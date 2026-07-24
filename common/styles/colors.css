@@ -1,0 +1,165 @@
+/**
+ * Microbiome Report color tokens
+ * Source of truth: ../../docs/design-system.md
+ */
+
+:root {
+  /* Base */
+  --color-white: #ffffff;
+
+  /* Mono palette */
+  --color-mono-100: #f5f5f5;
+  --color-mono-200: #ecefed;
+  --color-mono-300: #dee3e0;
+  --color-mono-400: #a8b5ae;
+  --color-mono-500: #a8b5ae;
+  --color-mono-600: #85948c;
+  --color-mono-700: #687970;
+  --color-mono-800: #4a5c54;
+  --color-mono-900: #303633;
+
+  /* Yellow palette */
+  --color-yellow-100: #fbf9f4;
+  --color-yellow-200: #f9f1df;
+  --color-yellow-400: #ffb451;
+  --color-yellow-600: #ff8d09;
+
+  /* Blue-green palette */
+  --color-blue-green-100: #f3faf9;
+  --color-blue-green-200: #e4f5f1;
+  --color-blue-green-400: #89c9bc;
+  --color-blue-green-500: #64b3a3;
+  --color-blue-green-600: #409c89;
+
+  /* Red palette */
+  --color-red-100: #fff5f6;
+  --color-red-200: #ffe6eb;
+  --color-red-500: #ee829d;
+  --color-red-600: #f2597f;
+
+  /* Blue palette */
+  --color-blue-100: #f4f9ff;
+  --color-blue-200: #dfeeff;
+  --color-blue-600: #5392da;
+
+  /* Green palette */
+  --color-green-100: #edf6e9;
+  --color-green-200: #d8edd0;
+  --color-green-400: #9fcf8d;
+  --color-green-600: #589c40;
+
+  /* Pink palette */
+  --color-pink-100: #fff3fd;
+  --color-pink-300: #ffdffa;
+  --color-pink-600: #f693d2;
+
+  /* Purple palette */
+  --color-purple-100: #f6f5ff;
+  --color-purple-200: #eceaff;
+  --color-purple-600: #988fe8;
+
+  /* Brand */
+  --color-brand-primary: var(--color-yellow-400);
+
+  /* Status */
+  --color-status-positive: var(--color-blue-green-600);
+  --color-status-negative: var(--color-red-600);
+
+  /* Data */
+  --color-data-bad-dark: var(--color-red-500);
+  --color-data-bad-medium: var(--color-red-200);
+  --color-data-bad-light: var(--color-red-100);
+  --color-data-normal-dark: var(--color-yellow-600);
+  --color-data-normal-medium: var(--color-yellow-200);
+  --color-data-normal-light: var(--color-yellow-100);
+  --color-data-good-dark: var(--color-blue-600);
+  --color-data-good-medium: var(--color-blue-200);
+  --color-data-good-light: var(--color-blue-100);
+  --color-data-best-dark: var(--color-blue-green-500);
+  --color-data-best-medium: var(--color-blue-green-200);
+  --color-data-best-light: var(--color-blue-green-100);
+  --color-data-common-dark: var(--color-green-600);
+  --color-data-common-medium: var(--color-green-200);
+  --color-data-common-light: var(--color-green-100);
+  --color-data-baseline-dark: var(--color-mono-400);
+  --color-data-baseline-medium: var(--color-mono-300);
+  --color-data-baseline-light: var(--color-mono-100);
+
+  /* Text */
+  --color-text-title: var(--color-mono-900);
+  --color-text-primary: var(--color-mono-800);
+  --color-text-secondary: var(--color-mono-700);
+  --color-text-tertiary: var(--color-mono-600);
+  --color-text-emphasis: var(--color-brand-primary);
+  --color-text-on: var(--color-white);
+  --color-text-status-positive: var(--color-status-positive);
+  --color-text-status-negative: var(--color-status-negative);
+
+  /* Surface */
+  --color-surface-base: var(--color-yellow-100);
+  --color-surface-base-mono: var(--color-mono-100);
+  --color-surface-subtle: var(--color-yellow-200);
+  --color-surface-subtle-mono: var(--color-mono-200);
+  --color-surface-on: var(--color-white);
+  --color-surface-emphasis: var(--color-yellow-600);
+  --color-surface-inverse: var(--color-mono-800);
+  --color-surface-status-positive: var(--color-blue-green-100);
+  --color-surface-status-negative: var(--color-red-100);
+
+  /* Border */
+  --color-border-default: var(--color-mono-300);
+  --color-border-strong: var(--color-mono-500);
+  --color-border-light: var(--color-mono-200);
+  --color-border-emphasis: var(--color-brand-primary);
+  --color-border-on: var(--color-white);
+  --color-border-status-positive: var(--color-blue-green-500);
+  --color-border-status-negative: var(--color-red-500);
+
+  /* Icon */
+  --color-icon-primary: var(--color-text-secondary);
+  --color-icon-secondary: var(--color-text-secondary);
+  --color-icon-emphasis: var(--color-text-emphasis);
+  --color-icon-on: var(--color-white);
+  --color-icon-status-positive: var(--color-status-positive);
+  --color-icon-status-negative: var(--color-status-negative);
+
+  /* Analysis categories */
+  --color-category-child-birth-special: #cf69aa;
+  --color-category-child-birth-dark: var(--color-pink-600);
+  --color-category-child-birth-medium: var(--color-pink-300);
+  --color-category-child-birth-light: var(--color-pink-100);
+  --color-category-feeding-special: #2b8142;
+  --color-category-feeding-dark: var(--color-green-600);
+  --color-category-feeding-medium: var(--color-green-200);
+  --color-category-feeding-light: var(--color-green-100);
+  --color-category-fret-dark: var(--color-blue-600);
+  --color-category-fret-medium: var(--color-blue-200);
+  --color-category-fret-light: var(--color-blue-100);
+  --color-category-poop-dark: var(--color-yellow-600);
+  --color-category-poop-medium: var(--color-yellow-200);
+  --color-category-poop-light: var(--color-yellow-100);
+  --color-category-sleep-dark: var(--color-purple-600);
+  --color-category-sleep-medium: var(--color-purple-200);
+  --color-category-sleep-light: var(--color-purple-100);
+  --color-category-skin-dark: var(--color-red-500);
+  --color-category-skin-medium: var(--color-red-200);
+  --color-category-skin-light: var(--color-red-100);
+
+  /* Custom guide categories */
+  --color-category-diet-dark: var(--color-green-600);
+  --color-category-diet-light: var(--color-green-200);
+  --color-category-exercise-dark: var(--color-yellow-600);
+  --color-category-exercise-light: var(--color-yellow-200);
+  --color-category-surrounding-dark: var(--color-blue-600);
+  --color-category-surrounding-light: var(--color-blue-200);
+  --color-category-habit-dark: var(--color-purple-600);
+  --color-category-habit-light: var(--color-purple-200);
+
+  /* Total guide levels */
+  --color-total-guide-lv1-dark: var(--color-brand-primary);
+  --color-total-guide-lv1-light: var(--color-yellow-100);
+  --color-total-guide-lv2-dark: var(--color-blue-green-400);
+  --color-total-guide-lv2-light: var(--color-blue-green-100);
+  --color-total-guide-lv3-dark: var(--color-green-400);
+  --color-total-guide-lv3-light: var(--color-green-100);
+}

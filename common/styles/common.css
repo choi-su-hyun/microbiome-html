@@ -1,0 +1,12 @@
+/* Shared document defaults */
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #444441;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}

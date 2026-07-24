@@ -1,0 +1,29 @@
+/**
+ * Shared A4 print canvas settings.
+ * The preview canvas corresponds to 595 × 842pt at 72dpi.
+ */
+
+:root {
+  --page-a4-width: 210mm;
+  --page-a4-height: 297mm;
+  --page-a4-preview-width: 595px;
+  --page-a4-preview-height: 842px;
+}
+
+@page {
+  size: 210mm 297mm;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
