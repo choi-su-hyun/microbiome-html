@@ -1,0 +1,85 @@
+.intro-page {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-surface-on) url("../../common/images/sheet_bg.jpg") center / 100% 100% no-repeat;
+}
+
+.intro-page__content {
+  position: absolute;
+  top: 200px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 274px;
+}
+
+.intro-page__title {
+  color: var(--color-text-title);
+}
+
+.intro-page__title p,
+.intro-page__title h1 {
+  width: 100%;
+}
+
+.intro-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  list-style: none;
+}
+
+.intro-page__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 16.5px;
+  color: var(--color-text-secondary);
+}
+
+.intro-page__item-label,
+.intro-page__item-page {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.intro-page__item-label {
+  line-height: 1.5;
+}
+
+.intro-page__item-line {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+  height: 1px;
+}
+
+.intro-page__item-page {
+  width: 16px;
+  text-align: right;
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+
+  .intro-page {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}

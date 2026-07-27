@@ -1,0 +1,190 @@
+.glossary-page {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-surface-base);
+}
+
+.report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+  padding: 0 25px;
+  color: var(--color-text-on);
+  background: linear-gradient(90deg, var(--color-brand-primary), var(--color-blue-green-400));
+}
+
+.report-header__logo {
+  width: 84px;
+  height: auto;
+  max-width: none;
+  filter: brightness(0) invert(1);
+}
+
+.report-header__metadata {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-header__metadata div {
+  display: flex;
+  gap: 4px;
+}
+
+.report-header__metadata div + div::before {
+  content: "";
+  width: 1px;
+  height: 8px;
+  margin-right: 4px;
+  background: color-mix(in srgb, var(--color-text-on) 60%, transparent);
+}
+
+.report-header__metadata dt,
+.report-header__metadata dd {
+  margin: 0;
+}
+
+.glossary-page__content {
+  padding: 20px 25px 0;
+}
+
+.glossary-page__intro {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+.glossary-page__intro h1 {
+  color: var(--color-text-primary);
+}
+
+.glossary-page__intro p {
+  margin-top: 4px;
+  color: var(--color-text-primary);
+}
+
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 24px;
+}
+
+.glossary-card {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  column-gap: 8px;
+  align-items: center;
+  min-height: 69px;
+  padding: 14px 20px;
+  background: var(--color-surface-on);
+  border-radius: 12px;
+}
+
+.glossary-card:nth-child(5) {
+  min-height: 76px;
+}
+
+.glossary-card dt {
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.glossary-card dd {
+  min-width: 0;
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.glossary-card dd p {
+  margin: 0;
+}
+
+.glossary-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  padding: 4px 6px;
+  color: var(--color-text-tertiary);
+  background: var(--color-surface-base);
+  border-radius: 6px;
+}
+
+.glossary-card__tag::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: url("../../common/svgs/info.svg") center / contain no-repeat;
+  flex-shrink: 0;
+}
+
+.report-footer__page-title {
+  color: var(--color-text-primary);
+}
+
+.report-footer__page-description {
+  color: var(--color-text-secondary);
+}
+
+.report-footer__content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.report-footer__text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.report-footer__page-divider {
+  width: 1px;
+  height: 8px;
+  background: var(--color-border-default);
+}
+
+.report-footer {
+  position: absolute;
+  right: 25px;
+  bottom: 16px;
+  left: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 8px;
+  color: var(--color-text-tertiary);
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.report-footer strong {
+  color: var(--color-text-title);
+  font-size: var(--font-size-9);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-label);
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+
+  .glossary-page {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}
