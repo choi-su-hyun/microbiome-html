@@ -6,65 +6,6 @@
   background: var(--color-surface-base);
 }
 
-.report-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 24px;
-  padding: 0 25px;
-  color: var(--color-text-on);
-  background: linear-gradient(90deg, var(--color-brand-primary), var(--color-blue-green-400));
-}
-
-.report-header__logo {
-  width: 84px;
-  height: auto;
-  max-width: none;
-  filter: brightness(0) invert(1);
-}
-
-.report-header__metadata {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.report-header__metadata div {
-  display: flex;
-  gap: 4px;
-}
-
-.report-header__metadata div + div::before {
-  content: "";
-  width: 1px;
-  height: 8px;
-  margin-right: 4px;
-  background: color-mix(in srgb, var(--color-text-on) 60%, transparent);
-}
-
-.report-header__metadata dt,
-.report-header__metadata dd {
-  margin: 0;
-}
-
-.glossary-page__content {
-  padding: 20px 25px 0;
-}
-
-.glossary-page__intro {
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--color-border-strong);
-}
-
-.glossary-page__intro h1 {
-  color: var(--color-text-primary);
-}
-
-.glossary-page__intro p {
-  margin-top: 4px;
-  color: var(--color-text-primary);
-}
-
 .glossary-list {
   display: flex;
   flex-direction: column;
@@ -120,53 +61,6 @@
   height: 8px;
   background: url("../../common/svgs/info.svg") center / contain no-repeat;
   flex-shrink: 0;
-}
-
-.report-footer__page-title {
-  color: var(--color-text-primary);
-}
-
-.report-footer__page-description {
-  color: var(--color-text-secondary);
-}
-
-.report-footer__content {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.report-footer__text-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.report-footer__page-divider {
-  width: 1px;
-  height: 8px;
-  background: var(--color-border-default);
-}
-
-.report-footer {
-  position: absolute;
-  right: 25px;
-  bottom: 16px;
-  left: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 18px;
-  padding-top: 8px;
-  color: var(--color-text-tertiary);
-  border-top: 1px solid var(--color-border-strong);
-}
-
-.report-footer strong {
-  color: var(--color-text-title);
-  font-size: var(--font-size-9);
-  font-weight: var(--font-weight-extrabold);
-  line-height: var(--line-height-label);
 }
 
 @media print {

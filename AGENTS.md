@@ -53,6 +53,32 @@
 - 아기와 보호자의 건강 정보가 들어갈 수 있으므로 실제 개인정보나 검체 데이터를 예시 파일에 넣지 않는다. 예시는 명백한 가상 데이터 또는 플레이스홀더만 사용한다.
 - 접근 가능한 대체 텍스트를 제공하고, 장식 이미지는 빈 `alt`를 사용한다.
 
+## 본문 페이지 기본 템플릿
+
+모든 본문 페이지는 `intro/glossary-of-terms.html`의 문서 구조와 페이지 레이아웃을 기본 템플릿으로 사용한다.
+
+- 새 본문 페이지를 만들거나 기존 본문 페이지의 구조를 수정하기 전에 `intro/glossary-of-terms.html`과 `intro/styles/glossary-of-terms.css`를 먼저 확인한다.
+- 공통 CSS는 `reset.css`, `common.css`, `print.css`, `colors.css`, `typography.css`, 페이지 전용 CSS 순서로 불러온다.
+- `<main>` 내부는 공통 `report-header`, 페이지별 본문 콘텐츠 영역, 공통 `report-footer` 순서로 구성한다.
+- `report-header`의 로고와 아이 정보 구조, `report-footer`의 파트명·페이지 설명·페이지 번호 구조를 동일하게 유지한다. 두 요소의 공통 스타일은 `common/styles/report-page.css`에서 관리한다.
+- 제목 영역은 본문 콘텐츠의 첫 요소로 두고, 모든 본문 페이지에서 아래 구조를 공통으로 사용한다. 페이지별 제목 문구와 설명 문구만 변경한다.
+
+  ```html
+  <section class="report-page__content">
+    <header class="report-page__title-area">
+      <h1 class="type-heading-primary-large-strong">페이지 제목</h1>
+      <p class="type-body-large">페이지를 설명하는 한두 문장</p>
+    </header>
+    <!-- 페이지별 콘텐츠 -->
+  </section>
+  ```
+
+- `report-page__title-area`는 제목, 설명, 하단 구분선으로 구성하며, 제목은 `type-heading-primary-large-strong`, 설명은 `type-body-large` 시맨틱 클래스를 우선 사용한다.
+- 제목 영역의 여백·설명과의 간격·하단 구분선은 여러 본문 페이지에서 같은 값으로 유지한다. `common/styles/report-page.css`에서 관리하며, 해당 파일은 `typography.css` 다음·페이지 전용 CSS 전에 불러온다.
+- 페이지별 콘텐츠에 맞게 시맨틱 요소와 전용 클래스는 변경할 수 있지만, 공통 인쇄 영역과 헤더·본문·푸터의 기본 배치 구조는 임의로 변경하지 않는다.
+- `intro/glossary-of-terms.html`의 공통 구조를 변경하면 해당 구조를 사용하는 모든 본문 페이지에 미치는 영향을 함께 확인한다.
+- 표지 등 본문이 아닌 특수 페이지는 이 규칙의 예외로 한다.
+
 ## 디자인 시스템
 
 새 페이지를 만들거나 기존 페이지의 디자인을 수정하기 전에 반드시 `docs/design-system.md`를 읽고, 문서에 명시된 색상 및 타이포그래피 토큰과 용도를 따른다. 디자인 시스템의 단일 기준 문서는 `docs/design-system.md`이며, 토큰을 추가하거나 변경할 때 해당 문서와 `common/styles/`의 대응 파일을 함께 갱신한다.
