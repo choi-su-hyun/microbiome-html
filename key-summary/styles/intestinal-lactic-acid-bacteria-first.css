@@ -1,0 +1,199 @@
+.intestinal-lactic-acid-bacteria {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-surface-base);
+}
+
+.intestinal-lactic-acid-bacteria__content {
+  padding-bottom: 32px;
+  background: var(--color-surface-on);
+}
+
+.gut-score {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  min-height: 130px;
+  padding: 16px 24px;
+  margin-top: 24px;
+  background: var(--color-surface-status-positive);
+  border: 1px solid var(--color-border-status-positive);
+  border-radius: 12px;
+}
+
+/* Reserved for the pie chart asset. It intentionally has no visible treatment. */
+.gut-score__chart-space {
+  width: 96px;
+  height: 96px;
+}
+
+.gut-score__rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  color: var(--color-text-status-positive);
+  background: var(--color-data-best-medium);
+  border-radius: 12px;
+}
+
+.gut-score h2 {
+  margin-top: 4px;
+  color: var(--color-text-title);
+}
+
+.gut-score p {
+  margin-top: 6px;
+  color: var(--color-text-primary);
+}
+
+.gut-score p em {
+  color: var(--color-text-status-positive);
+  font-style: normal;
+}
+
+.key-metrics {
+  margin-top: 24px;
+}
+
+.key-metrics h2 {
+  color: var(--color-text-title);
+}
+
+.key-metrics__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  padding: 0;
+  margin: 8px 0 0;
+  list-style: none;
+}
+
+.key-metrics__grid li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 76px;
+  padding: 18px 20px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+}
+
+.key-metrics__grid img {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  background: var(--color-surface-base-mono);
+  border-radius: 8px;
+}
+
+.key-metrics__grid p {
+  color: var(--color-text-primary);
+}
+
+.metric-tag {
+  display: inline-block;
+  padding: 4px 6px;
+  margin-left: 6px;
+  border-radius: 4px;
+  vertical-align: 1px;
+}
+
+.metric-tag--warning {
+  color: var(--color-data-bad-dark);
+  background: var(--color-data-bad-medium);
+}
+.metric-tag--positive {
+  color: var(--color-text-status-positive);
+  background: var(--color-data-best-medium);
+}
+.metric-tag--normal {
+  color: var(--color-data-normal-dark);
+  background: var(--color-data-normal-light);
+}
+
+.metric-value {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-text-title);
+}
+
+.metric-value span {
+  margin-left: 2px;
+  color: var(--color-text-primary);
+}
+
+.summary-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 24px;
+}
+
+.summary-panel {
+  padding: 12px 16px;
+  background: var(--color-surface-on);
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 0px #0000000d;
+}
+
+.summary-panel--tip {
+  border: 1px solid var(--color-border-emphasis);
+}
+
+.summary-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-surface-emphasis);
+}
+
+.summary-panel h2 img {
+  width: 16px;
+  height: 16px;
+}
+
+.summary-panel__items {
+  margin-top: 12px;
+}
+
+.summary-panel__items section {
+  padding: 0 0 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.summary-panel__items section:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.summary-panel h3 {
+  color: var(--color-text-primary);
+}
+.summary-panel p {
+  margin-top: 2px;
+  color: var(--color-text-secondary);
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+  .intestinal-lactic-acid-bacteria {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}

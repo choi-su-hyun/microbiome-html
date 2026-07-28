@@ -94,6 +94,10 @@
   color: var(--color-text-secondary);
 }
 
+.report-footer__page-number {
+  color: var(--color-text-title);
+}
+
 .report-footer__page-divider {
   width: 1px;
   height: 8px;
