@@ -1,0 +1,234 @@
+.intestinal-lactic-acid-bacteria-second {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-surface-on);
+}
+.intestinal-lactic-acid-bacteria-second__content {
+  padding-bottom: 0;
+}
+.composition {
+  margin-top: 24px;
+}
+.composition > h2,
+.main-bacteria > h2 {
+  color: var(--color-text-title);
+}
+.composition > h2 span,
+.main-bacteria > h2 span {
+  margin-left: 4px;
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-regular);
+}
+.composition__content {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 20px;
+  margin-top: 14px;
+}
+/* Pie-chart asset intentionally omitted. This preserves only its layout space. */
+.composition__chart-space {
+  height: 152px;
+  width: 152px;
+}
+.composition__list {
+  padding: 16px 20px;
+  margin: 0;
+  border: 1px solid var(--color-border-default);
+  border-radius: 10px;
+}
+.composition__list > div {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 18px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.composition__list > div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.composition__list dt,
+.composition__list dd {
+  margin: 0;
+}
+.composition__list dt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex-shrink: 0;
+  color: var(--color-text-primary);
+  line-height: 1;
+  white-space: nowrap;
+}
+.composition__color {
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.composition__name {
+  line-height: 1;
+}
+.composition__color--bifido,
+.bacteria-card__number--bifido {
+  background: var(--color-data-best-dark);
+}
+.composition__color--lacto,
+.bacteria-card__number--lacto {
+  background: var(--color-blue-600);
+}
+.composition__color--veillonella,
+.bacteria-card__number--veillonella {
+  background: var(--color-brand-primary);
+}
+.composition__color--other {
+  background: var(--color-text-secondary);
+}
+.composition__list dd {
+  display: block;
+  min-width: 0;
+  color: var(--color-text-title);
+  line-height: 1;
+}
+.composition__value {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.composition__value > strong {
+  color: var(--color-text-title);
+}
+.composition__list dd p {
+  flex: 1 1 auto;
+  flex-shrink: 1;
+  min-width: 0;
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+.change-summary {
+  display: grid;
+  grid-template-columns: 99px minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  min-height: 82px;
+  padding: 20px;
+  margin-top: 20px;
+  background: var(--color-surface-status-positive);
+  border: 1px solid var(--color-border-status-positive);
+  border-radius: 10px;
+}
+.change-summary__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.change-summary > img {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  background: var(--color-surface-on);
+  border-radius: 50%;
+}
+.change-summary h2 {
+  color: var(--color-text-title);
+}
+.change-summary p {
+  color: var(--color-text-secondary);
+}
+.change-summary p strong {
+  color: var(--color-text-status-positive);
+}
+.main-bacteria {
+  margin-top: 32px;
+}
+.main-bacteria__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+.bacteria-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+  border-radius: 8px;
+}
+.bacteria-card__intro {
+  min-height: 174px;
+  padding: 16px;
+  text-align: center;
+}
+.bacteria-card__number {
+  display: inline-grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-on);
+  border-radius: 50%;
+}
+.bacteria-card h3 {
+  margin-top: 6px;
+  color: var(--color-text-title);
+}
+.bacteria-card h3 small {
+  display: block;
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-regular);
+}
+.bacteria-card__intro > p {
+  margin-top: 12px;
+  color: var(--color-text-primary);
+  text-align: center;
+}
+.bacteria-card__benefits {
+  padding: 16px;
+  background: var(--color-surface-base);
+}
+.bacteria-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-primary);
+}
+.bacteria-card h4 img {
+  width: 12px;
+  height: 12px;
+}
+.bacteria-card ul {
+  padding: 0;
+  margin: 8px 0 0;
+  color: var(--color-text-primary);
+  list-style: none;
+}
+.bacteria-card li + li {
+  margin-top: 4px;
+}
+.bacteria-card li::before {
+  content: '•';
+  margin-right: 5px;
+}
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+  .intestinal-lactic-acid-bacteria-second {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}
