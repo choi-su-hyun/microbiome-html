@@ -23,7 +23,7 @@
 }
 .composition__content {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
+  grid-template-columns: 148px minmax(0, 1fr);
   gap: 20px;
   margin-top: 14px;
 }
@@ -33,7 +33,7 @@
   width: 152px;
 }
 .composition__list {
-  padding: 16px 20px;
+  padding: 15px 19px;
   margin: 0;
   border: 1px solid var(--color-border-default);
   border-radius: 10px;
@@ -44,7 +44,7 @@
   align-items: center;
   column-gap: 18px;
   margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   border-bottom: 1px solid var(--color-border-light);
 }
 .composition__list > div:last-child {
@@ -119,7 +119,6 @@
   grid-template-columns: 99px minmax(0, 1fr);
   align-items: center;
   gap: 40px;
-  min-height: 82px;
   padding: 20px;
   margin-top: 20px;
   background: var(--color-surface-status-positive);
@@ -162,7 +161,6 @@
   border-radius: 8px;
 }
 .bacteria-card__intro {
-  min-height: 174px;
   padding: 16px;
   text-align: center;
 }
