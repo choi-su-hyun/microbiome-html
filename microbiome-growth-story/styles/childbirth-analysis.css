@@ -1,0 +1,180 @@
+.childbirth-analysis {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-category-child-birth-light);
+}
+
+.childbirth-analysis__content {
+  padding-bottom: 0;
+}
+
+.childbirth-analysis__title-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.childbirth-analysis__title-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-category-child-birth-medium);
+  border-radius: 8px;
+}
+
+.childbirth-analysis__title-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.childbirth-analysis__title-area h1 span {
+  font-family: var(--font-family-heading-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+.childbirth-result {
+  margin-top: 24px;
+  padding: 20px 24px 36px;
+  background: var(--color-surface-on);
+  border-radius: 20px;
+}
+
+.childbirth-result__header,
+.childbirth-method,
+.childbirth-method strong {
+  display: flex;
+  align-items: center;
+}
+
+.childbirth-result__header {
+  justify-content: space-between;
+}
+
+.childbirth-result__header h2 {
+  color: var(--color-text-primary);
+}
+
+.childbirth-method {
+  gap: 10px;
+  color: var(--color-text-secondary);
+}
+
+.childbirth-method strong {
+  gap: 6px;
+  padding: 6px 8px;
+  color: var(--color-text-on);
+  background: var(--color-category-child-birth-special);
+  border-radius: 999px;
+}
+
+.childbirth-method img {
+  width: 12px;
+  height: 12px;
+}
+
+.childbirth-result__message {
+  padding: 16px;
+  margin-top: 8px;
+  text-align: center;
+  background: var(--color-surface-status-positive);
+  border-radius: 12px;
+}
+
+.childbirth-result__message strong,
+.childbirth-result__message b {
+  color: var(--color-text-status-positive);
+}
+
+.childbirth-result__message p {
+  margin-top: 2px;
+  color: var(--color-text-secondary);
+}
+
+.childbirth-chart-placeholder {
+  margin-top: 20px;
+  margin-bottom: 32px;
+  height: 250px;
+}
+
+.indicator-guide > h2 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-title);
+}
+
+.indicator-guide > h2 span {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-on);
+  background: var(--color-category-child-birth-dark);
+  border-radius: 50%;
+}
+
+.indicator-guide__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.indicator-guide__cards article {
+  min-height: 142px;
+  padding: 16px;
+  border: 1px solid var(--color-border-default);
+  border-radius: 8px;
+}
+
+.indicator-guide__cards h3,
+.indicator-guide__cards h4 {
+  color: var(--color-text-primary);
+}
+
+.indicator-guide__cards p {
+  min-height: 62px;
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+}
+
+.indicator-guide__cards h4 {
+  margin-top: 16px;
+}
+
+.indicator-guide__cards ul {
+  display: flex;
+  gap: 2px;
+  padding: 0;
+  margin: 6px 0 0;
+  list-style: none;
+}
+
+.indicator-guide__cards li {
+  padding: 5px 6px;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+  background: var(--color-surface-base-mono);
+  border-radius: 4px;
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+
+  .childbirth-analysis {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>분만 분석 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <link rel="stylesheet" href="../common/styles/reset.css" />
+    <link rel="stylesheet" href="../common/styles/common.css" />
+    <link rel="stylesheet" href="../common/styles/print.css" />
+    <link rel="stylesheet" href="../common/styles/colors.css" />
+    <link rel="stylesheet" href="../common/styles/typography.css" />
+    <link rel="stylesheet" href="../common/styles/report-page.css" />
+    <link rel="stylesheet" href="styles/childbirth-analysis.css" />
+  </head>
+  <body>
+    <main class="childbirth-analysis" aria-labelledby="childbirth-analysis-title">
+      <header class="report-header">
+        <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
+        <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
+          <div>
+            <dt>등록번호</dt>
+            <dd class="type-label-xsmall">0008127</dd>
+          </div>
+          <div>
+            <dt>이름</dt>
+            <dd class="type-label-xsmall">홍길동</dd>
+          </div>
+          <div>
+            <dt>나이</dt>
+            <dd class="type-label-xsmall">만 0세 (N개월)</dd>
+          </div>
+          <div>
+            <dt>성별</dt>
+            <dd class="type-label-xsmall">여아</dd>
+          </div>
+        </dl>
+      </header>
+
+      <section class="report-page__content childbirth-analysis__content">
+        <header class="report-page__title-area childbirth-analysis__title-area">
+          <span class="childbirth-analysis__title-icon" aria-hidden="true">
+            <img src="../common/svgs/pregnancy-pink.svg" alt="" />
+          </span>
+          <div>
+            <h1 id="childbirth-analysis-title" class="type-heading-primary-large-strong">
+              분만 분석 <span>: 태어날 때 만난 우리 아이 미생물</span>
+            </h1>
+            <p class="type-body-medium">
+              분만 방식에 따라 아이가 처음 만나는 미생물 환경은 달라질 수 있어요.<br />
+              우리 아이의 장 속 미생물이 어떻게 시작되었는지 살펴보아요.
+            </p>
+          </div>
+        </header>
+
+        <section class="childbirth-result" aria-labelledby="settlement-comparison-title">
+          <header class="childbirth-result__header">
+            <h2 id="settlement-comparison-title" class="type-heading-secondary-large-strong">
+              전이 정착도 비교
+            </h2>
+            <div class="childbirth-method">
+              <span class="type-label-medium-strong">분만 방법</span>
+              <strong class="type-label-small-strong">
+                제왕절개
+                <img src="../common/svgs/cesarean-section.svg" alt="" />
+              </strong>
+            </div>
+          </header>
+
+          <div class="childbirth-result__message">
+            <strong class="type-heading-secondary-small-strong"
+              >또래보다 전이 정착도가 높아요!</strong
+            >
+            <p class="type-body-medium">
+              같은 제왕절개 친구들과 비교했을 때, 엄마에게 물려받은 유익균 정착 신호가
+              <b>또래보다 빠른 편</b>이에요.
+            </p>
+          </div>
+
+          <div
+            class="childbirth-chart-placeholder"
+            role="img"
+            aria-label="엄마에게 받은 미생물 지표와 피부 및 환경에서 만난 미생물 지표 차트가 들어갈 영역"
+          ></div>
+
+          <section class="indicator-guide" aria-labelledby="indicator-guide-title">
+            <h2 id="indicator-guide-title" class="type-heading-secondary-small-strong">
+              <img src="../common/svgs/check-round-pink.svg" alt="" /> 그래프 속 지표 알아보기
+            </h2>
+            <div class="indicator-guide__cards">
+              <article>
+                <h3 class="type-heading-secondary-medium-strong">엄마에게 받은 미생물 지표</h3>
+                <p class="type-body-medium">
+                  엄마와의 첫 만남 과정에서 아이 장에 자리잡을 수 있는 미생물 균들을 살펴보는
+                  지표예요. 자연분만 아이에게서 높게 보이는 경향이 있지만, 모든 아이에게 똑같이
+                  나타나진 않아요.
+                </p>
+                <h4 class="type-label-xsmall-strong">대표 미생물 균 명</h4>
+                <ul aria-label="엄마에게 받은 대표 미생물">
+                  <li class="type-label-xsmall">박테로이더스</li>
+                  <li class="type-label-xsmall">파라박테로이더스</li>
+                  <li class="type-label-xsmall">락토바실러스</li>
+                </ul>
+              </article>
+              <article>
+                <h3 class="type-heading-secondary-medium-strong">피부/환경에서 만난 미생물 지표</h3>
+                <p class="type-body-medium">
+                  피부나 주변 환경과의 접촉 과정에서 아이 장에 자리잡는 미생물 균들을 살펴보는
+                  지표예요. 제왕절개 아이에게서 높게 보이는 경향이 있지만, 아이마다 다르게 나타날 수
+                  있어요.
+                </p>
+                <h4 class="type-label-xsmall-strong">대표 미생물 균 명</h4>
+                <ul aria-label="피부와 환경에서 만난 대표 미생물">
+                  <li class="type-label-xsmall">스테필로코커스</li>
+                  <li class="type-label-xsmall">코리네박테리움</li>
+                  <li class="type-label-xsmall">프로피오니박테리움</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <footer class="report-footer" aria-label="현재 페이지">
+        <div class="report-footer__content">
+          <div class="report-footer__text-wrapper">
+            <span class="report-footer__page-title type-label-xxsmall-strong"
+              >03 우리아이 미생물 성장 이야기</span
+            >
+            <span class="report-footer__page-divider" aria-hidden="true"></span>
+            <span class="report-footer__page-description type-label-xxsmall"
+              >분만 분석 : 태어날 때 만난 우리 아이 미생물</span
+            >
+          </div>
+          <strong class="report-footer__page-number type-label-small-strong">11p</strong>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
