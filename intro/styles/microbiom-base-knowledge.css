@@ -131,11 +131,12 @@
   position: absolute;
   z-index: 2;
   top: 50%;
-  right: -27px;
-  width: 46px;
-  height: 42px;
-  content: "";
-  background: url("../../common/svgs/arrow.svg") center / contain no-repeat;
+  right: -14px;
+  width: 24px;
+  height: 24px;
+  content: '';
+  filter: drop-shadow(0 4px 6px rgb(48 54 51 / 12%));
+  background: url('../../common/svgs/arrow.svg') center / contain no-repeat;
   transform: translateY(-30%);
 }
 
