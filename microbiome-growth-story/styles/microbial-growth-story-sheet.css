@@ -1,0 +1,84 @@
+.microbial-growth-story-sheet {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-surface-on) url("../../common/images/sheet_bg.jpg") center / 100% 100%
+    no-repeat;
+}
+
+.microbial-growth-story-sheet__content {
+  position: absolute;
+  top: 170px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 274px;
+}
+
+.microbial-growth-story-sheet__title {
+  color: var(--color-text-title);
+}
+
+.microbial-growth-story-sheet__title p,
+.microbial-growth-story-sheet__title h1 {
+  width: 100%;
+}
+
+.microbial-growth-story-sheet__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  list-style: none;
+}
+
+.microbial-growth-story-sheet__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 16.5px;
+  color: var(--color-text-secondary);
+}
+
+.microbial-growth-story-sheet__label {
+  flex: 0 0 auto;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.microbial-growth-story-sheet__leader {
+  flex: 1 1 auto;
+  min-width: 8px;
+  height: 1px;
+  border-top: 1px dotted var(--color-border-light);
+}
+
+.microbial-growth-story-sheet__page {
+  flex: 0 0 34px;
+  min-height: 10px;
+  color: var(--color-text-secondary);
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+
+  .microbial-growth-story-sheet {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}
