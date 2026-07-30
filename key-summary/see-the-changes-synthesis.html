@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>우리아이 변화 살펴보기 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <title>우리아이 변화 살펴보기 (종합)</title>
     <link rel="stylesheet" href="../common/styles/reset.css" />
     <link rel="stylesheet" href="../common/styles/common.css" />
     <link rel="stylesheet" href="../common/styles/print.css" />
     <link rel="stylesheet" href="../common/styles/colors.css" />
     <link rel="stylesheet" href="../common/styles/typography.css" />
     <link rel="stylesheet" href="../common/styles/report-page.css" />
-    <link rel="stylesheet" href="styles/see-the-changes.css" />
+    <link rel="stylesheet" href="styles/see-the-changes-synthesis.css" />
   </head>
   <body>
-    <main class="see-the-changes" aria-labelledby="see-the-changes-title">
+    <main class="see-the-changes-synthesis" aria-labelledby="synthesis-title">
       <header class="report-header">
         <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
         <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
@@ -35,24 +35,19 @@
           </div>
         </dl>
       </header>
-
-      <section class="report-page__content see-the-changes__content">
+      <section class="report-page__content synthesis-content">
         <header class="report-page__title-area">
-          <h1 id="see-the-changes-title" class="type-heading-primary-large-strong">
-            우리아이 변화 살펴보기 <span class="type-heading-primary-medium">(유익균)</span>
+          <h1 id="synthesis-title" class="type-heading-primary-large-strong">
+            우리아이 변화 살펴보기 <span class="type-heading-primary-medium">(종합)</span>
           </h1>
           <p class="type-body-large">
             지난 검사와 이번 검사를 비교해, 우리 아이가 어떻게 달라졌는지 살펴보아요.
           </p>
         </header>
-
-        <section
-          class="change-summary change-summary--overview"
-          aria-labelledby="change-overview-title"
-        >
-          <div class="change-summary__header">
+        <section class="synthesis-overview" aria-labelledby="synthesis-overview-title">
+          <div class="synthesis-overview__header">
             <img src="../common/svgs/document.svg" alt="" />
-            <h2 id="change-overview-title" class="type-heading-secondary-xsmall-strong">
+            <h2 id="synthesis-overview-title" class="type-heading-secondary-xsmall-strong">
               우리아이 변화<br />종합의견
             </h2>
           </div>
@@ -61,100 +56,126 @@
             이어가며 다음 변화도 함께 살펴보아요.
           </p>
         </section>
-
-        <section class="change-results" aria-label="유익균 변화 결과">
-          <article class="change-result">
-            <div class="change-result__summary">
+        <section class="synthesis-results" aria-label="종합 변화 결과">
+          <article class="synthesis-result">
+            <div class="synthesis-result__summary">
               <header>
-                <span class="change-result__icon"
-                  ><img src="../common/svgs/comprehensive-beneficial-bacteria.svg" alt=""
+                <span class="synthesis-result__icon"
+                  ><img src="../common/svgs/overall-score.svg" alt=""
                 /></span>
                 <div>
-                  <h2 class="type-heading-secondary-xsmall-strong">유익균 종합</h2>
+                  <h2 class="type-heading-secondary-xsmall-strong">종합 점수</h2>
                   <p class="type-body-small">모든 분석 결과를 종합한 점수</p>
                 </div>
               </header>
-              <p class="change-result__score">
+              <p class="synthesis-result__score">
                 <strong class="type-label-xxlarge-strong">68</strong
                 ><span class="type-label-large">점</span
                 ><em class="type-label-xsmall-strong">양호</em>
               </p>
             </div>
-            <div class="change-result__chart-space" aria-label="유익균 종합 변화 차트 영역"></div>
+            <div class="synthesis-result__chart-space" aria-label="종합 점수 변화 차트 영역"></div>
           </article>
-          <article class="change-result">
-            <div class="change-result__summary">
+          <article class="synthesis-result">
+            <div class="synthesis-result__summary">
               <header>
-                <span class="change-result__icon"
-                  ><img src="../common/svgs/defense-bacteria.svg" alt=""
+                <span class="synthesis-result__icon"
+                  ><img src="../common/svgs/microorganism-balance.svg" alt=""
                 /></span>
                 <div>
-                  <h2 class="type-heading-secondary-xsmall-strong">보챔 방어균</h2>
+                  <h2 class="type-heading-secondary-xsmall-strong">미생물 균형도</h2>
                   <p class="type-body-small">모든 분석 결과를 종합한 점수</p>
                 </div>
               </header>
-              <p class="change-result__score">
-                <strong class="type-label-xxlarge-strong">68</strong
-                ><span class="type-label-large">점</span
-                ><em class="type-label-xsmall-strong">양호</em>
-              </p>
-            </div>
-            <div class="change-result__chart-space" aria-label="보챔 방어균 변화 차트 영역"></div>
-          </article>
-          <article class="change-result">
-            <div class="change-result__summary">
-              <header>
-                <span class="change-result__icon"
-                  ><img src="../common/svgs/stool-defense-bacteria.svg" alt=""
-                /></span>
-                <div>
-                  <h2 class="type-heading-secondary-xsmall-strong">배변 방어균</h2>
-                  <p class="type-body-small">모든 분석 결과를 종합한 점수</p>
-                </div>
-              </header>
-              <p class="change-result__score">
-                <strong class="type-label-xxlarge-strong">68</strong
-                ><span class="type-label-large">점</span
-                ><em class="type-label-xsmall-strong">양호</em>
-              </p>
-            </div>
-            <div class="change-result__chart-space" aria-label="배변 방어균 변화 차트 영역"></div>
-          </article>
-          <article class="change-result">
-            <div class="change-result__summary">
-              <header>
-                <span class="change-result__icon"
-                  ><img src="../common/svgs/skin-trouble-defense-bacteria.svg" alt=""
-                /></span>
-                <div>
-                  <h2 class="type-heading-secondary-xsmall-strong">피부 트러블 방어균</h2>
-                  <p class="type-body-small">모든 분석 결과를 종합한 점수</p>
-                </div>
-              </header>
-              <p class="change-result__score">
+              <p class="synthesis-result__score">
                 <strong class="type-label-xxlarge-strong">68</strong
                 ><span class="type-label-large">점</span
                 ><em class="type-label-xsmall-strong">양호</em>
               </p>
             </div>
             <div
-              class="change-result__chart-space"
-              aria-label="피부 트러블 방어균 변화 차트 영역"
+              class="synthesis-result__chart-space"
+              aria-label="미생물 균형도 변화 차트 영역"
+            ></div>
+          </article>
+          <article class="synthesis-result">
+            <div class="synthesis-result__summary">
+              <header>
+                <span class="synthesis-result__icon"
+                  ><img src="../common/svgs/microbial-maturity.svg" alt=""
+                /></span>
+                <div>
+                  <h2 class="type-heading-secondary-xsmall-strong">미생물 성숙도</h2>
+                  <p class="type-body-small">모든 분석 결과를 종합한 점수</p>
+                </div>
+              </header>
+              <p class="synthesis-result__score">
+                <strong class="type-label-xxlarge-strong">68</strong
+                ><span class="type-label-large">점</span
+                ><em class="type-label-xsmall-strong">양호</em>
+              </p>
+            </div>
+            <div
+              class="synthesis-result__chart-space"
+              aria-label="미생물 성숙도 변화 차트 영역"
+            ></div>
+          </article>
+          <article class="synthesis-result">
+            <div class="synthesis-result__summary">
+              <header>
+                <span class="synthesis-result__icon"
+                  ><img src="../common/svgs/chemical-formula.svg" alt=""
+                /></span>
+                <div>
+                  <h2 class="type-heading-secondary-xsmall-strong">미생물 분포도</h2>
+                  <p class="type-body-small">모든 분석 결과를 종합한 점수</p>
+                </div>
+              </header>
+              <p class="synthesis-result__score">
+                <strong class="type-label-xxlarge-strong">68</strong
+                ><span class="type-label-large">점</span
+                ><em class="type-label-xsmall-strong">양호</em>
+              </p>
+            </div>
+            <div
+              class="synthesis-result__chart-space"
+              aria-label="미생물 분포도 변화 차트 영역"
+            ></div>
+          </article>
+          <article class="synthesis-result">
+            <div class="synthesis-result__summary">
+              <header>
+                <span class="synthesis-result__icon"
+                  ><img src="../common/svgs/harmful-bacteria.svg" alt=""
+                /></span>
+                <div>
+                  <h2 class="type-heading-secondary-xsmall-strong">유해균 분포도</h2>
+                  <p class="type-body-small">모든 분석 결과를 종합한 점수</p>
+                </div>
+              </header>
+              <p class="synthesis-result__score">
+                <strong class="type-label-xxlarge-strong">68</strong
+                ><span class="type-label-large">점</span
+                ><em class="type-label-xsmall-strong">양호</em>
+              </p>
+            </div>
+            <div
+              class="synthesis-result__chart-space"
+              aria-label="유해균 분포도 변화 차트 영역"
             ></div>
           </article>
         </section>
       </section>
-
       <footer class="report-footer" aria-label="현재 페이지">
         <div class="report-footer__content">
           <div class="report-footer__text-wrapper">
             <span class="report-footer__page-title type-label-xxsmall-strong">02 핵심 요약</span
             ><span class="report-footer__page-divider" aria-hidden="true"></span
             ><span class="report-footer__page-description type-label-xxsmall"
-              >우리아이 변화 살펴보기 (유익균)</span
+              >우리아이 변화 살펴보기 (종합)</span
             >
           </div>
-          <strong class="report-footer__page-number type-label-small-strong">8p</strong>
+          <strong class="report-footer__page-number type-label-small-strong">7p</strong>
         </div>
       </footer>
     </main>
