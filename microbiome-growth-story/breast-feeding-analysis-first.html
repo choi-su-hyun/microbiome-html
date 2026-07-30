@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>수유 분석 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <link rel="stylesheet" href="../common/styles/reset.css" />
+    <link rel="stylesheet" href="../common/styles/common.css" />
+    <link rel="stylesheet" href="../common/styles/print.css" />
+    <link rel="stylesheet" href="../common/styles/colors.css" />
+    <link rel="stylesheet" href="../common/styles/typography.css" />
+    <link rel="stylesheet" href="../common/styles/report-page.css" />
+    <link rel="stylesheet" href="styles/breast-feeding-analysis-first.css" />
+  </head>
+  <body>
+    <main class="breast-feeding-analysis" aria-labelledby="breast-feeding-analysis-title">
+      <header class="report-header">
+        <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
+        <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
+          <div>
+            <dt>등록번호</dt>
+            <dd class="type-label-xsmall">0008127</dd>
+          </div>
+          <div>
+            <dt>이름</dt>
+            <dd class="type-label-xsmall">홍길동</dd>
+          </div>
+          <div>
+            <dt>나이</dt>
+            <dd class="type-label-xsmall">만 0세 (N개월)</dd>
+          </div>
+          <div>
+            <dt>성별</dt>
+            <dd class="type-label-xsmall">여아</dd>
+          </div>
+        </dl>
+      </header>
+
+      <section class="report-page__content breast-feeding-analysis__content">
+        <header class="report-page__title-area breast-feeding-analysis__title-area">
+          <span class="breast-feeding-analysis__title-icon" aria-hidden="true">
+            <img src="../common/svgs/feeding-bottle-green.svg" alt="" />
+          </span>
+          <div>
+            <h1 id="breast-feeding-analysis-title" class="type-heading-primary-large-strong">
+              수유 분석 <span>: 수유로 자라나는 우리아이 미생물</span>
+            </h1>
+            <p class="type-body-medium">
+              수유 방식은 아이의 장 속 미생물이 자라는 데 영향을 줄 수 있어요.<br />
+              우리 아이의 현재 미생물 상태를 수유 환경과 함께 확인해 보아요.
+            </p>
+          </div>
+        </header>
+
+        <section class="breast-feeding-result" aria-labelledby="feeding-comparison-title">
+          <header class="breast-feeding-result__header">
+            <h2 id="feeding-comparison-title" class="type-heading-secondary-large-strong">
+              수유 방식에 따른 미생물 분석
+            </h2>
+            <div class="breast-feeding-method">
+              <span class="type-label-medium-strong">수유 방법</span>
+              <strong class="type-label-small-strong">
+                모유수유
+                <img src="../common/svgs/breast-feeding.svg" alt="" />
+              </strong>
+            </div>
+          </header>
+
+          <div class="breast-feeding-result__message">
+            <strong class="type-heading-secondary-small-strong">
+              주요 미생물 지표군은 또래와 비슷해요!
+            </strong>
+            <p class="type-body-medium">
+              같은 모유수유 친구들과 비교했을 때, 주요 미생물 지표군이 또래와 비슷하니 걱정하지
+              않아도 괜찮아요.
+            </p>
+          </div>
+
+          <div
+            class="breast-feeding-chart-placeholder"
+            role="img"
+            aria-label="모유 미생물 지표군과 분유 미생물 지표군 차트가 들어갈 영역"
+          ></div>
+
+          <section class="breast-feeding-indicators" aria-labelledby="feeding-indicators-title">
+            <h2 id="feeding-indicators-title" class="type-heading-secondary-small-strong">
+              <img src="../common/svgs/checked-round-green.svg" alt="" />
+              그래프 속 지표 알아보기
+            </h2>
+            <div class="breast-feeding-indicators__cards">
+              <article>
+                <h3 class="type-body-medium-strong">모유 미생물 지표군</h3>
+                <p class="type-body-medium">
+                  모유를 통해 아이에게 직접 전해질 수 있거나, 모유 영양분을 바탕으로 자리잡기 쉬운
+                  미생물을 살펴보는 지표예요. 혼합수유, 이유식, 생활 환경에 따라 다르게 나타날 수
+                  있어요.
+                </p>
+                <h4 class="type-label-xsmall-strong">대표 미생물 균 명</h4>
+                <ul aria-label="모유 미생물 대표 균">
+                  <li class="type-label-xsmall">비피도박테리움</li>
+                </ul>
+              </article>
+              <article>
+                <h3 class="type-body-medium-strong">분유 미생물 지표군</h3>
+                <p class="type-body-medium">
+                  분유 수유 환경에서 상대적으로 함께 관찰될 수 있는 미생물을 살펴보는 지표예요.
+                  분유수유 아이에게서 상대적으로 높게 보일 수 있지만, 모든 아이에게 똑같이 나타나는
+                  것은 아니며 성장 과정에 따라 달라질 수 있어요.
+                </p>
+                <h4 class="type-label-xsmall-strong">대표 미생물 균 명</h4>
+                <ul aria-label="분유 미생물 대표 균">
+                  <li class="type-label-xsmall">박테로이데스</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <footer class="report-footer" aria-label="현재 페이지">
+        <div class="report-footer__content">
+          <div class="report-footer__text-wrapper">
+            <span class="report-footer__page-title type-label-xxsmall-strong">
+              03 우리아이 미생물 성장 이야기
+            </span>
+            <span class="report-footer__page-divider" aria-hidden="true"></span>
+            <span class="report-footer__page-description type-label-xxsmall">
+              수유 분석 : 수유로 자라나는 우리아이 미생물
+            </span>
+          </div>
+          <strong class="report-footer__page-number type-label-small-strong">13p</strong>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

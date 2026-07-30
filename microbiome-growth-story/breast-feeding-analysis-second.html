@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>수유 분석 결과 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <link rel="stylesheet" href="../common/styles/reset.css" />
+    <link rel="stylesheet" href="../common/styles/common.css" />
+    <link rel="stylesheet" href="../common/styles/print.css" />
+    <link rel="stylesheet" href="../common/styles/colors.css" />
+    <link rel="stylesheet" href="../common/styles/typography.css" />
+    <link rel="stylesheet" href="../common/styles/report-page.css" />
+    <link rel="stylesheet" href="styles/breast-feeding-analysis-second.css" />
+  </head>
+  <body>
+    <main
+      class="breast-feeding-analysis-second"
+      aria-labelledby="breast-feeding-analysis-second-title"
+    >
+      <header class="report-header">
+        <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
+        <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
+          <div>
+            <dt>등록번호</dt>
+            <dd class="type-label-xsmall">0008127</dd>
+          </div>
+          <div>
+            <dt>이름</dt>
+            <dd class="type-label-xsmall">홍길동</dd>
+          </div>
+          <div>
+            <dt>나이</dt>
+            <dd class="type-label-xsmall">만 0세 (N개월)</dd>
+          </div>
+          <div>
+            <dt>성별</dt>
+            <dd class="type-label-xsmall">여아</dd>
+          </div>
+        </dl>
+      </header>
+
+      <section class="report-page__content breast-feeding-analysis-second__content">
+        <header class="report-page__title-area breast-feeding-analysis-second__title-area">
+          <span class="breast-feeding-analysis-second__title-icon" aria-hidden="true">
+            <img src="../common/svgs/feeding-bottle-green.svg" alt="" />
+          </span>
+          <div>
+            <h1
+              id="breast-feeding-analysis-second-title"
+              class="type-heading-primary-large-strong"
+            >
+              수유 분석 <span>: 수유로 자라나는 우리아이 미생물</span>
+            </h1>
+            <p class="type-body-medium">
+              수유 방식은 아이의 장 속 미생물이 자라는 데 영향을 줄 수 있어요.<br />
+              우리 아이의 현재 미생물 상태를 수유 환경과 함께 확인해 보아요.
+            </p>
+          </div>
+        </header>
+
+        <section class="breast-feeding-summary" aria-labelledby="breast-feeding-summary-title">
+          <span class="breast-feeding-summary__method type-label-medium-strong">
+            모유수유
+            <img src="../common/svgs/breast-feeding.svg" alt="" />
+          </span>
+          <div class="breast-feeding-summary__content">
+            <h2 id="breast-feeding-summary-title" class="type-heading-secondary-medium-strong">
+              결과 요약
+            </h2>
+            <p class="type-body-large">
+              {홍길동} 아기는 {모유수유}의 또래 아이들보다
+              <strong>유익균 수치가 높은 편</strong>이며<br />
+              {분유수유} 또래 아이들보다 <em>유해균 수치가 살짝 낮은 편</em>이에요.
+            </p>
+          </div>
+        </section>
+
+        <section
+          class="breast-feeding-comparison"
+          aria-labelledby="breast-feeding-comparison-title"
+        >
+          <h2 id="breast-feeding-comparison-title" class="type-heading-secondary-large-strong">
+            전이 정착도 비교
+          </h2>
+
+          <div
+            class="breast-feeding-comparison__chart-placeholder"
+            role="img"
+            aria-label="유익균과 유해균의 수유 방식별 전이 정착도를 비교하는 차트가 들어갈 영역"
+          ></div>
+
+          <section class="breast-feeding-tips" aria-labelledby="breast-feeding-tips-title">
+            <h2 id="breast-feeding-tips-title" class="type-heading-secondary-small-strong">
+              <img src="../common/svgs/checked-round-green.svg" alt="" />
+              더 좋아질 수 있도록 Tip을 알려드려요!
+            </h2>
+            <div class="breast-feeding-tips__list">
+              <article>
+                <span
+                  class="breast-feeding-tip__tag breast-feeding-tip__tag--diet type-label-small-strong"
+                >
+                  식이
+                  <img src="../common/svgs/feeding-bottle-filled-green.svg" alt="" />
+                </span>
+                <div>
+                  <h3 class="type-body-medium-strong">모유 먹는 시간과 반응을 봐 주세요!</h3>
+                  <p class="type-body-medium">수유 시간, 먹은 뒤 보챔, 변 상태를 기록해 보세요.</p>
+                </div>
+              </article>
+              <article>
+                <span
+                  class="breast-feeding-tip__tag breast-feeding-tip__tag--surrounding type-label-small-strong"
+                >
+                  환경
+                  <img src="../common/svgs/home-filled-blue.svg" alt="" />
+                </span>
+                <div>
+                  <h3 class="type-body-medium-strong">젖병·젖꼭지 세척을 확인해요!</h3>
+                  <p class="type-body-medium">사용 후 바로 세척하고 말리는 흐름을 지켜주세요.</p>
+                </div>
+              </article>
+              <article>
+                <span
+                  class="breast-feeding-tip__tag breast-feeding-tip__tag--exercise type-label-small-strong"
+                >
+                  운동
+                  <img src="../common/svgs/foot.svg" alt="" />
+                </span>
+                <div>
+                  <h3 class="type-body-medium-strong">수유 후 트림 시간을 가져요!</h3>
+                  <p class="type-body-medium">먹은 뒤 잠시 세워 안고 트림을 확인해 주세요.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <footer class="report-footer" aria-label="현재 페이지">
+        <div class="report-footer__content">
+          <div class="report-footer__text-wrapper">
+            <span class="report-footer__page-title type-label-xxsmall-strong">
+              03 우리아이 미생물 성장 이야기
+            </span>
+            <span class="report-footer__page-divider" aria-hidden="true"></span>
+            <span class="report-footer__page-description type-label-xxsmall">
+              수유 분석 : 수유로 자라나는 우리아이 미생물
+            </span>
+          </div>
+          <strong class="report-footer__page-number type-label-small-strong">14p</strong>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

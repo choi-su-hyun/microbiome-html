@@ -1,0 +1,193 @@
+.breast-feeding-analysis-second {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-category-feeding-light);
+}
+
+.breast-feeding-analysis-second__content {
+  padding-bottom: 0;
+}
+
+.breast-feeding-analysis-second__title-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.breast-feeding-analysis-second__title-icon {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  background: var(--color-category-feeding-medium);
+  border-radius: 8px;
+}
+
+.breast-feeding-analysis-second__title-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.breast-feeding-analysis-second__title-area h1 span {
+  font-family: var(--font-family-heading-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+.breast-feeding-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 68px;
+  padding: 16px 20px;
+  margin-top: 24px;
+  background: var(--color-surface-on);
+  border: 1px solid var(--color-category-feeding-dark);
+  border-radius: 12px;
+}
+
+.breast-feeding-summary__method {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  color: var(--color-text-on);
+  background: var(--color-category-feeding-dark);
+  border-radius: 999px;
+}
+
+.breast-feeding-summary__method img {
+  width: 12px;
+  height: 12px;
+}
+
+.breast-feeding-summary__content {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.breast-feeding-summary h2 {
+  color: var(--color-text-title);
+  white-space: nowrap;
+}
+
+.breast-feeding-summary p {
+  color: var(--color-text-primary);
+}
+
+.breast-feeding-summary strong {
+  color: var(--color-text-status-positive);
+  font-style: normal;
+}
+
+.breast-feeding-summary em {
+  color: var(--color-text-status-negative);
+  font-style: normal;
+  font-weight: var(--font-weight-extrabold);
+}
+
+.breast-feeding-comparison {
+  padding: 20px 24px 26px;
+  margin-top: 12px;
+  background: var(--color-surface-on);
+  border-radius: 20px;
+}
+
+.breast-feeding-comparison > h2 {
+  color: var(--color-text-primary);
+}
+
+.breast-feeding-comparison__chart-placeholder {
+  height: 252px;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.breast-feeding-tips > h2 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-title);
+}
+
+.breast-feeding-tips > h2 img {
+  width: 16px;
+  height: 16px;
+}
+
+.breast-feeding-tips__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.breast-feeding-tips__list article {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border-default);
+  border-radius: 8px;
+}
+
+.breast-feeding-tip__tag {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.breast-feeding-tip__tag img {
+  width: 12px;
+  height: 12px;
+}
+
+.breast-feeding-tip__tag--diet {
+  color: var(--color-category-diet-dark);
+  background: var(--color-category-diet-light);
+}
+
+.breast-feeding-tip__tag--surrounding {
+  color: var(--color-category-surrounding-dark);
+  background: var(--color-category-surrounding-light);
+}
+
+.breast-feeding-tip__tag--exercise {
+  color: var(--color-category-exercise-dark);
+  background: var(--color-category-exercise-light);
+}
+
+.breast-feeding-tips h3 {
+  color: var(--color-text-primary);
+}
+
+.breast-feeding-tips p {
+  margin-top: 2px;
+  color: var(--color-text-secondary);
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+
+  .breast-feeding-analysis-second {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}
