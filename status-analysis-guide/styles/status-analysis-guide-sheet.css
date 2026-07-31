@@ -1,0 +1,83 @@
+.status-analysis-guide-sheet {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-surface-on) url("../../common/images/sheet_bg.jpg") center / 100% 100% no-repeat;
+}
+
+.status-analysis-guide-sheet__content {
+  position: absolute;
+  top: 170px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 274px;
+}
+
+.status-analysis-guide-sheet__title {
+  color: var(--color-text-title);
+}
+
+.status-analysis-guide-sheet__title p,
+.status-analysis-guide-sheet__title h1 {
+  width: 100%;
+}
+
+.status-analysis-guide-sheet__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  list-style: none;
+}
+
+.status-analysis-guide-sheet__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 16.5px;
+  color: var(--color-text-secondary);
+}
+
+.status-analysis-guide-sheet__label {
+  flex: 0 0 auto;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.status-analysis-guide-sheet__leader {
+  flex: 1 1 auto;
+  min-width: 8px;
+  height: 1px;
+  border-top: 1px dotted var(--color-border-light);
+}
+
+.status-analysis-guide-sheet__page {
+  flex: 0 0 34px;
+  min-height: 10px;
+  color: var(--color-text-secondary);
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+
+  .status-analysis-guide-sheet {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}
