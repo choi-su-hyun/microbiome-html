@@ -1,0 +1,261 @@
+.my-baby-microbial-status {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-surface-on);
+}
+.microbial-status__content {
+  padding: 0;
+}
+.microbial-status__top {
+  padding: 20px 24px 0;
+}
+
+.microbial-status-summary {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 16px 24px;
+  margin-top: 24px;
+  background: var(--color-surface-status-negative);
+  border: 1px solid var(--color-border-status-negative);
+  border-radius: 8px;
+}
+.microbial-status-summary h2 {
+  color: var(--color-text-title);
+}
+.microbial-status-summary h2 strong {
+  color: var(--color-text-status-negative);
+}
+.microbial-status-summary p {
+  color: var(--color-text-secondary);
+}
+
+.microbial-status-dashboard {
+  padding: 16px;
+  margin-top: 8px;
+  background: var(--color-surface-on);
+  border-radius: 20px;
+  box-shadow: 0 5px 12px color-mix(in srgb, var(--color-mono-900) 6%, transparent);
+}
+.microbial-status-composition {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 24px;
+}
+.microbial-status-composition__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.microbial-status-composition__info header h2 {
+  color: var(--color-text-title);
+}
+.microbial-status-composition__info header p {
+  margin-top: 4px;
+  color: var(--color-text-secondary);
+}
+.microbial-status-composition__summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 0;
+  align-items: center;
+  justify-items: center;
+  padding: 12px 0;
+  margin-top: 12px;
+  background: var(--color-surface-base-mono);
+  border-radius: 8px;
+}
+.microbial-status-composition__summary > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.microbial-status-composition__summary div:not(:last-child) {
+  border-right: 1px solid var(--color-border-default);
+}
+.microbial-status-composition__summary dt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+.microbial-status-composition__summary dd {
+  margin: 8px 0 0;
+  color: var(--color-text-title);
+}
+.microbial-status-composition__summary dd span {
+  margin-left: 2px;
+  color: var(--color-text-secondary);
+}
+.microbial-status-composition__marker {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+.microbial-status-composition__marker--beneficial {
+  background: var(--color-status-positive);
+}
+.microbial-status-composition__marker--harmful {
+  background: var(--color-data-bad-dark);
+}
+.microbial-status-composition__marker--other {
+  background: var(--color-data-baseline-dark);
+}
+.microbial-status-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+.microbial-status-metrics article {
+  padding: 12px 16px;
+  height: 111px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+}
+.microbial-status-metrics article > header,
+.microbial-status-metric__title {
+  display: flex;
+  align-items: center;
+}
+.microbial-status-metrics article > header {
+  justify-content: space-between;
+  gap: 8px;
+}
+.microbial-status-metric__title {
+  gap: 2px;
+  min-width: 0;
+}
+.microbial-status-metric__title img {
+  width: 20px;
+  height: 20px;
+}
+.microbial-status-score {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-title);
+  white-space: nowrap;
+}
+.microbial-status-score__value {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.microbial-status-score__value > span + span {
+  margin-left: -2px;
+}
+.microbial-status-metrics em {
+  padding: 5px 6px;
+  font-style: normal;
+  border-radius: 5px;
+}
+.microbial-status-metrics article:nth-child(1) em {
+  color: var(--color-data-normal-dark);
+  background: var(--color-data-normal-light);
+}
+.microbial-status-metrics article:nth-child(2) em,
+.microbial-status-metrics article:nth-child(4) em {
+  color: var(--color-text-status-positive);
+  background: var(--color-surface-status-positive);
+}
+.microbial-status-metrics article:nth-child(3) em {
+  color: var(--color-text-status-negative);
+  background: var(--color-surface-status-negative);
+}
+.microbial-status-chart-placeholder {
+  height: 59px;
+  margin-top: 8px;
+}
+.microbial-status-note {
+  margin-top: 16px;
+  color: var(--color-text-tertiary);
+}
+
+.microbial-status-guide {
+  margin: 16px 0 0;
+  padding: 16px 24px 64px;
+  background: var(--color-surface-subtle);
+}
+.microbial-status-guide > h2 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-title);
+}
+.microbial-status-guide > h2 img {
+  width: 16px;
+  height: 16px;
+}
+.microbial-status-guide dl {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-top: 8px;
+  background: var(--color-surface-on);
+  border-radius: 12px;
+}
+
+.microbial-status-guide__item {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+  gap: 12px;
+}
+.microbial-status-guide__divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border-light);
+}
+.microbial-status-guide__item .divider {
+  width: 1px;
+  height: 30px;
+  background: var(--color-border-light);
+}
+.microbial-status-guide__item-content {
+  display: grid;
+  grid-template-columns: 73px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+}
+
+.microbial-status-guide dt {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+.microbial-status-guide dt img {
+  width: 20px;
+  height: 20px;
+}
+.microbial-status-guide dd {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+  .my-baby-microbial-status {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}

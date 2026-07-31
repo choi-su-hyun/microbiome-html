@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>우리아이 미생물 상태 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <link rel="stylesheet" href="../common/styles/reset.css" />
+    <link rel="stylesheet" href="../common/styles/common.css" />
+    <link rel="stylesheet" href="../common/styles/print.css" />
+    <link rel="stylesheet" href="../common/styles/colors.css" />
+    <link rel="stylesheet" href="../common/styles/typography.css" />
+    <link rel="stylesheet" href="../common/styles/report-page.css" />
+    <link rel="stylesheet" href="styles/my-baby-microbial-status.css" />
+  </head>
+  <body>
+    <main class="my-baby-microbial-status" aria-labelledby="microbial-status-title">
+      <header class="report-header">
+        <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
+        <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
+          <div>
+            <dt>등록번호</dt>
+            <dd class="type-label-xsmall">0008127</dd>
+          </div>
+          <div>
+            <dt>이름</dt>
+            <dd class="type-label-xsmall">홍길동</dd>
+          </div>
+          <div>
+            <dt>나이</dt>
+            <dd class="type-label-xsmall">만 0세 (N개월)</dd>
+          </div>
+          <div>
+            <dt>성별</dt>
+            <dd class="type-label-xsmall">여아</dd>
+          </div>
+        </dl>
+      </header>
+
+      <section class="report-page__content microbial-status__content">
+        <div class="microbial-status__top">
+          <header class="report-page__title-area">
+            <h1 id="microbial-status-title" class="type-heading-primary-large-strong">
+              우리아이 미생물 상태
+            </h1>
+            <p class="type-body-medium">
+              우리 아이 장 속에는 어떤 미생물들이 함께 살고 있을까요?<br />유익균, 균형, 다양성 등을
+              통해 현재 미생물 상태를 한눈에 살펴보아요.
+            </p>
+          </header>
+
+          <section class="microbial-status-summary" aria-labelledby="status-summary-title">
+            <h2 id="status-summary-title" class="type-heading-secondary-small-strong">
+              현재 {홍길동} 아기는<br /><strong>{단계형}</strong>이에요.
+            </h2>
+            <p class="type-body-medium">
+              현재 유익균 비율이 조금 낮고, 또래 대비 미생물 성숙도가 조금 낮아요.<br />하지만
+              <b>2~4주 내 개선 가능한 시점</b>이 많아요! 특히 유산균을 통해 비피도 수치를 빠르게
+              회복할 수 있는 단계예요.
+            </p>
+          </section>
+
+        <section class="microbial-status-dashboard" aria-labelledby="composition-title">
+          <div class="microbial-status-composition" aria-label="장내 미생물 구성 비율">
+            <div class="microbial-status-composition__info">
+              <header>
+                <h2 id="composition-title" class="type-heading-secondary-small-strong">
+                  우리아이 장내 미생물 구성 비율
+                </h2>
+                <p class="type-body-medium">
+                  우리 아이 장내 생태계가 월령에 맞게 잘 자라고 있는지 확인하는 지표입니다.
+                </p>
+              </header>
+              <dl class="microbial-status-composition__summary">
+                <div>
+                  <dt class="type-label-small">
+                    <i
+                      class="microbial-status-composition__marker microbial-status-composition__marker--beneficial"
+                    ></i
+                    >유익균
+                  </dt>
+                  <dd class="type-label-xxlarge-strong">
+                    45<span class="type-label-large">%</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt class="type-label-small">
+                    <i
+                      class="microbial-status-composition__marker microbial-status-composition__marker--harmful"
+                    ></i
+                    >유해균
+                  </dt>
+                  <dd class="type-label-xxlarge-strong">
+                    13<span class="type-label-large">%</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt class="type-label-small">
+                    <i
+                      class="microbial-status-composition__marker microbial-status-composition__marker--other"
+                    ></i
+                    >기타 균
+                  </dt>
+                  <dd class="type-label-xxlarge-strong">
+                    42<span class="type-label-large">%</span>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div
+              class="microbial-status-composition__chart-placeholder"
+              role="img"
+              aria-label="장내 미생물 구성 비율 반원 차트가 들어갈 빈 영역"
+            ></div>
+          </div>
+          <div class="microbial-status-metrics">
+            <article>
+              <header>
+                <span class="microbial-status-metric__title"
+                  ><img src="../common/svgs/microorganism-balance.svg" alt="" />
+                  <h3 class="type-heading-secondary-small-strong">미생물 균형도</h3></span
+                ><strong class="microbial-status-score"
+                  ><span class="microbial-status-score__value"
+                    ><span class="type-label-xxlarge-strong">66</span
+                    ><span class="type-label-large">점</span></span
+                  ><em class="type-label-small-strong">보통</em></strong
+                >
+              </header>
+              <div
+                class="microbial-status-chart-placeholder"
+                role="img"
+                aria-label="미생물 균형도 차트가 들어갈 빈 영역"
+              ></div>
+            </article>
+            <article>
+              <header>
+                <span class="microbial-status-metric__title"
+                  ><img src="../common/svgs/harmful-bacteria.svg" alt="" />
+                  <h3 class="type-heading-secondary-small-strong">유해균 분포도</h3></span
+                ><strong class="microbial-status-score"
+                  ><span class="microbial-status-score__value"
+                    ><span class="type-label-xxlarge-strong">88</span
+                    ><span class="type-label-large">점</span></span
+                  ><em class="type-label-small-strong">양호</em></strong
+                >
+              </header>
+              <div
+                class="microbial-status-chart-placeholder"
+                role="img"
+                aria-label="유해균 분포도 차트가 들어갈 빈 영역"
+              ></div>
+            </article>
+            <article>
+              <header>
+                <span class="microbial-status-metric__title"
+                  ><img src="../common/svgs/microbial-maturity.svg" alt="" />
+                  <h3 class="type-heading-secondary-small-strong">미생물 성숙도</h3></span
+                ><strong class="microbial-status-score"
+                  ><span class="microbial-status-score__value"
+                    ><span class="type-label-xxlarge-strong">18</span
+                    ><span class="type-label-large">점</span></span
+                  ><em class="type-label-small-strong">주의</em></strong
+                >
+              </header>
+              <div
+                class="microbial-status-chart-placeholder"
+                role="img"
+                aria-label="미생물 성숙도 차트가 들어갈 빈 영역"
+              ></div>
+            </article>
+            <article>
+              <header>
+                <span class="microbial-status-metric__title"
+                  ><img src="../common/svgs/growth.svg" alt="" />
+                  <h3 class="type-heading-secondary-small-strong">미생물 풍부도</h3></span
+                ><strong class="microbial-status-score"
+                  ><span class="microbial-status-score__value"
+                    ><span class="type-label-xxlarge-strong">72</span
+                    ><span class="type-label-large">점</span></span
+                  ><em class="type-label-small-strong">양호</em></strong
+                >
+              </header>
+              <div
+                class="microbial-status-chart-placeholder"
+                role="img"
+                aria-label="미생물 풍부도 차트가 들어갈 빈 영역"
+              ></div>
+            </article>
+          </div>
+        </section>
+        <p class="microbial-status-note type-caption-medium">
+          * 이 결과는 통계적 연령/경험을 기반으로 하며, 특정 질병의 원인을 단정하지 않습니다.
+        </p>
+        </div>
+
+        <section class="microbial-status-guide microbial-status-guide-region" aria-labelledby="status-guide-title">
+          <h2 id="status-guide-title" class="type-heading-secondary-small-strong">
+            <img src="../common/svgs/check-fill-orange.svg" alt="" />그래프 속 지표 알아보기
+          </h2>
+          <dl>
+            <div class="microbial-status-guide__item">
+              <div class="microbial-status-guide__item-content">
+                <dt class="type-label-small-strong">
+                  <img src="../common/svgs/microorganism-balance.svg" alt="" />미생물 균형도
+                </dt>
+                <dd class="type-body-small">
+                  아이 장 속 미생물이 고르게 유지되고 있는지 확인하는 지표예요.
+                </dd>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="microbial-status-guide__item-content">
+                <dt class="type-label-small-strong">
+                  <img src="../common/svgs/harmful-bacteria.svg" alt="" />유해균 분포도
+                </dt>
+                <dd class="type-body-small">
+                  주의 깊게 살펴볼 유해 미생물이 어느 정도인지 확인하는 지표예요.
+                </dd>
+              </div>
+            </div>
+
+            <div class="microbial-status-guide__divider"></div>
+
+            <div class="microbial-status-guide__item">
+              <div class="microbial-status-guide__item-content">
+                <dt class="type-label-small-strong">
+                  <img src="../common/svgs/microbial-maturity.svg" alt="" />미생물 성숙도
+                </dt>
+                <dd class="type-body-small">
+                  우리 아이의 나이(월령)에 맞게 장 속 미생물이 자리잡고 있는지 확인하는 지표예요.
+                </dd>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="microbial-status-guide__item-content">
+                <dt class="type-label-small-strong">
+                  <img src="../common/svgs/growth.svg" alt="" />미생물 풍부도
+                </dt>
+                <dd class="type-body-small">
+                  우리 아이 장 속 미생물의 전체적인 구성과 분포를 확인하는 지표예요.
+                </dd>
+              </div>
+            </div>
+          </dl>
+        </section>
+      </section>
+
+      <footer class="report-footer" aria-label="현재 페이지">
+        <div class="report-footer__content">
+          <div class="report-footer__text-wrapper">
+            <span class="report-footer__page-title type-label-xxsmall-strong"
+              >03 우리아이 미생물 성장 이야기</span
+            ><span class="report-footer__page-divider" aria-hidden="true"></span
+            ><span class="report-footer__page-description type-label-xxsmall"
+              >우리아이 미생물 상태</span
+            >
+          </div>
+          <strong class="report-footer__page-number type-label-small-strong">16p</strong>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
