@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>수면리듬 분석 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <link rel="stylesheet" href="../common/styles/reset.css" />
+    <link rel="stylesheet" href="../common/styles/common.css" />
+    <link rel="stylesheet" href="../common/styles/print.css" />
+    <link rel="stylesheet" href="../common/styles/colors.css" />
+    <link rel="stylesheet" href="../common/styles/typography.css" />
+    <link rel="stylesheet" href="../common/styles/report-page.css" />
+    <link rel="stylesheet" href="styles/sleep-rhythm-analysis.css" />
+  </head>
+  <body>
+    <main class="sleep-rhythm-analysis" aria-labelledby="sleep-rhythm-analysis-title">
+      <header class="report-header">
+        <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
+        <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
+          <div><dt>등록번호</dt><dd class="type-label-xsmall">0008127</dd></div>
+          <div><dt>이름</dt><dd class="type-label-xsmall">홍길동</dd></div>
+          <div><dt>나이</dt><dd class="type-label-xsmall">만 0세 (N개월)</dd></div>
+          <div><dt>성별</dt><dd class="type-label-xsmall">여아</dd></div>
+        </dl>
+      </header>
+
+      <section class="report-page__content sleep-rhythm-analysis__content">
+        <header class="report-page__title-area sleep-rhythm-analysis__title-area">
+          <img src="../common/svgs/moon-sleep.svg" alt="" />
+          <div>
+            <h1 id="sleep-rhythm-analysis-title" class="type-heading-primary-large-strong">수면리듬 분석</h1>
+            <p class="type-body-medium">잠들기 힘들어하고 자주 깨나요? 우리 아이의 수면 흐름을 함께 확인해 보아요.</p>
+          </div>
+        </header>
+
+        <section class="sleep-rhythm-analysis__card" aria-labelledby="sleep-comparison-title">
+          <header>
+            <h2 id="sleep-comparison-title" class="type-heading-secondary-large-strong">수면 방해균 및 불규칙균 비율 비교</h2>
+            <p class="type-caption-large">* 월령별 신생아 평균 범위와 비교한 수치입니다.</p>
+          </header>
+
+          <div class="sleep-rhythm-analysis__chart-placeholder" role="img" aria-label="수면 방해균과 불규칙균 비율 비교 차트가 들어갈 빈 영역"></div>
+
+          <ol class="sleep-rhythm-analysis__clues" aria-label="수면 리듬 분석 단서">
+            <li>
+              <span class="sleep-rhythm-analysis__clue-number type-label-small-strong">단서 1</span>
+              <div>
+                <h3 class="type-body-medium-strong">행복 호르몬(세로토닌) 재료 부족 <span class="type-label-xsmall-strong"># 세로토닌 부족</span></h3>
+                <p class="type-body-medium">수면 호르몬인 멜라토닌의 원료가 되는 ‘세로토닌’을 만드는 장내 미생물이 부족해 보입니다.<br />이로 인해 밤에 자연스럽게 잠들기 어려울 수 있습니다.</p>
+              </div>
+            </li>
+            <li>
+              <span class="sleep-rhythm-analysis__clue-number type-label-small-strong">단서 2</span>
+              <div>
+                <h3 class="type-body-medium-strong">장-뇌 축 (Gut-Brain) 과민 신호 <span class="type-label-xsmall-strong"># 장뇌축 자극</span></h3>
+                <p class="type-body-medium">장내 가스나 불편함이 ‘미주 신경’을 통해 뇌로 직접 전달되고 있습니다.<br />뇌가 장의 불편함을 감지하여 얕은 잠을 자게 만들고 자주 깨게 합니다.</p>
+              </div>
+            </li>
+            <li>
+              <span class="sleep-rhythm-analysis__clue-number type-label-small-strong">단서 3</span>
+              <div>
+                <h3 class="type-body-medium-strong">미세 염증 반응으로 인한 각성 <span class="type-label-xsmall-strong"># 세로토닌 부족</span></h3>
+                <p class="type-body-medium">장내 미세한 염증 신호가 스트레스 호르몬(코르티솔) 수치를 높여 수면을 방해할 가능성이 있습니다.<br />몸이 이완되지 않고 긴장 상태를 유지하려 합니다.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="sleep-rhythm-analysis__together" aria-labelledby="sleep-together-title">
+          <h2 id="sleep-together-title" class="type-heading-secondary-medium-strong">함께 살펴본 내용</h2>
+          <dl class="type-body-medium">
+            <div class="sleep-rhythm-analysis__together-item">
+              <dt class="type-body-medium-strong"><img src="../common/svgs/paperweight.svg" alt="" />문진 응답 내용</dt>
+              <div class="divider"></div>
+              <dd>수유 후 다리를 오므리며 울, 방귀 냄새가 독함</dd>
+            </div>
+            <div class="sleep-rhythm-analysis__together-item">
+              <dt class="type-body-medium-strong"><img src="../common/svgs/inspection-indicators.svg" alt="" />검사 지표</dt>
+              <div class="divider"></div>
+              <dd>가스 생성균 비율 18%(높음), 비피도 비율 15%(낮음)</dd>
+            </div>
+          </dl>
+        </section>
+      </section>
+
+      <footer class="report-footer" aria-label="현재 페이지">
+        <div class="report-footer__content">
+          <div class="report-footer__text-wrapper">
+            <span class="report-footer__page-title type-label-xxsmall-strong">04 우리아이 상태 분석 및 맞춤 가이드</span>
+            <span class="report-footer__page-divider" aria-hidden="true"></span>
+            <span class="report-footer__page-description type-label-xxsmall">수면 분석</span>
+          </div>
+          <strong class="report-footer__page-number type-label-small-strong">19p</strong>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
