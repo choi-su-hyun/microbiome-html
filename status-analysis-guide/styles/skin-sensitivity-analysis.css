@@ -1,0 +1,109 @@
+.skin-sensitivity-analysis {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-category-skin-light);
+}
+
+.skin-sensitivity-analysis__title-area { display: flex; align-items: center; gap: 12px; }
+
+.skin-sensitivity-analysis__title-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: var(--color-category-skin-medium);
+  border-radius: 8px;
+}
+
+.skin-sensitivity-analysis__title-icon::after {
+  position: absolute;
+  inset: 8px;
+  content: "";
+  background: var(--color-category-skin-dark);
+  -webkit-mask: url("../../common/svgs/skin-trouble-defense-bacteria.svg") center / contain no-repeat;
+  mask: url("../../common/svgs/skin-trouble-defense-bacteria.svg") center / contain no-repeat;
+}
+
+.skin-sensitivity-analysis__title-area > div { min-width: 0; }
+
+.skin-sensitivity-analysis__card {
+  padding: 20px 24px;
+  margin-top: 24px;
+  background: var(--color-surface-on);
+  border-radius: 20px;
+  box-shadow: 0 5px 12px color-mix(in srgb, var(--color-mono-900) 6%, transparent);
+}
+
+.skin-sensitivity-analysis__card > header { display: flex; align-items: baseline; gap: 4px; }
+.skin-sensitivity-analysis__card h2 { color: var(--color-text-primary); }
+.skin-sensitivity-analysis__card > header p { color: var(--color-text-tertiary); }
+.skin-sensitivity-analysis__chart-placeholder { height: 219px; margin-top: 12px; margin-bottom: 20px; }
+.skin-sensitivity-analysis__clues { display: flex; flex-direction: column; gap: 4px; list-style: none; }
+
+.skin-sensitivity-analysis__clues li {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--color-category-skin-light);
+  border-radius: 8px;
+}
+
+.skin-sensitivity-analysis__clue-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 4px 8px;
+  color: var(--color-text-on);
+  background: var(--color-category-skin-dark);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.skin-sensitivity-analysis__clues h3 { color: var(--color-text-primary); }
+
+.skin-sensitivity-analysis__clues h3 span {
+  display: inline-flex;
+  padding: 4px 6px;
+  margin-left: 6px;
+  color: var(--color-category-skin-dark);
+  background: var(--color-category-skin-medium);
+  border-radius: 4px;
+}
+
+.skin-sensitivity-analysis__clues p { margin-top: 4px; color: var(--color-text-secondary); }
+
+.skin-sensitivity-analysis__together {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 24px;
+  margin-top: 12px;
+  color: var(--color-text-on);
+  background: var(--color-category-skin-dark);
+  border-radius: 12px;
+}
+
+.skin-sensitivity-analysis__together h2 { color: inherit; }
+.skin-sensitivity-analysis__together dl { display: flex; flex-direction: column; gap: 4px; }
+.skin-sensitivity-analysis__together-item { display: flex; align-items: center; gap: 8px; }
+
+.skin-sensitivity-analysis__together-item .divider {
+  width: 1px;
+  height: 9px;
+  background: var(--color-border-on);
+  opacity: 0.5;
+}
+
+.skin-sensitivity-analysis__together dt { display: flex; align-items: center; gap: 4px; }
+.skin-sensitivity-analysis__together dt img { width: 12px; height: 12px; filter: brightness(0) invert(1); }
+.skin-sensitivity-analysis__together dd { margin: 0; }
+
+@media print {
+  html, body { width: 100%; height: 100%; }
+  body { display: block; min-height: 0; background: transparent; }
+  .skin-sensitivity-analysis { width: var(--page-a4-width); height: var(--page-a4-height); break-after: page; }
+}
