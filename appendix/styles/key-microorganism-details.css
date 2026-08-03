@@ -1,0 +1,90 @@
+.key-microorganism-details {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-surface-base-mono);
+}
+.key-microorganism-details .report-header {
+  background: var(--color-mono-400);
+}
+.key-microorganism-details__content {
+  padding: 20px 24px 0;
+}
+.microorganism-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 24px;
+  list-style: none;
+}
+.microorganism-list li {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  min-height: 78px;
+  padding: 20px;
+  background: var(--color-surface-on);
+  border-radius: 8px;
+}
+.microorganism-list h2 {
+  color: var(--color-text-primary);
+}
+.microorganism-list li > div:first-child p {
+  margin-top: 2px;
+  color: var(--color-text-primary);
+}
+.microorganism-list li > div:last-child > p {
+  color: var(--color-text-secondary);
+}
+.microorganism-list span {
+  display: flex;
+  gap: 2px;
+  margin-top: 6px;
+}
+.microorganism-list b {
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+.microorganism-list b:first-child {
+  color: var(--color-status-positive);
+  background: var(--color-blue-green-200);
+}
+.microorganism-list b:last-child {
+  color: var(--color-text-tertiary);
+  background: var(--color-surface-subtle-mono);
+}
+.microorganism-note {
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  right: 24px;
+  bottom: 66px;
+  left: 24px;
+  padding: 12px 16px;
+  color: var(--color-text-tertiary);
+  background: var(--color-surface-subtle-mono);
+  border-radius: 6px;
+}
+.microorganism-note img {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+}
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+  .key-microorganism-details {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}
