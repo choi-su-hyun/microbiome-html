@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>병원 방문 가이드 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <link rel="stylesheet" href="../common/styles/reset.css" />
+    <link rel="stylesheet" href="../common/styles/common.css" />
+    <link rel="stylesheet" href="../common/styles/print.css" />
+    <link rel="stylesheet" href="../common/styles/colors.css" />
+    <link rel="stylesheet" href="../common/styles/typography.css" />
+    <link rel="stylesheet" href="../common/styles/report-page.css" />
+    <link rel="stylesheet" href="styles/hospital-visit-guide.css" />
+  </head>
+  <body>
+    <main class="hospital-visit-guide" aria-labelledby="hospital-title">
+      <header class="report-header">
+        <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
+        <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
+          <div>
+            <dt>등록번호</dt>
+            <dd class="type-label-xsmall">0008127</dd>
+          </div>
+          <div>
+            <dt>이름</dt>
+            <dd class="type-label-xsmall">홍길동</dd>
+          </div>
+          <div>
+            <dt>나이</dt>
+            <dd class="type-label-xsmall">만 0세 (N개월)</dd>
+          </div>
+          <div>
+            <dt>성별</dt>
+            <dd class="type-label-xsmall">여아</dd>
+          </div>
+        </dl>
+      </header>
+      <section class="report-page__content hospital-visit-guide__content">
+        <header class="hospital-visit-guide__title report-page__title-area">
+          <img src="../common/svgs/siren.svg" alt="" />
+          <div>
+            <h1 id="hospital-title" class="type-heading-primary-large-strong">병원 방문 가이드</h1>
+            <p class="type-body-small">
+              아래 증상이 관찰되면 현재의 플랜을 <strong>즉시 중단</strong>하고 전문가와 상의하세요.
+            </p>
+          </div>
+        </header>
+        <section class="hospital-symptoms" aria-labelledby="symptoms-title">
+          <h2 id="symptoms-title" class="visually-hidden">병원 방문이 필요한 증상</h2>
+          <ul>
+            <li>
+              <img src="../common/svgs/sad-face.svg" alt="" />
+              <h3 class="type-heading-secondary-medium-strong">통제되지 않는 울음</h3>
+              <ul class="type-body-large">
+                <li>
+                  평소 달래지던 방법이 통하지 않고, <em>약 3시간 이상 지속적이고 강한 울음</em>이
+                  발생하는 경우
+                </li>
+                <li><em>갈비뼈 사이가 심하게 들어가거나</em> 숨을 쉴 때마다 힘들어 보이는 경우</li>
+              </ul>
+            </li>
+            <li>
+              <img src="../common/svgs/puke-face.svg" alt="" />
+              <h3 class="type-heading-secondary-medium-strong">수유 거부 및 반복 구토</h3>
+              <ul class="type-body-large">
+                <li>
+                  수유량이 <em>평소의 50% 미만으로 급감</em>하거나, 단순 게워냄이 아닌 분수 토가
+                  반복될 때
+                </li>
+                <li>토사물에 <em>피가 섞이거나 초록색에 가까운 구토</em>가 보이는 경우</li>
+              </ul>
+            </li>
+            <li>
+              <img src="../common/svgs/high-fever-face.svg" alt="" />
+              <h3 class="type-heading-secondary-medium-strong">고열 또는 체온 이상</h3>
+              <ul class="type-body-large">
+                <li>몸에 <em>38℃ 이상</em>의 열이 동반되는 경우</li>
+                <li>열과 함께 <em>경련, 호흡 이상, 심한 보챔</em>이 함께 나타나는 경우</li>
+              </ul>
+            </li>
+            <li>
+              <img src="../common/svgs/dehydration-face.svg" alt="" />
+              <h3 class="type-heading-secondary-medium-strong">탈수 의심 증상</h3>
+              <ul class="type-body-large">
+                <li><em>눈물 감소, 눈 꺼짐, 머리 위 말랑한 부분 꺼짐</em>이 보이는 경우</li>
+                <li>아이가 <em>축 처지거나</em> 수유를 잘 하지 못하는 경우</li>
+              </ul>
+            </li>
+            <li>
+              <img src="../common/svgs/abnormal-bowel-movements-face.svg" alt="" />
+              <h3 class="type-heading-secondary-medium-strong">배변 이상 증상</h3>
+              <ul class="type-body-large">
+                <li><em>혈변, 검은변, 끈적한 점액변</em>이 반복해서 관찰되는 경우</li>
+              </ul>
+            </li>
+            <li>
+              <img src="../common/svgs/decreased-consciousness-face.svg" alt="" />
+              <h3 class="type-heading-secondary-medium-strong">의식 저하 및 경련 신호</h3>
+              <ul class="type-body-large">
+                <li>몸이 뻣뻣해지거나 <em>팔다리를 반복적으로 떠는 모습</em>이 보이는 경우</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <aside class="hospital-visit-guide__warning">
+          <h2 class="type-heading-secondary-medium-strong">
+            <img src="../common/svgs/warning.svg" alt="" />위 증상 중 하나라도 해당된다면
+          </h2>
+          <p class="type-body-large-strong">
+            일반적인 영유아 긴급 증상 기준이므로, 소아청소년과 전문의를 방문하고<br />의사의 진단에
+            따른 치료를 최우선으로 진행해 주세요.
+          </p>
+        </aside>
+        <p class="hospital-visit-guide__note type-caption-medium">
+          * 이 결과는 통계적 연관/경향을 기반으로 하며, 특정 질병의 원인을 단정하지 않습니다.
+        </p>
+      </section>
+      <footer class="report-footer" aria-label="현재 페이지">
+        <div class="report-footer__content">
+          <div class="report-footer__text-wrapper">
+            <span class="report-footer__page-title type-label-xxsmall-strong">05 부록</span
+            ><span class="report-footer__page-divider" aria-hidden="true"></span
+            ><span class="report-footer__page-description type-label-xxsmall"
+              >병원 방문 가이드</span
+            >
+          </div>
+          <strong class="report-footer__page-number type-label-small-strong">25p</strong>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
