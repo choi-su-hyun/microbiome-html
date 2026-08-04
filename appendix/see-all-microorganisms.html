@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>우리아이 미생물 전체보기 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <link rel="stylesheet" href="../common/styles/reset.css" />
+    <link rel="stylesheet" href="../common/styles/common.css" />
+    <link rel="stylesheet" href="../common/styles/print.css" />
+    <link rel="stylesheet" href="../common/styles/colors.css" />
+    <link rel="stylesheet" href="../common/styles/typography.css" />
+    <link rel="stylesheet" href="../common/styles/report-page.css" />
+    <link rel="stylesheet" href="styles/see-all-microorganisms.css" />
+  </head>
+  <body>
+    <main class="see-all-microorganisms" aria-labelledby="microorganisms-title">
+      <header class="report-header">
+        <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
+        <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
+          <div>
+            <dt>등록번호</dt>
+            <dd class="type-label-xsmall">0008127</dd>
+          </div>
+          <div>
+            <dt>이름</dt>
+            <dd class="type-label-xsmall">홍길동</dd>
+          </div>
+          <div>
+            <dt>나이</dt>
+            <dd class="type-label-xsmall">만 0세 (N개월)</dd>
+          </div>
+          <div>
+            <dt>성별</dt>
+            <dd class="type-label-xsmall">여아</dd>
+          </div>
+        </dl>
+      </header>
+      <section class="report-page__content see-all-microorganisms__content">
+        <header class="report-page__title-area">
+          <h1 id="microorganisms-title" class="type-heading-primary-large-strong">
+            우리아이 미생물 전체보기
+          </h1>
+          <p class="type-body-medium">
+            이번 검사를 통해 우리 아이에게서 발견한 모든 균종을 정리했습니다.
+          </p>
+        </header>
+        <section class="microorganisms-card" aria-label="검출 미생물 목록">
+          <div class="microorganisms-legend type-label-medium-strong">
+            <span class="is-beneficial">유익균</span><span class="is-neutral">지표균</span
+            ><span class="is-harmful">지표균</span>
+          </div>
+          <div class="microorganisms-columns" aria-label="임시 미생물 목록">
+            <ul class="microorganisms-list type-body-medium-strong">
+              <li class="is-beneficial"><span>Escherichia coli</span><span>0.564%</span></li>
+              <li class="is-harmful"><span>Klebsiella pneumoniae</span><span>0.564%</span></li>
+            </ul>
+            <ul class="microorganisms-list type-body-medium-strong">
+              <li class="is-neutral"><span>Ruminococcus_A faecicola</span><span>0.564%</span></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <footer class="report-footer" aria-label="현재 페이지">
+        <div class="report-footer__content">
+          <div class="report-footer__text-wrapper">
+            <span class="report-footer__page-title type-label-xxsmall-strong">05 부록</span
+            ><span class="report-footer__page-divider"></span
+            ><span class="report-footer__page-description type-label-xxsmall"
+              >우리아이 미생물 전체보기</span
+            >
+          </div>
+          <strong class="report-footer__page-number type-label-small-strong">27p</strong>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+.see-all-microorganisms {
+  position: relative;
+  width: var(--page-a4-preview-width);
+  height: var(--page-a4-preview-height);
+  overflow: hidden;
+  background: var(--color-surface-base-mono);
+}
+.see-all-microorganisms .report-header {
+  background: var(--color-mono-400);
+}
+.see-all-microorganisms__content {
+  padding: 20px 24px 0;
+}
+.microorganisms-card {
+  min-height: 637px;
+  padding: 16px;
+  margin-top: 24px;
+  background: var(--color-surface-on);
+  border-radius: 10px;
+}
+.microorganisms-legend {
+  display: flex;
+  gap: 4px;
+}
+.microorganisms-legend span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 18px;
+}
+.microorganisms-legend span::before,
+.microorganisms-list li::before {
+  width: 8px;
+  height: 8px;
+  content: '';
+  background: currentColor;
+  border-radius: 50%;
+}
+.microorganisms-list li::before {
+  width: 6px;
+  height: 6px;
+}
+
+.microorganisms-legend .is-beneficial {
+  color: var(--color-status-positive);
+  background: var(--color-blue-green-200);
+}
+.microorganisms-legend .is-neutral {
+  color: var(--color-text-tertiary);
+  background: var(--color-surface-subtle-mono);
+}
+.microorganisms-legend .is-harmful {
+  color: var(--color-data-bad-dark);
+  background: var(--color-data-bad-light);
+}
+.microorganisms-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 16px;
+}
+.microorganisms-list {
+  list-style: none;
+}
+.microorganisms-list li {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.microorganisms-list li:last-child {
+  border-bottom: 0;
+}
+.microorganisms-list li > span:first-of-type {
+  flex: 1;
+  color: var(--color-text-secondary);
+}
+.microorganisms-list li > span:last-child {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-regular);
+}
+.microorganisms-list .is-beneficial::before {
+  color: var(--color-status-positive);
+}
+.microorganisms-list .is-neutral::before {
+  color: var(--color-mono-400);
+}
+.microorganisms-list .is-harmful::before {
+  color: var(--color-data-bad-dark);
+}
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+  .see-all-microorganisms {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
+}
