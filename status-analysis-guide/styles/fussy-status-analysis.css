@@ -46,9 +46,45 @@
 }
 
 .fussy-status-analysis__chart-placeholder {
-  height: 219px;
+  height: 174px;
   margin-top: 12px;
-  margin-bottom: 20px;
+}
+
+.fussy-status-analysis__legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 12px 16px;
+  margin: 12px 0 20px;
+  list-style: none;
+  color: var(--color-text-primary);
+  background: var(--color-surface-base-mono);
+  border-radius: 4px;
+}
+
+.fussy-status-analysis__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fussy-status-analysis__legend-swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.fussy-status-analysis__legend-item.is-fussy .fussy-status-analysis__legend-swatch {
+  background: var(--color-status-negative);
+}
+
+.fussy-status-analysis__legend-item.is-defense .fussy-status-analysis__legend-swatch {
+  background: var(--color-status-positive);
+}
+
+.fussy-status-analysis__legend-item.is-peer .fussy-status-analysis__legend-swatch {
+  background: var(--color-data-baseline-dark);
 }
 
 .fussy-status-analysis__clues {

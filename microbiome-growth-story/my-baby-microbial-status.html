@@ -59,140 +59,227 @@
             </p>
           </section>
 
-        <section class="microbial-status-dashboard" aria-labelledby="composition-title">
-          <div class="microbial-status-composition" aria-label="장내 미생물 구성 비율">
-            <div class="microbial-status-composition__info">
-              <header>
-                <h2 id="composition-title" class="type-heading-secondary-small-strong">
-                  우리아이 장내 미생물 구성 비율
-                </h2>
-                <p class="type-body-medium">
-                  우리 아이 장내 생태계가 월령에 맞게 잘 자라고 있는지 확인하는 지표입니다.
-                </p>
-              </header>
-              <dl class="microbial-status-composition__summary">
-                <div>
-                  <dt class="type-label-small">
-                    <i
-                      class="microbial-status-composition__marker microbial-status-composition__marker--beneficial"
-                    ></i
-                    >유익균
-                  </dt>
-                  <dd class="type-label-xxlarge-strong">
-                    45<span class="type-label-large">%</span>
-                  </dd>
-                </div>
-                <div>
-                  <dt class="type-label-small">
-                    <i
-                      class="microbial-status-composition__marker microbial-status-composition__marker--harmful"
-                    ></i
-                    >유해균
-                  </dt>
-                  <dd class="type-label-xxlarge-strong">
-                    13<span class="type-label-large">%</span>
-                  </dd>
-                </div>
-                <div>
-                  <dt class="type-label-small">
-                    <i
-                      class="microbial-status-composition__marker microbial-status-composition__marker--other"
-                    ></i
-                    >기타 균
-                  </dt>
-                  <dd class="type-label-xxlarge-strong">
-                    42<span class="type-label-large">%</span>
-                  </dd>
-                </div>
-              </dl>
+          <section class="microbial-status-dashboard" aria-labelledby="composition-title">
+            <div class="microbial-status-composition" aria-label="장내 미생물 구성 비율">
+              <div class="microbial-status-composition__info">
+                <header>
+                  <h2 id="composition-title" class="type-heading-secondary-small-strong">
+                    우리아이 장내 미생물 구성 비율
+                  </h2>
+                  <p class="type-body-medium">
+                    우리 아이 장내 생태계가 월령에 맞게 잘 자라고 있는지 확인하는 지표입니다.
+                  </p>
+                </header>
+                <dl class="microbial-status-composition__summary">
+                  <div>
+                    <dt class="type-label-small">
+                      <i
+                        class="microbial-status-composition__marker microbial-status-composition__marker--beneficial"
+                      ></i
+                      >유익균
+                    </dt>
+                    <dd class="type-label-xxlarge-strong">
+                      45<span class="type-label-large">%</span>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="type-label-small">
+                      <i
+                        class="microbial-status-composition__marker microbial-status-composition__marker--harmful"
+                      ></i
+                      >유해균
+                    </dt>
+                    <dd class="type-label-xxlarge-strong">
+                      13<span class="type-label-large">%</span>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="type-label-small">
+                      <i
+                        class="microbial-status-composition__marker microbial-status-composition__marker--other"
+                      ></i
+                      >기타 균
+                    </dt>
+                    <dd class="type-label-xxlarge-strong">
+                      42<span class="type-label-large">%</span>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div
+                class="microbial-status-composition__chart-placeholder"
+                role="img"
+                aria-label="장내 미생물 구성 비율 반원 차트가 들어갈 빈 영역"
+              ></div>
             </div>
-            <div
-              class="microbial-status-composition__chart-placeholder"
-              role="img"
-              aria-label="장내 미생물 구성 비율 반원 차트가 들어갈 빈 영역"
-            ></div>
-          </div>
-          <div class="microbial-status-metrics">
-            <article>
-              <header>
-                <span class="microbial-status-metric__title"
-                  ><img src="../common/svgs/microorganism-balance.svg" alt="" />
-                  <h3 class="type-heading-secondary-small-strong">미생물 균형도</h3></span
-                ><strong class="microbial-status-score"
-                  ><span class="microbial-status-score__value"
-                    ><span class="type-label-xxlarge-strong">66</span
-                    ><span class="type-label-large">점</span></span
-                  ><em class="type-label-small-strong">보통</em></strong
-                >
-              </header>
-              <div
-                class="microbial-status-chart-placeholder"
-                role="img"
-                aria-label="미생물 균형도 차트가 들어갈 빈 영역"
-              ></div>
-            </article>
-            <article>
-              <header>
-                <span class="microbial-status-metric__title"
-                  ><img src="../common/svgs/harmful-bacteria.svg" alt="" />
-                  <h3 class="type-heading-secondary-small-strong">유해균 분포도</h3></span
-                ><strong class="microbial-status-score"
-                  ><span class="microbial-status-score__value"
-                    ><span class="type-label-xxlarge-strong">88</span
-                    ><span class="type-label-large">점</span></span
-                  ><em class="type-label-small-strong">양호</em></strong
-                >
-              </header>
-              <div
-                class="microbial-status-chart-placeholder"
-                role="img"
-                aria-label="유해균 분포도 차트가 들어갈 빈 영역"
-              ></div>
-            </article>
-            <article>
-              <header>
-                <span class="microbial-status-metric__title"
-                  ><img src="../common/svgs/microbial-maturity.svg" alt="" />
-                  <h3 class="type-heading-secondary-small-strong">미생물 성숙도</h3></span
-                ><strong class="microbial-status-score"
-                  ><span class="microbial-status-score__value"
-                    ><span class="type-label-xxlarge-strong">18</span
-                    ><span class="type-label-large">점</span></span
-                  ><em class="type-label-small-strong">주의</em></strong
-                >
-              </header>
-              <div
-                class="microbial-status-chart-placeholder"
-                role="img"
-                aria-label="미생물 성숙도 차트가 들어갈 빈 영역"
-              ></div>
-            </article>
-            <article>
-              <header>
-                <span class="microbial-status-metric__title"
-                  ><img src="../common/svgs/growth.svg" alt="" />
-                  <h3 class="type-heading-secondary-small-strong">미생물 풍부도</h3></span
-                ><strong class="microbial-status-score"
-                  ><span class="microbial-status-score__value"
-                    ><span class="type-label-xxlarge-strong">72</span
-                    ><span class="type-label-large">점</span></span
-                  ><em class="type-label-small-strong">양호</em></strong
-                >
-              </header>
-              <div
-                class="microbial-status-chart-placeholder"
-                role="img"
-                aria-label="미생물 풍부도 차트가 들어갈 빈 영역"
-              ></div>
-            </article>
-          </div>
-        </section>
-        <p class="microbial-status-note type-caption-medium">
-          * 이 결과는 통계적 연령/경험을 기반으로 하며, 특정 질병의 원인을 단정하지 않습니다.
-        </p>
+            <div class="microbial-status-metrics">
+              <article>
+                <header>
+                  <span class="microbial-status-metric__title"
+                    ><img src="../common/svgs/microorganism-balance.svg" alt="" />
+                    <h3 class="type-heading-secondary-small-strong">미생물 균형도</h3></span
+                  ><strong class="microbial-status-score"
+                    ><span class="microbial-status-score__value"
+                      ><span class="type-label-xxlarge-strong">66</span
+                      ><span class="type-label-large">점</span></span
+                    ><em class="type-label-small-strong">보통</em></strong
+                  >
+                </header>
+                <div>
+                  <div
+                    class="microbial-status-chart-placeholder"
+                    role="img"
+                    aria-label="미생물 균형도 차트가 들어갈 빈 영역"
+                  ></div>
+                  <ul
+                    class="microbial-status-metric-legend type-label-xxsmall"
+                    aria-label="차트 범례"
+                  >
+                    <li class="microbial-status-metric-legend__item is-peer">
+                      <span
+                        class="microbial-status-metric-legend__swatch"
+                        aria-hidden="true"
+                      ></span>
+                      또래 기준 범위
+                    </li>
+                    <li class="microbial-status-metric-legend__item is-child">
+                      <span
+                        class="microbial-status-metric-legend__swatch"
+                        aria-hidden="true"
+                      ></span>
+                      우리 아이
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article>
+                <header>
+                  <span class="microbial-status-metric__title"
+                    ><img src="../common/svgs/harmful-bacteria.svg" alt="" />
+                    <h3 class="type-heading-secondary-small-strong">유해균 분포도</h3></span
+                  ><strong class="microbial-status-score"
+                    ><span class="microbial-status-score__value"
+                      ><span class="type-label-xxlarge-strong">88</span
+                      ><span class="type-label-large">점</span></span
+                    ><em class="type-label-small-strong">양호</em></strong
+                  >
+                </header>
+                <div>
+                  <div
+                    class="microbial-status-chart-placeholder"
+                    role="img"
+                    aria-label="유해균 분포도 차트가 들어갈 빈 영역"
+                  ></div>
+                  <ul
+                    class="microbial-status-metric-legend type-label-xxsmall"
+                    aria-label="차트 범례"
+                  >
+                    <li class="microbial-status-metric-legend__item is-peer">
+                      <span
+                        class="microbial-status-metric-legend__swatch"
+                        aria-hidden="true"
+                      ></span>
+                      또래 기준 범위
+                    </li>
+                    <li class="microbial-status-metric-legend__item is-child">
+                      <span
+                        class="microbial-status-metric-legend__swatch"
+                        aria-hidden="true"
+                      ></span>
+                      우리 아이
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article>
+                <header>
+                  <span class="microbial-status-metric__title"
+                    ><img src="../common/svgs/microbial-maturity.svg" alt="" />
+                    <h3 class="type-heading-secondary-small-strong">미생물 성숙도</h3></span
+                  ><strong class="microbial-status-score"
+                    ><span class="microbial-status-score__value"
+                      ><span class="type-label-xxlarge-strong">18</span
+                      ><span class="type-label-large">점</span></span
+                    ><em class="type-label-small-strong">주의</em></strong
+                  >
+                </header>
+                <div>
+                  <div
+                    class="microbial-status-chart-placeholder"
+                    role="img"
+                    aria-label="미생물 성숙도 차트가 들어갈 빈 영역"
+                  ></div>
+                  <ul
+                    class="microbial-status-metric-legend type-label-xxsmall"
+                    aria-label="차트 범례"
+                  >
+                    <li class="microbial-status-metric-legend__item is-peer">
+                      <span
+                        class="microbial-status-metric-legend__swatch"
+                        aria-hidden="true"
+                      ></span>
+                      또래 기준 범위
+                    </li>
+                    <li class="microbial-status-metric-legend__item is-child">
+                      <span
+                        class="microbial-status-metric-legend__swatch"
+                        aria-hidden="true"
+                      ></span>
+                      우리 아이
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article>
+                <header>
+                  <span class="microbial-status-metric__title"
+                    ><img src="../common/svgs/growth.svg" alt="" />
+                    <h3 class="type-heading-secondary-small-strong">미생물 풍부도</h3></span
+                  ><strong class="microbial-status-score"
+                    ><span class="microbial-status-score__value"
+                      ><span class="type-label-xxlarge-strong">72</span
+                      ><span class="type-label-large">점</span></span
+                    ><em class="type-label-small-strong">양호</em></strong
+                  >
+                </header>
+                <div>
+                  <div
+                    class="microbial-status-chart-placeholder"
+                    role="img"
+                    aria-label="미생물 풍부도 차트가 들어갈 빈 영역"
+                  ></div>
+                  <ul
+                    class="microbial-status-metric-legend type-label-xxsmall"
+                    aria-label="차트 범례"
+                  >
+                    <li class="microbial-status-metric-legend__item is-peer">
+                      <span
+                        class="microbial-status-metric-legend__swatch"
+                        aria-hidden="true"
+                      ></span>
+                      또래 기준 범위
+                    </li>
+                    <li class="microbial-status-metric-legend__item is-child">
+                      <span
+                        class="microbial-status-metric-legend__swatch"
+                        aria-hidden="true"
+                      ></span>
+                      우리 아이
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
+          <p class="microbial-status-note type-caption-medium">
+            * 이 결과는 통계적 연령/경험을 기반으로 하며, 특정 질병의 원인을 단정하지 않습니다.
+          </p>
         </div>
 
-        <section class="microbial-status-guide microbial-status-guide-region" aria-labelledby="status-guide-title">
+        <section
+          class="microbial-status-guide microbial-status-guide-region"
+          aria-labelledby="status-guide-title"
+        >
           <h2 id="status-guide-title" class="type-heading-secondary-small-strong">
             <img src="../common/svgs/check-fill-orange.svg" alt="" />그래프 속 지표 알아보기
           </h2>

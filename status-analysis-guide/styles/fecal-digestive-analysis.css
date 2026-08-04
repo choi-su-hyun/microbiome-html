@@ -19,7 +19,9 @@
   border-radius: 8px;
 }
 
-.fecal-digestive-analysis__title-area > div { min-width: 0; }
+.fecal-digestive-analysis__title-area > div {
+  min-width: 0;
+}
 
 .fecal-digestive-analysis__card {
   padding: 20px 24px;
@@ -29,13 +31,66 @@
   box-shadow: 0 5px 12px color-mix(in srgb, var(--color-mono-900) 6%, transparent);
 }
 
-.fecal-digestive-analysis__card > header { display: flex; align-items: baseline; gap: 4px; }
-.fecal-digestive-analysis__card h2 { color: var(--color-text-primary); }
-.fecal-digestive-analysis__card > header p { color: var(--color-text-tertiary); }
+.fecal-digestive-analysis__card > header {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.fecal-digestive-analysis__card h2 {
+  color: var(--color-text-primary);
+}
+.fecal-digestive-analysis__card > header p {
+  color: var(--color-text-tertiary);
+}
 
-.fecal-digestive-analysis__chart-placeholder { height: 219px; margin-top: 12px; margin-bottom: 20px; }
+.fecal-digestive-analysis__chart-placeholder {
+  height: 174px;
+  margin-top: 12px;
+}
 
-.fecal-digestive-analysis__clues { display: flex; flex-direction: column; gap: 4px; list-style: none; }
+.fecal-digestive-analysis__legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 12px 16px;
+  margin: 12px 0 20px;
+  list-style: none;
+  color: var(--color-text-primary);
+  background: var(--color-surface-base-mono);
+  border-radius: 4px;
+}
+
+.fecal-digestive-analysis__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fecal-digestive-analysis__legend-swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.fecal-digestive-analysis__legend-item.is-hindering .fecal-digestive-analysis__legend-swatch {
+  background: var(--color-status-negative);
+}
+
+.fecal-digestive-analysis__legend-item.is-defense .fecal-digestive-analysis__legend-swatch {
+  background: var(--color-status-positive);
+}
+
+.fecal-digestive-analysis__legend-item.is-peer .fecal-digestive-analysis__legend-swatch {
+  background: var(--color-data-baseline-dark);
+}
+
+.fecal-digestive-analysis__clues {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+}
 
 .fecal-digestive-analysis__clues li {
   display: grid;
@@ -59,7 +114,9 @@
   white-space: nowrap;
 }
 
-.fecal-digestive-analysis__clues h3 { color: var(--color-text-primary); }
+.fecal-digestive-analysis__clues h3 {
+  color: var(--color-text-primary);
+}
 
 .fecal-digestive-analysis__clues h3 span {
   display: inline-flex;
@@ -70,7 +127,10 @@
   border-radius: 4px;
 }
 
-.fecal-digestive-analysis__clues p { margin-top: 4px; color: var(--color-text-secondary); }
+.fecal-digestive-analysis__clues p {
+  margin-top: 4px;
+  color: var(--color-text-secondary);
+}
 
 .fecal-digestive-analysis__together {
   display: flex;
@@ -83,9 +143,19 @@
   border-radius: 12px;
 }
 
-.fecal-digestive-analysis__together h2 { color: inherit; }
-.fecal-digestive-analysis__together dl { display: flex; flex-direction: column; gap: 4px; }
-.fecal-digestive-analysis__together-item { display: flex; align-items: center; gap: 8px; }
+.fecal-digestive-analysis__together h2 {
+  color: inherit;
+}
+.fecal-digestive-analysis__together dl {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fecal-digestive-analysis__together-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
 .fecal-digestive-analysis__together-item .divider {
   width: 1px;
@@ -94,7 +164,11 @@
   opacity: 0.5;
 }
 
-.fecal-digestive-analysis__together dt { display: flex; align-items: center; gap: 4px; }
+.fecal-digestive-analysis__together dt {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
 .fecal-digestive-analysis__together dt img {
   width: 12px;
@@ -102,10 +176,24 @@
   filter: brightness(0) invert(1);
 }
 
-.fecal-digestive-analysis__together dd { margin: 0; }
+.fecal-digestive-analysis__together dd {
+  margin: 0;
+}
 
 @media print {
-  html, body { width: 100%; height: 100%; }
-  body { display: block; min-height: 0; background: transparent; }
-  .fecal-digestive-analysis { width: var(--page-a4-width); height: var(--page-a4-height); break-after: page; }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+  .fecal-digestive-analysis {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
 }

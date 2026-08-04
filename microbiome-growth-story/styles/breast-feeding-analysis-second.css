@@ -100,9 +100,45 @@
 }
 
 .breast-feeding-comparison__chart-placeholder {
-  height: 252px;
+  height: 207px;
   margin-top: 12px;
-  margin-bottom: 32px;
+}
+
+.breast-feeding-chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 16px;
+  margin: 12px 0 32px;
+  list-style: none;
+  color: var(--color-text-primary);
+  background: var(--color-surface-base-mono);
+  border-radius: 4px;
+}
+
+.breast-feeding-chart-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.breast-feeding-chart-legend__swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.breast-feeding-chart-legend__item.is-child-beneficial .breast-feeding-chart-legend__swatch {
+  background: var(--color-status-positive);
+}
+
+.breast-feeding-chart-legend__item.is-child-harmful .breast-feeding-chart-legend__swatch {
+  background: var(--color-status-negative);
+}
+
+.breast-feeding-chart-legend__item.is-peer .breast-feeding-chart-legend__swatch {
+  background: var(--color-data-baseline-medium);
 }
 
 .breast-feeding-tips > h2 {

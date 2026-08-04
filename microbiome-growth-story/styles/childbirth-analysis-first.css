@@ -93,8 +93,40 @@
 
 .childbirth-chart-placeholder {
   margin-top: 20px;
-  margin-bottom: 32px;
-  height: 250px;
+  height: 228px;
+}
+
+.childbirth-chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 16px;
+  margin: 8px 0 32px;
+  list-style: none;
+  color: var(--color-text-primary);
+  background: var(--color-surface-base-mono);
+  border-radius: 4px;
+}
+
+.childbirth-chart-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.childbirth-chart-legend__swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.childbirth-chart-legend__item.is-child .childbirth-chart-legend__swatch {
+  background: var(--color-category-child-birth-dark);
+}
+
+.childbirth-chart-legend__item.is-peer .childbirth-chart-legend__swatch {
+  background: var(--color-data-baseline-dark);
 }
 
 .indicator-guide > h2 {
@@ -134,8 +166,7 @@
 }
 
 .indicator-guide__cards p {
-  min-height: 62px;
-  margin-top: 6px;
+  margin-top: 2px;
   color: var(--color-text-secondary);
 }
 

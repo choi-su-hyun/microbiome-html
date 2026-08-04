@@ -101,8 +101,48 @@
 
 .childbirth-comparison__chart-placeholder {
   margin-top: 12px;
-  margin-bottom: 32px;
-  height: 252px;
+  height: 207px;
+}
+
+.childbirth-chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 16px;
+  margin: 12px 0 32px;
+  list-style: none;
+  color: var(--color-text-primary);
+  background: var(--color-surface-base-mono);
+  border-radius: 4px;
+}
+
+.childbirth-chart-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.childbirth-chart-legend__swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.childbirth-chart-legend__item.is-child-beneficial .childbirth-chart-legend__swatch {
+  background: var(--color-status-positive);
+}
+
+.childbirth-chart-legend__item.is-child-harmful .childbirth-chart-legend__swatch {
+  background: var(--color-status-negative);
+}
+
+.childbirth-chart-legend__item.is-peer-cesarean .childbirth-chart-legend__swatch {
+  background: var(--color-category-child-birth-special);
+}
+
+.childbirth-chart-legend__item.is-peer-vaginal .childbirth-chart-legend__swatch {
+  background: var(--color-category-child-birth-dark);
 }
 
 .childbirth-tips > h2 {

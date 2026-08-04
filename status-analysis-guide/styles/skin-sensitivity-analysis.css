@@ -6,7 +6,11 @@
   background: var(--color-category-skin-light);
 }
 
-.skin-sensitivity-analysis__title-area { display: flex; align-items: center; gap: 12px; }
+.skin-sensitivity-analysis__title-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .skin-sensitivity-analysis__title-icon {
   position: relative;
@@ -19,13 +23,16 @@
 .skin-sensitivity-analysis__title-icon::after {
   position: absolute;
   inset: 8px;
-  content: "";
+  content: '';
   background: var(--color-category-skin-dark);
-  -webkit-mask: url("../../common/svgs/skin-trouble-defense-bacteria.svg") center / contain no-repeat;
-  mask: url("../../common/svgs/skin-trouble-defense-bacteria.svg") center / contain no-repeat;
+  -webkit-mask: url('../../common/svgs/skin-trouble-defense-bacteria.svg') center / contain
+    no-repeat;
+  mask: url('../../common/svgs/skin-trouble-defense-bacteria.svg') center / contain no-repeat;
 }
 
-.skin-sensitivity-analysis__title-area > div { min-width: 0; }
+.skin-sensitivity-analysis__title-area > div {
+  min-width: 0;
+}
 
 .skin-sensitivity-analysis__card {
   padding: 20px 24px;
@@ -35,11 +42,65 @@
   box-shadow: 0 5px 12px color-mix(in srgb, var(--color-mono-900) 6%, transparent);
 }
 
-.skin-sensitivity-analysis__card > header { display: flex; align-items: baseline; gap: 4px; }
-.skin-sensitivity-analysis__card h2 { color: var(--color-text-primary); }
-.skin-sensitivity-analysis__card > header p { color: var(--color-text-tertiary); }
-.skin-sensitivity-analysis__chart-placeholder { height: 219px; margin-top: 12px; margin-bottom: 20px; }
-.skin-sensitivity-analysis__clues { display: flex; flex-direction: column; gap: 4px; list-style: none; }
+.skin-sensitivity-analysis__card > header {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.skin-sensitivity-analysis__card h2 {
+  color: var(--color-text-primary);
+}
+.skin-sensitivity-analysis__card > header p {
+  color: var(--color-text-tertiary);
+}
+.skin-sensitivity-analysis__chart-placeholder {
+  height: 174px;
+  margin-top: 12px;
+}
+
+.skin-sensitivity-analysis__legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 12px 16px;
+  margin: 12px 0 20px;
+  list-style: none;
+  color: var(--color-text-primary);
+  background: var(--color-surface-base-mono);
+  border-radius: 4px;
+}
+
+.skin-sensitivity-analysis__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.skin-sensitivity-analysis__legend-swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.skin-sensitivity-analysis__legend-item.is-trouble .skin-sensitivity-analysis__legend-swatch {
+  background: var(--color-status-negative);
+}
+
+.skin-sensitivity-analysis__legend-item.is-defense .skin-sensitivity-analysis__legend-swatch {
+  background: var(--color-status-positive);
+}
+
+.skin-sensitivity-analysis__legend-item.is-peer .skin-sensitivity-analysis__legend-swatch {
+  background: var(--color-data-baseline-dark);
+}
+
+.skin-sensitivity-analysis__clues {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+}
 
 .skin-sensitivity-analysis__clues li {
   display: grid;
@@ -63,7 +124,9 @@
   white-space: nowrap;
 }
 
-.skin-sensitivity-analysis__clues h3 { color: var(--color-text-primary); }
+.skin-sensitivity-analysis__clues h3 {
+  color: var(--color-text-primary);
+}
 
 .skin-sensitivity-analysis__clues h3 span {
   display: inline-flex;
@@ -74,7 +137,10 @@
   border-radius: 4px;
 }
 
-.skin-sensitivity-analysis__clues p { margin-top: 4px; color: var(--color-text-secondary); }
+.skin-sensitivity-analysis__clues p {
+  margin-top: 4px;
+  color: var(--color-text-secondary);
+}
 
 .skin-sensitivity-analysis__together {
   display: flex;
@@ -87,9 +153,19 @@
   border-radius: 12px;
 }
 
-.skin-sensitivity-analysis__together h2 { color: inherit; }
-.skin-sensitivity-analysis__together dl { display: flex; flex-direction: column; gap: 4px; }
-.skin-sensitivity-analysis__together-item { display: flex; align-items: center; gap: 8px; }
+.skin-sensitivity-analysis__together h2 {
+  color: inherit;
+}
+.skin-sensitivity-analysis__together dl {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.skin-sensitivity-analysis__together-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
 .skin-sensitivity-analysis__together-item .divider {
   width: 1px;
@@ -98,12 +174,34 @@
   opacity: 0.5;
 }
 
-.skin-sensitivity-analysis__together dt { display: flex; align-items: center; gap: 4px; }
-.skin-sensitivity-analysis__together dt img { width: 12px; height: 12px; filter: brightness(0) invert(1); }
-.skin-sensitivity-analysis__together dd { margin: 0; }
+.skin-sensitivity-analysis__together dt {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.skin-sensitivity-analysis__together dt img {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0) invert(1);
+}
+.skin-sensitivity-analysis__together dd {
+  margin: 0;
+}
 
 @media print {
-  html, body { width: 100%; height: 100%; }
-  body { display: block; min-height: 0; background: transparent; }
-  .skin-sensitivity-analysis { width: var(--page-a4-width); height: var(--page-a4-height); break-after: page; }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: block;
+    min-height: 0;
+    background: transparent;
+  }
+  .skin-sensitivity-analysis {
+    width: var(--page-a4-width);
+    height: var(--page-a4-height);
+    break-after: page;
+  }
 }
