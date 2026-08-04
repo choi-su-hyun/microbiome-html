@@ -12,6 +12,11 @@
 }
 
 .gut-score {
+  --gut-score-bg: var(--color-data-best-light);
+  --gut-score-border: var(--color-data-best-dark);
+  --gut-score-accent: var(--color-status-positive);
+  --gut-score-badge-bg: var(--color-data-best-medium);
+
   display: grid;
   grid-template-columns: 118px minmax(0, 1fr);
   align-items: center;
@@ -19,15 +24,40 @@
   min-height: 130px;
   padding: 16px 24px;
   margin-top: 24px;
-  background: var(--color-surface-status-positive);
-  border: 1px solid var(--color-border-status-positive);
+  background: var(--gut-score-bg);
+  border: 1px solid var(--gut-score-border);
   border-radius: 12px;
 }
 
-/* Reserved for the pie chart asset. It intentionally has no visible treatment. */
+/* 매우좋음 80~95 */
+.gut-score--best {
+  --gut-score-bg: var(--color-data-best-light);
+  --gut-score-border: var(--color-data-best-dark);
+  --gut-score-accent: var(--color-status-positive);
+  --gut-score-badge-bg: var(--color-data-best-medium);
+}
+
+/* 좋음 70~79 */
+.gut-score--good {
+  --gut-score-bg: var(--color-data-good-light);
+  --gut-score-border: var(--color-data-good-dark);
+  --gut-score-accent: var(--color-data-good-dark);
+  --gut-score-badge-bg: var(--color-data-good-medium);
+}
+
+/* 보통 50~69 */
+.gut-score--normal {
+  --gut-score-bg: var(--color-data-normal-light);
+  --gut-score-border: var(--color-data-normal-dark);
+  --gut-score-accent: var(--color-data-normal-dark);
+  --gut-score-badge-bg: var(--color-data-normal-medium);
+}
+
+/* Reserved for the pie chart asset. Use --gut-score-accent for the ring. */
 .gut-score__chart-space {
   width: 96px;
   height: 96px;
+  color: var(--gut-score-accent);
 }
 
 .gut-score__rank {
@@ -35,8 +65,8 @@
   align-items: center;
   justify-content: center;
   padding: 6px 12px;
-  color: var(--color-text-status-positive);
-  background: var(--color-data-best-medium);
+  color: var(--gut-score-accent);
+  background: var(--gut-score-badge-bg);
   border-radius: 12px;
 }
 
@@ -51,7 +81,7 @@
 }
 
 .gut-score p em {
-  color: var(--color-text-status-positive);
+  color: var(--gut-score-accent);
   font-style: normal;
 }
 
