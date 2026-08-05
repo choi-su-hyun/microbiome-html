@@ -13,21 +13,47 @@
 }
 
 .microbial-status-summary {
+  --summary-bg: var(--color-surface-status-negative);
+  --summary-border: var(--color-border-status-negative);
+  --summary-accent: var(--color-text-status-negative);
+
   display: grid;
   grid-template-columns: 124px minmax(0, 1fr);
   gap: 24px;
   align-items: center;
   padding: 16px 24px;
   margin-top: 24px;
-  background: var(--color-surface-status-negative);
-  border: 1px solid var(--color-border-status-negative);
+  background: var(--summary-bg);
+  border: 1px solid var(--summary-border);
   border-radius: 8px;
 }
+
+/* 집중관찰단계 */
+.microbial-status-summary--intensive {
+  --summary-bg: var(--color-surface-status-negative);
+  --summary-border: var(--color-border-status-negative);
+  --summary-accent: var(--color-text-status-negative);
+}
+
+/* 생활관리단계 */
+.microbial-status-summary--lifestyle {
+  --summary-bg: var(--color-data-normal-light);
+  --summary-border: var(--color-data-normal-dark);
+  --summary-accent: var(--color-data-normal-dark);
+}
+
+/* 균형성숙단계 */
+.microbial-status-summary--balanced {
+  --summary-bg: var(--color-surface-status-positive);
+  --summary-border: var(--color-border-status-positive);
+  --summary-accent: var(--color-text-status-positive);
+}
+
 .microbial-status-summary h2 {
   color: var(--color-text-title);
 }
 .microbial-status-summary h2 strong {
-  color: var(--color-text-status-negative);
+  color: var(--summary-accent);
 }
 .microbial-status-summary p {
   color: var(--color-text-secondary);
@@ -156,18 +182,23 @@
   font-style: normal;
   border-radius: 5px;
 }
-.microbial-status-metrics article:nth-child(1) em {
+
+/* 주의 0~19 */
+.microbial-status-tag--bad {
+  color: var(--color-data-bad-dark);
+  background: var(--color-data-bad-medium);
+}
+
+/* 보통 20~69 */
+.microbial-status-tag--normal {
   color: var(--color-data-normal-dark);
-  background: var(--color-data-normal-light);
+  background: var(--color-data-normal-medium);
 }
-.microbial-status-metrics article:nth-child(2) em,
-.microbial-status-metrics article:nth-child(4) em {
-  color: var(--color-text-status-positive);
-  background: var(--color-surface-status-positive);
-}
-.microbial-status-metrics article:nth-child(3) em {
-  color: var(--color-text-status-negative);
-  background: var(--color-surface-status-negative);
+
+/* 양호 70~100 */
+.microbial-status-tag--best {
+  color: var(--color-data-best-dark);
+  background: var(--color-data-best-medium);
 }
 .microbial-status-chart-placeholder {
   height: 44px;

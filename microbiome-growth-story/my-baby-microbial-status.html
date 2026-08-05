@@ -48,7 +48,10 @@
             </p>
           </header>
 
-          <section class="microbial-status-summary" aria-labelledby="status-summary-title">
+          <section
+            class="microbial-status-summary microbial-status-summary--intensive"
+            aria-labelledby="status-summary-title"
+          >
             <h2 id="status-summary-title" class="type-heading-secondary-small-strong">
               현재 {홍길동} 아기는<br /><strong>{단계형}</strong>이에요.
             </h2>
@@ -122,7 +125,9 @@
                     ><span class="microbial-status-score__value"
                       ><span class="type-label-xxlarge-strong">66</span
                       ><span class="type-label-large">점</span></span
-                    ><em class="type-label-small-strong">보통</em></strong
+                    ><em class="type-label-small-strong microbial-status-tag--normal"
+                      >보통</em
+                    ></strong
                   >
                 </header>
                 <div>
@@ -161,7 +166,9 @@
                     ><span class="microbial-status-score__value"
                       ><span class="type-label-xxlarge-strong">88</span
                       ><span class="type-label-large">점</span></span
-                    ><em class="type-label-small-strong">양호</em></strong
+                    ><em class="type-label-small-strong microbial-status-tag--best"
+                      >양호</em
+                    ></strong
                   >
                 </header>
                 <div>
@@ -200,7 +207,7 @@
                     ><span class="microbial-status-score__value"
                       ><span class="type-label-xxlarge-strong">18</span
                       ><span class="type-label-large">점</span></span
-                    ><em class="type-label-small-strong">주의</em></strong
+                    ><em class="type-label-small-strong microbial-status-tag--bad">주의</em></strong
                   >
                 </header>
                 <div>
@@ -233,13 +240,15 @@
               <article>
                 <header>
                   <span class="microbial-status-metric__title"
-                    ><img src="../common/svgs/growth.svg" alt="" />
+                    ><img src="../common/svgs/chemical-formula.svg" alt="" />
                     <h3 class="type-heading-secondary-small-strong">미생물 풍부도</h3></span
                   ><strong class="microbial-status-score"
                     ><span class="microbial-status-score__value"
                       ><span class="type-label-xxlarge-strong">72</span
                       ><span class="type-label-large">점</span></span
-                    ><em class="type-label-small-strong">양호</em></strong
+                    ><em class="type-label-small-strong microbial-status-tag--best"
+                      >양호</em
+                    ></strong
                   >
                 </header>
                 <div>
@@ -322,7 +331,7 @@
 
               <div class="microbial-status-guide__item-content">
                 <dt class="type-label-small-strong">
-                  <img src="../common/svgs/growth.svg" alt="" />미생물 풍부도
+                  <img src="../common/svgs/chemical-formula.svg" alt="" />미생물 풍부도
                 </dt>
                 <dd class="type-body-small">
                   우리 아이 장 속 미생물의 전체적인 구성과 분포를 확인하는 지표예요.
