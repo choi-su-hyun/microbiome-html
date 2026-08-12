@@ -107,6 +107,7 @@
 | `exercise` | 운동 태그 | `yellow-600` | `yellow-200` |
 | `surrounding` | 환경 태그 | `blue-600` | `blue-200` |
 | `habit` | 습관 태그 | `purple-600` | `purple-200` |
+| `observation` | 관찰 태그 | `mono-800` | `mono-200` |
 
 ### 종합 가이드 단계
 

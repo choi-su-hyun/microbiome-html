@@ -183,19 +183,59 @@
   border-radius: 999px;
 }
 
+.childbirth-tip__tag::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .childbirth-tip__tag--diet {
   color: var(--color-category-diet-dark);
-  background: var(--color-category-diet-light);
+  background-color: var(--color-category-diet-light);
+}
+
+.childbirth-tip__tag--diet::after {
+  background-image: url("../../common/svgs/feeding-bottle-filled-green.svg");
+}
+
+.childbirth-tip__tag--exercise {
+  color: var(--color-category-exercise-dark);
+  background-color: var(--color-category-exercise-light);
+}
+
+.childbirth-tip__tag--exercise::after {
+  background-image: url("../../common/svgs/foot.svg");
 }
 
 .childbirth-tip__tag--surrounding {
   color: var(--color-category-surrounding-dark);
-  background: var(--color-category-surrounding-light);
+  background-color: var(--color-category-surrounding-light);
+}
+
+.childbirth-tip__tag--surrounding::after {
+  background-image: url("../../common/svgs/home-filled-blue.svg");
 }
 
 .childbirth-tip__tag--habit {
   color: var(--color-category-habit-dark);
-  background: var(--color-category-habit-light);
+  background-color: var(--color-category-habit-light);
+}
+
+.childbirth-tip__tag--habit::after {
+  background-image: url("../../common/svgs/alarm-filled-purple.svg");
+}
+
+.childbirth-tip__tag--observation {
+  color: var(--color-category-observation-dark);
+  background-color: var(--color-category-observation-light);
+}
+
+.childbirth-tip__tag--observation::after {
+  background-image: url("../../common/svgs/observation.svg");
 }
 
 .childbirth-tips h3 {

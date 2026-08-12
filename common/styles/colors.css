@@ -154,6 +154,8 @@
   --color-category-surrounding-light: var(--color-blue-200);
   --color-category-habit-dark: var(--color-purple-600);
   --color-category-habit-light: var(--color-purple-200);
+  --color-category-observation-dark: var(--color-mono-800);
+  --color-category-observation-light: var(--color-mono-200);
 
   /* Total guide levels */
   --color-total-guide-lv1-dark: var(--color-brand-primary);
