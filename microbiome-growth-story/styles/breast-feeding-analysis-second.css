@@ -179,24 +179,59 @@
   border-radius: 999px;
 }
 
-.breast-feeding-tip__tag img {
+.breast-feeding-tip__tag::after {
+  content: "";
+  flex: 0 0 auto;
   width: 12px;
   height: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .breast-feeding-tip__tag--diet {
   color: var(--color-category-diet-dark);
-  background: var(--color-category-diet-light);
+  background-color: var(--color-category-diet-light);
 }
 
-.breast-feeding-tip__tag--surrounding {
-  color: var(--color-category-surrounding-dark);
-  background: var(--color-category-surrounding-light);
+.breast-feeding-tip__tag--diet::after {
+  background-image: url("../../common/svgs/feeding-bottle-filled-green.svg");
 }
 
 .breast-feeding-tip__tag--exercise {
   color: var(--color-category-exercise-dark);
-  background: var(--color-category-exercise-light);
+  background-color: var(--color-category-exercise-light);
+}
+
+.breast-feeding-tip__tag--exercise::after {
+  background-image: url("../../common/svgs/foot.svg");
+}
+
+.breast-feeding-tip__tag--surrounding {
+  color: var(--color-category-surrounding-dark);
+  background-color: var(--color-category-surrounding-light);
+}
+
+.breast-feeding-tip__tag--surrounding::after {
+  background-image: url("../../common/svgs/home-filled-blue.svg");
+}
+
+.breast-feeding-tip__tag--habit {
+  color: var(--color-category-habit-dark);
+  background-color: var(--color-category-habit-light);
+}
+
+.breast-feeding-tip__tag--habit::after {
+  background-image: url("../../common/svgs/alarm-filled-purple.svg");
+}
+
+.breast-feeding-tip__tag--observation {
+  color: var(--color-category-observation-dark);
+  background-color: var(--color-category-observation-light);
+}
+
+.breast-feeding-tip__tag--observation::after {
+  background-image: url("../../common/svgs/observation.svg");
 }
 
 .breast-feeding-tips h3 {
