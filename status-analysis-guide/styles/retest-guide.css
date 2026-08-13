@@ -56,6 +56,7 @@
   display: block;
   width: 40px;
   height: 40px;
+  background: url("../../common/svgs/check-round-not-active.svg") center / contain no-repeat;
 }
 .retest-timeline li div {
   position: relative;
@@ -67,6 +68,7 @@
   padding: 12px 6px;
   color: var(--color-text-tertiary);
   background: var(--color-surface-base-mono);
+  border: 1px solid transparent;
   border-radius: 8px;
   text-align: center;
 }
@@ -84,18 +86,59 @@
 .retest-timeline li span + span {
   margin-top: 5px;
 }
-.retest-timeline .is-current::after {
+
+/* 1회차(is-first-round): 1번째 = 이번 검사
+   2회차 이상(is-repeat-round): 1번째 = 지난 검사, 2번째 = 이번 검사 */
+.retest-timeline .is-first-round > li:nth-child(1) .retest-timeline__node,
+.retest-timeline .is-repeat-round > li:nth-child(-n + 2) .retest-timeline__node {
+  background-image: url("../status-analysis-guide-images/retest-guide-svg/check-round-active.svg");
+}
+
+.retest-timeline .is-first-round > li:nth-child(1)::after,
+.retest-timeline .is-repeat-round > li:nth-child(1)::after {
   background: var(--color-surface-emphasis);
 }
-.retest-timeline .is-current div {
+
+.retest-timeline .is-first-round > li:nth-child(1) > div,
+.retest-timeline .is-repeat-round > li:nth-child(2) > div {
   color: var(--color-text-on);
   background: var(--color-surface-emphasis);
+  border-color: var(--color-surface-emphasis);
 }
-.retest-timeline .is-current strong {
+.retest-timeline .is-first-round > li:nth-child(1) strong,
+.retest-timeline .is-repeat-round > li:nth-child(2) strong {
   color: var(--color-text-on);
 }
-.retest-timeline .is-current div::before {
+.retest-timeline .is-first-round > li:nth-child(1) > div::before,
+.retest-timeline .is-repeat-round > li:nth-child(2) > div::before {
   border-bottom-color: var(--color-surface-emphasis);
+}
+
+.retest-timeline .is-repeat-round > li:nth-child(1) > div {
+  color: var(--color-text-primary);
+  background: var(--color-surface-on);
+  border-color: var(--color-surface-emphasis);
+}
+.retest-timeline .is-repeat-round > li:nth-child(1) strong {
+  color: var(--color-data-normal-dark);
+}
+.retest-timeline .is-repeat-round > li:nth-child(1) > div::before {
+  top: -9px;
+  left: 50%;
+  border-right-width: 8px;
+  border-bottom: 9px solid var(--color-surface-emphasis);
+  border-left-width: 8px;
+  transform: translateX(-50%);
+}
+.retest-timeline .is-repeat-round > li:nth-child(1) > div::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  border-right: 7px solid transparent;
+  border-bottom: 8px solid var(--color-surface-on);
+  border-left: 7px solid transparent;
+  transform: translateX(-50%);
 }
 .retest-reasons {
   padding: 24px 24px 0;
