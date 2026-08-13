@@ -97,6 +97,30 @@
 - 최종 PDF 출력 전에 `SUIT Variable`과 `Hakgyoansim Dunggeunmiso`의 실제 로딩 및 폰트 대체 여부를 확인한다.
 - 디자인 시스템 문서와 기존 구현이 충돌하면 `docs/design-system.md`를 기준으로 맞추되, 인쇄 가독성과 접근 가능한 대비를 함께 확인한다.
 
+## 데이터 바인딩
+
+동적 값은 HTML에 `##`와 `|`로 구성된 토큰으로 표시한다. 파이프라인이 바인딩 표(카테고리·키·값)의 계층을 따라 이 토큰을 JSON 데이터로 치환한다.
+
+레거시 형식과 동일하다. 예: `##1|머릿말|기본정보|성명##`, `##1|종합평가|종합등급##`
+
+### 토큰 문법
+
+- 형식: `##데이터소스ID|카테고리|…|필드##`
+- `##`로 토큰을 감싸고, 계층은 `|`로 구분한다.
+- 첫 세그먼트는 데이터 소스(바인딩 표) ID다. 페이지에 표가 하나이면 `1`을 쓴다.
+- 이후 세그먼트는 JSON 루트부터의 키 경로다. 현재 페이지 JSON은 최상위에 `visible`이 있으므로 경로에 `visible`을 포함한다.
+- 예: `##1|visible|title##` → `visible.title`, `##1|visible|report_context|child_name##` → `visible.report_context.child_name`
+- 배열 값은 0부터 시작하는 인덱스를 세그먼트로 쓴다. 예: `##1|visible|outline|0|title##`
+- class 속성 등에도 토큰을 삽입할 수 있다. 예: `class="grade##1|visible|overall_score|grade##"`
+
+### 데이터 소스와 작업 규칙
+
+- 데이터 소스는 `1_main_module/src/pipeline_outputs/json/pdf_json/target_reference_pdf_v4/pdf_XX/pdf_XX.json`이다.
+- HTML 페이지와 `pdf_XX`는 페이지 역할이 일치하는 쌍으로만 매핑한다. JSON에 없는 키를 토큰으로 만들지 않는다.
+- 화면에 보이는 동적 텍스트·수치·이름 등만 토큰으로 바꾼다. 레이블·장식 문구 등 고정 카피는 그대로 둔다.
+- 한 페이지씩 바인딩하고, 사용자 확인이 끝나기 전에 다음 페이지로 진행하지 않는다.
+- 실제 개인정보나 검체 데이터를 HTML에 넣지 않는다. JSON의 플레이스홀더·가상 값만 사용한다.
+
 ## 새 페이지 추가 절차
 
 1. 대상 파트의 다음 순번으로 HTML 파일을 만든다.
