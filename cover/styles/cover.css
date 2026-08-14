@@ -3,7 +3,7 @@
   height: var(--page-a4-preview-height);
   padding: 255px 64px;
   overflow: hidden;
-  background: url("../../common/images/cover_bg.jpg") center / 100% 100% no-repeat;
+  background: url('../../common/images/cover_bg.jpg') center / 100% 100% no-repeat;
 }
 
 .cover-page__content {
@@ -30,6 +30,7 @@
   font-style: normal;
   line-height: 120%;
   letter-spacing: var(--letter-spacing-display);
+  max-width: 330px;
 }
 
 .cover-page__description {
@@ -39,6 +40,7 @@
   font-weight: var(--font-weight-regular);
   line-height: 1.65;
   letter-spacing: var(--letter-spacing-default);
+  max-width: 180px;
 }
 
 .cover-page__metadata {
@@ -56,7 +58,7 @@
 }
 
 .cover-page__metadata-row::before {
-  content: "";
+  content: '';
   grid-column: 2;
   grid-row: 1;
   width: 1px;

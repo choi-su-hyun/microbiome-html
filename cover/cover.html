@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>##1|visible|title##</title>
+    <title>##page_1|visible|title_above## ##page_1|visible|title_below##</title>
     <link rel="stylesheet" href="../common/styles/reset.css" />
     <link rel="stylesheet" href="../common/styles/common.css" />
     <link rel="stylesheet" href="../common/styles/print.css" />
@@ -14,26 +14,30 @@
   <body>
     <main class="cover-page" aria-labelledby="report-title">
       <section class="cover-page__content">
-        <p class="cover-page__logo" aria-label="##1|visible|report_context|brand##">
-          <img src="../common/svgs/logo.svg" alt="##1|visible|report_context|brand##" />
+        <p class="cover-page__logo" aria-label="##page_1|visible|report_context|brand##">
+          <img src="../common/svgs/logo.svg" alt="##page_1|visible|report_context|brand##" />
         </p>
 
-        <h1 id="report-title" class="cover-page__title">##1|visible|title##</h1>
+        <h1 id="report-title" class="cover-page__title">
+          ##page_1|visible|title_above## ##page_1|visible|title_below##
+        </h1>
 
-        <p class="cover-page__description">##1|visible|subtitle##</p>
+        <p class="cover-page__description">
+          ##page_1|visible|subtitle_above## ##page_1|visible|subtitle_below##
+        </p>
 
         <dl class="cover-page__metadata" aria-label="분석 정보">
           <div class="cover-page__metadata-row">
             <dt class="type-label-xlarge-strong">분석 일자</dt>
-            <dd class="type-label-xlarge">##1|visible|report_context|analysis_date##</dd>
+            <dd class="type-label-xlarge">##page_1|visible|report_context|analysis_date##</dd>
           </div>
           <div class="cover-page__metadata-row">
             <dt class="type-label-xlarge-strong">부모 이름</dt>
-            <dd class="type-label-xlarge">##1|visible|report_context|parent_name##</dd>
+            <dd class="type-label-xlarge">##page_1|visible|report_context|parent_name##</dd>
           </div>
           <div class="cover-page__metadata-row">
             <dt class="type-label-xlarge-strong">아이 이름</dt>
-            <dd class="type-label-xlarge">##1|visible|report_context|child_name##</dd>
+            <dd class="type-label-xlarge">##page_1|visible|report_context|child_name##</dd>
           </div>
         </dl>
       </section>
