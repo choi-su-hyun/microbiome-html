@@ -8,14 +8,14 @@
 
 ## 파트와 디렉터리
 
-| 순서 | 파트 | 디렉터리 | 이미지 디렉터리 |
-| --- | --- | --- | --- |
-| 1 | 표지 | `cover/` | `cover/cover-images/` |
-| 2 | 인트로 | `intro/` | `intro/intro-images/` |
-| 3 | 핵심요약 | `key-summary/` | `key-summary/key-summary-images/` |
-| 4 | 우리아이 미생물 성장 이야기 | `microbiome-growth-story/` | `microbiome-growth-story/microbiome-growth-story-images/` |
-| 5 | 우리아이 상태 분석 및 맞춤 가이드 | `status-analysis-guide/` | `status-analysis-guide/status-analysis-guide-images/` |
-| 6 | 부록 | `appendix/` | `appendix/appendix-images/` |
+| 순서 | 파트                              | 디렉터리                   | 이미지 디렉터리                                           |
+| ---- | --------------------------------- | -------------------------- | --------------------------------------------------------- |
+| 1    | 표지                              | `cover/`                   | `cover/cover-images/`                                     |
+| 2    | 인트로                            | `intro/`                   | `intro/intro-images/`                                     |
+| 3    | 핵심요약                          | `key-summary/`             | `key-summary/key-summary-images/`                         |
+| 4    | 우리아이 미생물 성장 이야기       | `microbiome-growth-story/` | `microbiome-growth-story/microbiome-growth-story-images/` |
+| 5    | 우리아이 상태 분석 및 맞춤 가이드 | `status-analysis-guide/`   | `status-analysis-guide/status-analysis-guide-images/`     |
+| 6    | 부록                              | `appendix/`                | `appendix/appendix-images/`                               |
 
 파트 디렉터리는 숫자 접두사 없이 역할을 나타내는 영문 이름으로 관리한다. PDF 순서는 위 표의 순서를 따른다.
 
@@ -142,7 +142,7 @@
 - 예: `##page_1|visible|title_above##` → `value.page_1.response.visible.title_above`
 - 예: `##page_4|visible|report_context|child_name##` → `value.page_4.response.visible.report_context.child_name`
 - 객체 키는 JSON에 정의된 이름 그대로 쓴다. 예: `##page_2|visible|sections|A|section##`, `##page_4|visible|terms|term_A##`
-- 값이 배열일 때만 0부터 시작하는 인덱스를 세그먼트로 쓴다. 예: `##page_8|visible|items|0|label##`
+- 값이 배열인 경우는 없다.(배열이 있다면 사용자에게 알린다)
 - class 속성 등에도 토큰을 삽입할 수 있다. 예: `class="grade grade--##page_8|visible|overall_score|grade##"`
 
 ### 페이지별 바인딩 절차
