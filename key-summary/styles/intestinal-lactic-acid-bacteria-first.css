@@ -30,7 +30,7 @@
 }
 
 /* 매우좋음 80~95 */
-.gut-score--best {
+.gut-score--매우좋음 {
   --gut-score-bg: var(--color-data-best-light);
   --gut-score-border: var(--color-data-best-dark);
   --gut-score-accent: var(--color-status-positive);
@@ -38,7 +38,7 @@
 }
 
 /* 좋음 70~79 */
-.gut-score--good {
+.gut-score--좋음 {
   --gut-score-bg: var(--color-data-good-light);
   --gut-score-border: var(--color-data-good-dark);
   --gut-score-accent: var(--color-data-good-dark);
@@ -46,7 +46,7 @@
 }
 
 /* 보통 50~69 */
-.gut-score--normal {
+.gut-score--보통 {
   --gut-score-bg: var(--color-data-normal-light);
   --gut-score-border: var(--color-data-normal-dark);
   --gut-score-accent: var(--color-data-normal-dark);
@@ -133,15 +133,17 @@
   vertical-align: 1px;
 }
 
-.metric-tag--warning {
+.metric-tag--주의 {
   color: var(--color-data-bad-dark);
   background: var(--color-data-bad-medium);
 }
-.metric-tag--positive {
+
+.metric-tag--양호 {
   color: var(--color-text-status-positive);
   background: var(--color-data-best-medium);
 }
-.metric-tag--normal {
+
+.metric-tag--보통 {
   color: var(--color-data-normal-dark);
   background: var(--color-data-normal-light);
 }

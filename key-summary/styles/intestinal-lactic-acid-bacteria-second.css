@@ -29,6 +29,9 @@
 }
 /* Pie-chart asset intentionally omitted. This preserves only its layout space. */
 .composition__chart-space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 152px;
   width: 152px;
 }
