@@ -149,6 +149,11 @@
 .change-summary p strong {
   color: var(--color-text-status-positive);
 }
+
+.change-summary p em {
+  color: var(--color-text-status-positive);
+  font-style: normal;
+}
 .main-bacteria {
   margin-top: 32px;
 }
@@ -208,6 +213,12 @@
   margin: 8px 0 0;
   color: var(--color-text-primary);
   list-style: none;
+}
+.bacteria-card li.branch-content-0 {
+  display: none;
+}
+.bacteria-card li.branch-content-1 {
+  display: list-item;
 }
 .bacteria-card li + li {
   margin-top: 4px;
