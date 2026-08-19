@@ -11,7 +11,6 @@
 .change-summary--overview {
   --overview-bg: var(--color-surface-status-positive);
   --overview-border: var(--color-border-status-positive);
-  --overview-accent: var(--color-text-status-positive);
 
   display: grid;
   grid-template-columns: 99px minmax(0, 1fr);
@@ -24,25 +23,16 @@
   border-radius: 10px;
 }
 
-/* 또래보다 높을 시 */
-.change-summary--overview.change-summary--high {
+/* 녹색계열 */
+.change-summary--overview.change-summary--녹색계열 {
   --overview-bg: var(--color-surface-status-positive);
   --overview-border: var(--color-border-status-positive);
-  --overview-accent: var(--color-text-status-positive);
 }
 
-/* 또래보다 비슷 */
-.change-summary--overview.change-summary--similar {
-  --overview-bg: var(--color-surface-status-positive);
-  --overview-border: var(--color-border-status-positive);
-  --overview-accent: var(--color-text-status-positive);
-}
-
-/* 또래보다 낮을 시 */
-.change-summary--overview.change-summary--low {
-  --overview-bg: var(--color-surface-status-negative);
-  --overview-border: var(--color-border-status-negative);
-  --overview-accent: var(--color-text-status-negative);
+/* 주황계열 */
+.change-summary--overview.change-summary--주황계열 {
+  --overview-bg: var(--color-data-normal-medium);
+  --overview-border: var(--color-brand-primary);
 }
 
 .change-summary__header {
@@ -70,7 +60,12 @@
   color: var(--color-text-secondary);
 }
 .change-summary--overview p strong {
-  color: var(--overview-accent);
+  color: var(--color-text-status-positive);
+}
+
+.change-summary--overview p em {
+  color: var(--color-data-normal-dark);
+  font-style: normal;
 }
 .change-results {
   margin-top: 16px;
@@ -91,22 +86,22 @@
   border-bottom: 1px solid var(--color-border-light);
 }
 
-/* 양호 70~100 */
-.change-result--best {
+/* 양호 */
+.change-result--양호 {
   --result-badge-color: var(--color-data-best-dark);
   --result-badge-bg: var(--color-data-best-medium);
   --result-chart-accent: var(--color-data-best-dark);
 }
 
-/* 보통 20~69 */
-.change-result--normal {
+/* 보통 */
+.change-result--보통 {
   --result-badge-color: var(--color-data-normal-dark);
   --result-badge-bg: var(--color-data-normal-medium);
   --result-chart-accent: var(--color-data-normal-dark);
 }
 
-/* 주의 0~19 */
-.change-result--bad {
+/* 주의 */
+.change-result--주의 {
   --result-badge-color: var(--color-data-bad-dark);
   --result-badge-bg: var(--color-data-bad-medium);
   --result-chart-accent: var(--color-data-bad-dark);

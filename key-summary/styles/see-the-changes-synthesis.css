@@ -11,7 +11,6 @@
 .synthesis-overview {
   --overview-bg: var(--color-surface-status-positive);
   --overview-border: var(--color-border-status-positive);
-  --overview-accent: var(--color-text-status-positive);
 
   display: grid;
   grid-template-columns: 99px minmax(0, 1fr);
@@ -24,25 +23,14 @@
   border-radius: 10px;
 }
 
-/* 또래보다 높을 시 */
-.synthesis-overview--high {
+.synthesis-overview--녹색계열 {
   --overview-bg: var(--color-surface-status-positive);
   --overview-border: var(--color-border-status-positive);
-  --overview-accent: var(--color-text-status-positive);
 }
 
-/* 또래보다 비슷 */
-.synthesis-overview--similar {
-  --overview-bg: var(--color-surface-status-positive);
-  --overview-border: var(--color-border-status-positive);
-  --overview-accent: var(--color-text-status-positive);
-}
-
-/* 또래보다 낮을 시 */
-.synthesis-overview--low {
-  --overview-bg: var(--color-surface-status-negative);
-  --overview-border: var(--color-border-status-negative);
-  --overview-accent: var(--color-text-status-negative);
+.synthesis-overview--주황계열 {
+  --overview-bg: var(--color-data-normal-medium);
+  --overview-border: var(--color-brand-primary);
 }
 
 .synthesis-overview__header {
@@ -59,12 +47,18 @@
 }
 .synthesis-overview h2 {
   color: var(--color-text-title);
+  max-width: 60px;
 }
 .synthesis-overview p {
   color: var(--color-text-secondary);
 }
 .synthesis-overview p strong {
-  color: var(--overview-accent);
+  color: var(--color-text-status-positive);
+}
+
+.synthesis-overview p em {
+  color: var(--color-data-normal-dark);
+  font-style: normal;
 }
 .synthesis-results {
   padding: 24px;
@@ -85,22 +79,22 @@
   border-bottom: 1px solid var(--color-border-light);
 }
 
-/* 양호 70~100 */
-.synthesis-result--best {
+/* 양호 */
+.synthesis-result--양호 {
   --result-badge-color: var(--color-data-best-dark);
   --result-badge-bg: var(--color-data-best-medium);
   --result-chart-accent: var(--color-data-best-dark);
 }
 
-/* 보통 20~69 */
-.synthesis-result--normal {
+/* 보통 */
+.synthesis-result--보통 {
   --result-badge-color: var(--color-data-normal-dark);
   --result-badge-bg: var(--color-data-normal-medium);
   --result-chart-accent: var(--color-data-normal-dark);
 }
 
-/* 주의 0~19 */
-.synthesis-result--bad {
+/* 주의 */
+.synthesis-result--주의 {
   --result-badge-color: var(--color-data-bad-dark);
   --result-badge-bg: var(--color-data-bad-medium);
   --result-chart-accent: var(--color-data-bad-dark);

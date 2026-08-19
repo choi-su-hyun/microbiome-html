@@ -11,7 +11,6 @@
 .harmful-overview {
   --overview-bg: var(--color-surface-status-positive);
   --overview-border: var(--color-border-status-positive);
-  --overview-accent: var(--color-text-status-positive);
 
   display: grid;
   grid-template-columns: 99px minmax(0, 1fr);
@@ -24,25 +23,14 @@
   border-radius: 10px;
 }
 
-/* 또래보다 높을 시 */
-.harmful-overview--high {
+.harmful-overview--녹색계열 {
   --overview-bg: var(--color-surface-status-positive);
   --overview-border: var(--color-border-status-positive);
-  --overview-accent: var(--color-text-status-positive);
 }
 
-/* 또래보다 비슷 */
-.harmful-overview--similar {
-  --overview-bg: var(--color-surface-status-positive);
-  --overview-border: var(--color-border-status-positive);
-  --overview-accent: var(--color-text-status-positive);
-}
-
-/* 또래보다 낮을 시 */
-.harmful-overview--low {
-  --overview-bg: var(--color-surface-status-negative);
-  --overview-border: var(--color-border-status-negative);
-  --overview-accent: var(--color-text-status-negative);
+.harmful-overview--주황계열 {
+  --overview-bg: var(--color-data-normal-medium);
+  --overview-border: var(--color-brand-primary);
 }
 
 .harmful-overview__header {
@@ -64,7 +52,12 @@
   color: var(--color-text-secondary);
 }
 .harmful-overview p strong {
-  color: var(--overview-accent);
+  color: var(--color-text-status-positive);
+}
+
+.harmful-overview p em {
+  color: var(--color-data-normal-dark);
+  font-style: normal;
 }
 .harmful-results {
   display: grid;
@@ -85,22 +78,22 @@
   border-bottom: 1px solid var(--color-border-light);
 }
 
-/* 양호 70~100 */
-.harmful-result--best {
+/* 양호 */
+.harmful-result--양호 {
   --result-badge-color: var(--color-data-best-dark);
   --result-badge-bg: var(--color-data-best-medium);
   --result-chart-accent: var(--color-data-best-dark);
 }
 
-/* 보통 20~69 */
-.harmful-result--normal {
+/* 보통 */
+.harmful-result--보통 {
   --result-badge-color: var(--color-data-normal-dark);
   --result-badge-bg: var(--color-data-normal-medium);
   --result-chart-accent: var(--color-data-normal-dark);
 }
 
-/* 주의 0~19 */
-.harmful-result--bad {
+/* 주의 */
+.harmful-result--주의 {
   --result-badge-color: var(--color-data-bad-dark);
   --result-badge-bg: var(--color-data-bad-medium);
   --result-chart-accent: var(--color-data-bad-dark);
@@ -159,11 +152,17 @@
   background: var(--result-badge-bg);
   border-radius: 4px;
 }
-/* Chart graphics are intentionally omitted; this reserves their layout area. */
 .mini-chart {
   height: 88px;
   margin-top: 16px;
   color: var(--result-chart-accent);
+}
+
+.mini-chart img {
+  display: block;
+  width: 232px;
+  height: 88px;
+  object-fit: contain;
 }
 @media print {
   html,

@@ -101,19 +101,19 @@
 
 동적 값은 HTML에 `##`와 `|`로 구성된 토큰으로 표시한다. 파이프라인이 바인딩 표(카테고리·키·값)의 계층을 따라 이 토큰을 JSON 데이터로 치환한다.
 
-### 데이터 소스 (datas 워크스페이스)
+### 데이터 소스
 
-- 바인딩용 JSON은 `datas` 워크스페이스(예: `/Users/choisuhyun/Downloads/datas/`)에 `{등록번호}.json` 형태로 둔다.
+- 바인딩용 JSON은 `test` 워크스페이스(예: `/Users/choisuhyun/Downloads/test/`)에 `{등록번호}.json` 형태로 둔다. 예: `32PD7PN_2.json`.
 - JSON 파일명의 `{등록번호}`는 해당 파일 `visible.report_context.registration_code`와 일치한다.
-- 어떤 JSON 파일의 어떤 `page_N`을 어떤 HTML에 바인딩할지는 **사용자가 매 요청마다 지정**한다. 에이전트가 임의로 매핑하지 않는다.
+- 어떤 JSON 파일의 어떤 페이지 키(`A1`, `B6` 등)를 어떤 HTML에 바인딩할지는 **사용자가 매 요청마다 지정**한다. 에이전트가 임의로 매핑하지 않는다.
 
 ### JSON 구조
 
 ```text
 {
   "value": {
-    "page_count": 35,
-    "page_1": {
+    "page_count": 40,
+    "A1": {
       "pdf_id": "pdf_01",
       "design_pdf_number": 2,
       "part_index": 1,
@@ -122,48 +122,71 @@
         "visible": { … 페이지별 동적 데이터 … }
       }
     },
-    "page_2": { … },
+    "A2": { … },
+    "B6": { … },
     …
   }
 }
 ```
 
-- `page_N`(N = 1 … `page_count`)이 HTML 한 페이지에 대응하는 데이터 단위다.
-- 실제 바인딩 필드는 `value.page_N.response.visible` 아래에 있다.
+- 페이지 키는 `page_N`이 아니라 파트 문자와 순번이다. 예: `A1`, `B6`, `C3`.
+- 실제 바인딩 필드는 `value.{페이지키}.response.visible` 아래에 있다.
 - `pdf_id`, `page_id`, `design_pdf_number`는 페이지 식별·매핑 확인용 메타데이터다.
-- `part_index` / `part_count`가 2 이상이면 한 HTML 파일이 여러 `page_N`으로 나뉜다(예: 맞춤 케어 가이드, 참고 문헌).
+- `part_index` / `part_count`가 2 이상이면 한 HTML 파일이 여러 페이지 키로 나뉜다(예: 맞춤 케어 가이드, 참고 문헌).
 
 ### 토큰 문법
 
-- 형식: `##page_N|visible|…|필드##`
+- 형식: `##페이지키|visible|…|필드##`
 - `##`로 토큰을 감싸고, 계층은 `|`로 구분한다.
-- 첫 세그먼트는 JSON의 `page_N` 키와 동일한 데이터 소스 ID다. 예: `page_1`, `page_4`.
+- 첫 세그먼트는 JSON의 페이지 키와 동일하다. 예: `A1`, `B6`.
 - 두 번째 세그먼트부터는 `response.visible` 아래의 키 경로다. `response`는 토큰에 쓰지 않는다.
-- 예: `##page_1|visible|title_above##` → `value.page_1.response.visible.title_above`
-- 예: `##page_4|visible|report_context|child_name##` → `value.page_4.response.visible.report_context.child_name`
-- 객체 키는 JSON에 정의된 이름 그대로 쓴다. 예: `##page_2|visible|sections|A|section##`, `##page_4|visible|terms|term_A##`
+- 예: `##A1|visible|title_above##` → `value.A1.response.visible.title_above`
+- 예: `##B6|visible|report_context|name##` → `value.B6.response.visible.report_context.name`
+- 객체 키는 JSON에 정의된 이름 그대로 쓴다. 예: `##A2|visible|sections|A|section##`, `##B6|visible|metric_cards|branch_1_metric_label##`
 - 값이 배열인 경우는 없다.(배열이 있다면 사용자에게 알린다)
-- class 속성 등에도 토큰을 삽입할 수 있다. 예: `class="grade grade--##page_8|visible|overall_score|grade##"`
+- class 속성 등에도 토큰을 삽입할 수 있다. 예: `class="change-result change-result--##B6|visible|metric_cards|branch_1_current_status##"`
+- 박스 배경·테두리처럼 영역 전체 색은 `status` 값을 클래스 접미사로 쓴다. JSON 값은 공백 없이 온다. 예: `class="change-summary--##B6|visible|summary_opinion|branch_sentence|status##"`
+
+### 문장 일부 강조 (`strong`, `em`)
+
+문장 안에서 일부만 색상을 달리할 때는 HTML에서 문장을 쪼개지 않는다. JSON 값에 태그를 넣고, 해당 필드를 토큰 하나로 바인딩한다. 한 문장에 두 스타일이 함께 올 수 있다.
+
+- 내부 글자색은 `<strong>` / `<em>`으로 표시한다.
+- 각 태그의 실제 색상은 해당 부모 클래스의 페이지 전용 CSS에서 지정한다.
+- 줄바꿈이 있으면 JSON에 `<br>`을 포함한다.
+- 에이전트는 강조 구간을 다른 태그로 다시 감싸지 않는다. 토큰을 문단 요소 안에 그대로 둔다.
+
+예:
+
+```html
+<section
+  class="change-summary change-summary--overview change-summary--##B6|visible|summary_opinion|branch_sentence|status##"
+>
+  <p class="type-body-medium">##B6|visible|summary_opinion|branch_sentence|body##</p>
+</section>
+```
+
+페이지 전용 CSS에서 `em`의 기본 이탤릭은 끈다.
 
 ### 페이지별 바인딩 절차
 
-한 페이지씩 요청·검토·승인 후 다음 페이지로 진행한다. 에이전트는 사용자가 지정한 HTML 파일 하나와 해당 JSON `page_N` 하나만 처리한다.
+한 페이지씩 요청·검토·승인 후 다음 페이지로 진행한다. 에이전트는 사용자가 지정한 HTML 파일 하나와 해당 JSON 페이지 키 하나만 처리한다.
 
 #### 1. 요청 받기
 
 사용자가 **HTML 파일**과 **JSON 데이터**를 함께 지정한다. 에이전트는 지정되지 않은 항목을 추측하지 않는다.
 
-- JSON: `{등록번호}.json`의 `page_N` (예: `3QNJ521_1.json` → `page_4`)
-- HTML: 바인딩 대상 파일 경로 (예: `intro/glossary-of-terms.html`)
+- JSON: `{등록번호}.json`의 페이지 키 (예: `32PD7PN_2.json` → `B6`)
+- HTML: 바인딩 대상 파일 경로 (예: `key-summary/see-the-changes-beneficial-bacteria.html`)
 
 요청 예:
 
-- `3QNJ521_1.json page_4 → intro/glossary-of-terms.html 바인딩`
-- `intro/content-index.html에 3QNJ521_1.json page_2 데이터 바인딩`
+- `32PD7PN_2.json B6 → key-summary/see-the-changes-beneficial-bacteria.html 바인딩`
+- `intro/glossary-of-terms.html에 32PD7PN_2.json A4 데이터 바인딩`
 
 #### 2. JSON 확인
 
-1. 사용자가 지정한 JSON 파일 → `value.page_N`을 연다.
+1. 사용자가 지정한 JSON 파일 → `value.{페이지키}`를 연다.
 2. `response.visible`의 키 구조를 파악한다.
 3. HTML에 대응하는 모든 동적 필드를 목록으로 정리한다.
 4. JSON에 없는 키는 토큰으로 만들지 않는다.
@@ -171,17 +194,17 @@
 #### 3. HTML 수정
 
 1. 사용자가 지정한 HTML 파일을 연다.
-2. 화면에 보이는 동적 텍스트·수치·이름·등급·날짜 등을 `##page_N|visible|…##` 토큰으로 교체한다. 토큰의 `page_N`은 사용자가 지정한 JSON `page_N`과 일치해야 한다.
+2. 화면에 보이는 동적 텍스트·수치·이름·등급·날짜 등을 `##페이지키|visible|…##` 토큰으로 교체한다. 토큰의 페이지 키는 사용자가 지정한 JSON 키와 일치해야 한다.
 3. 레이블·장식 문구·고정 카피는 그대로 둔다.
 4. `report_context`, `footer`, 등급 class 등 반복 필드도 JSON 키가 있으면 토큰으로 바꾼다.
-5. 기존 레거시 토큰(`##1|visible|…##`)이 남아 있으면 해당 `page_N` 형식으로 교체한다.
+5. 기존 레거시 토큰(`##page_N|visible|…##`, `##1|visible|…##`)이 남아 있으면 해당 페이지 키 형식으로 교체한다.
 6. HTML 구조·CSS·레이아웃은 바인딩 목적 외에는 변경하지 않는다.
 
 #### 4. 결과 보고
 
 수정 후 아래 내용을 사용자에게 전달한다.
 
-- 대상: JSON 파일 / `page_N` / HTML 파일 / `page_name`
+- 대상: JSON 파일 / 페이지 키 / HTML 파일 / `page_name`
 - 치환한 토큰 목록(필드 경로와 HTML 위치)
 - JSON 키와 HTML 요소가 1:1로 대응되지 않는 경우(객체 키 이름, 분할 페이지 등) 설명
 - 미바인딩으로 남긴 항목과 이유
@@ -189,16 +212,16 @@
 #### 5. 사용자 검토·승인
 
 - 사용자가 HTML 미리보기 또는 PDF 출력으로 확인한다.
-- 수정 요청이 있으면 해당 `page_N`만 다시 수정한다.
-- 승인 후에만 다음 `page_N` 작업을 시작한다.
+- 수정 요청이 있으면 해당 페이지 키만 다시 수정한다.
+- 승인 후에만 다음 페이지 키 작업을 시작한다.
 
 ### 작업 규칙
 
 - HTML ↔ JSON 매핑은 사용자가 지정한다. 에이전트가 매핑 표를 만들거나 추측하지 않는다.
-- 한 번에 사용자가 지정한 HTML 하나·JSON `page_N` 하나만 바인딩한다. 사용자 확인이 끝나기 전에 다음 페이지로 진행하지 않는다.
+- 한 번에 사용자가 지정한 HTML 하나·JSON 페이지 키 하나만 바인딩한다. 사용자 확인이 끝나기 전에 다음 페이지로 진행하지 않는다.
 - HTML 예시 파일에 실제 개인정보를 직접 넣지 않는다. JSON의 값은 파이프라인 치환용이며, HTML에는 토큰만 남긴다.
 - JSON 객체는 배열이 아닌 명명 키(`A`, `term_A`, `branch_1` 등)를 쓰는 경우가 많다. 토큰 경로는 JSON 실제 구조를 따른다.
-- 분할 페이지(`part_index` > 1)는 사용자가 지정한 `page_N`의 `visible`만 참조한다. 다른 파트 데이터를 섞지 않는다.
+- 분할 페이지(`part_index` > 1)는 사용자가 지정한 페이지 키의 `visible`만 참조한다. 다른 파트 데이터를 섞지 않는다.
 
 ## 새 페이지 추가 절차
 
