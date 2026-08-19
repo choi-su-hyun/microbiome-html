@@ -71,6 +71,14 @@
   color: var(--color-text-secondary);
 }
 
+.contents-item.branch-content-0 {
+  display: none;
+}
+
+.contents-item.branch-content-1 {
+  display: flex;
+}
+
 .contents-item__label {
   flex: 0 0 auto;
   line-height: 1.5;
