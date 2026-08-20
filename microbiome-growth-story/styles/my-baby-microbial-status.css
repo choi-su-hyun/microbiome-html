@@ -28,32 +28,41 @@
   border-radius: 8px;
 }
 
-/* 집중관찰단계 */
-.microbial-status-summary--intensive {
-  --summary-bg: var(--color-surface-status-negative);
-  --summary-border: var(--color-border-status-negative);
+/* 집중 관찰 단계 */
+.microbial-status-summary--red {
+  --summary-bg: var(--color-data-bad-light);
+  --summary-border: var(--color-data-bad-dark);
   --summary-accent: var(--color-text-status-negative);
 }
 
-/* 생활관리단계 */
-.microbial-status-summary--lifestyle {
+/* 생활 관리 단계 */
+.microbial-status-summary--orange {
   --summary-bg: var(--color-data-normal-light);
   --summary-border: var(--color-data-normal-dark);
   --summary-accent: var(--color-data-normal-dark);
 }
 
-/* 균형성숙단계 */
-.microbial-status-summary--balanced {
-  --summary-bg: var(--color-surface-status-positive);
-  --summary-border: var(--color-border-status-positive);
-  --summary-accent: var(--color-text-status-positive);
+/* 균형 성숙 단계 */
+.microbial-status-summary--green {
+  --summary-bg: var(--color-data-common-light);
+  --summary-border: var(--color-data-common-dark);
+  --summary-accent: var(--color-green-500);
+}
+
+/* 안정 유지 단계 */
+.microbial-status-summary--blue {
+  --summary-bg: var(--color-data-good-light);
+  --summary-border: var(--color-data-good-dark);
+  --summary-accent: var(--color-blue-700);
 }
 
 .microbial-status-summary h2 {
   color: var(--color-text-title);
 }
-.microbial-status-summary h2 strong {
+.microbial-status-summary h2 strong,
+.microbial-status-summary h2 em {
   color: var(--summary-accent);
+  font-style: normal;
 }
 .microbial-status-summary p {
   color: var(--color-text-secondary);
@@ -184,21 +193,36 @@
 }
 
 /* 주의 0~19 */
-.microbial-status-tag--bad {
+.microbial-status-tag--bad,
+.microbial-status-tag--주의 {
   color: var(--color-data-bad-dark);
   background: var(--color-data-bad-medium);
 }
 
 /* 보통 20~69 */
-.microbial-status-tag--normal {
+.microbial-status-tag--normal,
+.microbial-status-tag--보통 {
   color: var(--color-data-normal-dark);
   background: var(--color-data-normal-medium);
 }
 
 /* 양호 70~100 */
-.microbial-status-tag--best {
+.microbial-status-tag--best,
+.microbial-status-tag--양호 {
   color: var(--color-data-best-dark);
   background: var(--color-data-best-medium);
+}
+.microbial-status-composition__chart-placeholder img {
+  display: block;
+  width: 164px;
+  height: 84px;
+  object-fit: contain;
+}
+.microbial-status-chart-placeholder img {
+  display: block;
+  width: 223px;
+  height: 44px;
+  object-fit: contain;
 }
 .microbial-status-chart-placeholder {
   height: 44px;

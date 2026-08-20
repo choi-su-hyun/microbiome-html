@@ -70,11 +70,11 @@
   color: var(--color-text-secondary);
 }
 
-.micro-type-card--current {
+.micro-type-card--true {
   border-color: var(--color-border-emphasis);
   background: var(--color-surface-base);
 }
-.micro-type-card--current .micro-type-card__symbol {
+.micro-type-card--true .micro-type-card__symbol {
   background: var(--color-surface-subtle);
 }
 .micro-type-card__speech-bubble {
@@ -89,7 +89,7 @@
   background: var(--color-surface-inverse);
   border-radius: 999px;
 }
-.micro-type-card--current .micro-type-card__speech-bubble {
+.micro-type-card--true .micro-type-card__speech-bubble {
   display: flex;
 }
 .micro-type-card__speech-bubble::after {

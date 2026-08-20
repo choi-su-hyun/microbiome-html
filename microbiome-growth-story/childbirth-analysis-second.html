@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>분만 분석 결과 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <title>##C4|visible|title## | 신생아 마이크로바이옴 유전체 분석 리포트</title>
     <link rel="stylesheet" href="../common/styles/reset.css" />
     <link rel="stylesheet" href="../common/styles/common.css" />
     <link rel="stylesheet" href="../common/styles/print.css" />
@@ -15,23 +15,27 @@
   <body>
     <main class="childbirth-analysis-second" aria-labelledby="childbirth-analysis-second-title">
       <header class="report-header">
-        <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
+        <img
+          class="report-header__logo"
+          src="../common/svgs/logo.svg"
+          alt="##C4|visible|report_context|brand##"
+        />
         <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
           <div>
             <dt>등록번호</dt>
-            <dd class="type-label-xsmall">0008127</dd>
+            <dd class="type-label-xsmall">##C4|visible|report_context|registration_code##</dd>
           </div>
           <div>
             <dt>이름</dt>
-            <dd class="type-label-xsmall">홍길동</dd>
+            <dd class="type-label-xsmall">##C4|visible|report_context|name##</dd>
           </div>
           <div>
             <dt>나이</dt>
-            <dd class="type-label-xsmall">만 0세 (N개월)</dd>
+            <dd class="type-label-xsmall">##C4|visible|report_context|age##</dd>
           </div>
           <div>
             <dt>성별</dt>
-            <dd class="type-label-xsmall">여아</dd>
+            <dd class="type-label-xsmall">##C4|visible|report_context|sex##</dd>
           </div>
         </dl>
       </header>
@@ -43,35 +47,40 @@
           </span>
           <div>
             <h1 id="childbirth-analysis-second-title" class="type-heading-primary-large-strong">
-              분만 분석 <span>: 태어날 때 만난 우리 아이 미생물</span>
+              ##C4|visible|title##
             </h1>
-            <p class="type-body-medium">
-              분만 방식에 따라 아이가 처음 만나는 미생물 환경은 달라질 수 있어요.<br />
-              우리 아이의 장 속 미생물이 어떻게 시작되었는지 살펴보아요.
-            </p>
+            <p class="type-body-medium">##C4|visible|subtitle##</p>
           </div>
         </header>
 
         <section class="childbirth-summary" aria-labelledby="childbirth-summary-title">
-          <span class="childbirth-summary__method type-label-medium-strong">
-            제왕절개
-            <img src="../common/svgs/cesarean-section.svg" alt="" />
+          <!-- comment:: childbirth-summary__method--##C4|visible|delivery_badge## 값에 따라 제왕절개/자연분만 아이콘과 배지 색이 달라짐. -->
+          <span
+            class="childbirth-summary__method type-label-medium-strong childbirth-summary__method--##C4|visible|delivery_badge##"
+          >
+            ##C4|visible|delivery_badge##
+            <img
+              class="childbirth-summary__icon childbirth-summary__icon--제왕절개"
+              src="../common/svgs/cesarean-section.svg"
+              alt=""
+            />
+            <img
+              class="childbirth-summary__icon childbirth-summary__icon--자연분만"
+              src="../common/svgs/natural-birth.svg"
+              alt=""
+            />
           </span>
           <div class="childbirth-summary__content">
             <h2 id="childbirth-summary-title" class="type-heading-secondary-medium-strong">
-              결과 요약
+              ##C4|visible|summary_title##
             </h2>
-            <p class="type-body-large">
-              {홍길동} 아기는 {제왕절개}의 또래 아이들보다
-              <strong>유익균 수치가 높은 편</strong>이며<br />
-              {자연분만} 또래 아이들보다 <em>유해균 수치가 살짝 낮은 편</em>이에요.
-            </p>
+            <p class="type-body-large">##C4|visible|branch_result_summary##</p>
           </div>
         </section>
 
         <section class="childbirth-comparison" aria-labelledby="childbirth-comparison-title">
           <h2 id="childbirth-comparison-title" class="type-heading-secondary-large-strong">
-            전이 정착도 비교
+            ##C4|visible|section_label##
           </h2>
 
           <div>
@@ -79,7 +88,12 @@
               class="childbirth-comparison__chart-placeholder"
               role="img"
               aria-label="유익균과 유해균 전이 정착도를 비교하는 차트가 들어갈 영역"
-            ></div>
+            >
+              <img
+                src="##C4|visible|graph_svg_path|graph_020_delivery_method_beneficial_harmful_comparison##"
+                alt=""
+              />
+            </div>
             <ul class="childbirth-chart-legend type-label-small" aria-label="차트 범례">
               <li class="childbirth-chart-legend__item is-child-beneficial">
                 <span class="childbirth-chart-legend__swatch" aria-hidden="true"></span>
@@ -103,41 +117,43 @@
           <section class="childbirth-tips" aria-labelledby="childbirth-tips-title">
             <h2 id="childbirth-tips-title" class="type-heading-secondary-small-strong">
               <img src="../common/svgs/check-round-pink.svg" alt="" />
-              더 좋아질 수 있도록 Tip을 알려드려요!
+              ##C4|visible|selected_tips|title##
             </h2>
             <div class="childbirth-tips__list">
               <article>
-                <span class="childbirth-tip__tag childbirth-tip__tag--diet type-label-small-strong"
-                  >식이</span
+                <span
+                  class="childbirth-tip__tag type-label-small-strong childbirth-tip__tag--##C4|visible|selected_tips|branch_1_category##"
+                  >##C4|visible|selected_tips|branch_1_category##</span
                 >
                 <div>
                   <h3 class="type-body-medium-strong">
-                    수유 관련 내용은 수유 페이지에서 자세히 볼게요!
+                    ##C4|visible|selected_tips|branch_1_title##
                   </h3>
-                  <p class="type-body-medium">이 페이지에서는 생활 리듬 중심으로 참고해 주세요.</p>
+                  <p class="type-body-medium">##C4|visible|selected_tips|branch_1_body##</p>
                 </div>
               </article>
               <article>
                 <span
-                  class="childbirth-tip__tag childbirth-tip__tag--surrounding type-label-small-strong"
-                  >환경</span
-                >
-                <div>
-                  <h3 class="type-body-medium-strong">아이에게 익숙한 환경을 유지해 주세요!</h3>
-                  <p class="type-body-medium">특별한 변화보다 편안한 생활 환경을 이어가 주세요.</p>
-                </div>
-              </article>
-              <article>
-                <span class="childbirth-tip__tag childbirth-tip__tag--habit type-label-small-strong"
-                  >습관</span
+                  class="childbirth-tip__tag type-label-small-strong childbirth-tip__tag--##C4|visible|selected_tips|branch_2_category##"
+                  >##C4|visible|selected_tips|branch_2_category##</span
                 >
                 <div>
                   <h3 class="type-body-medium-strong">
-                    하루 생활 리듬이 크게 흔들리지 않게 해 주세요!
+                    ##C4|visible|selected_tips|branch_2_title##
                   </h3>
-                  <p class="type-body-medium">
-                    수유, 낮잠, 밤잠 시간이 달라졌는지 함께 확인해 주세요.
-                  </p>
+                  <p class="type-body-medium">##C4|visible|selected_tips|branch_2_body##</p>
+                </div>
+              </article>
+              <article>
+                <span
+                  class="childbirth-tip__tag type-label-small-strong childbirth-tip__tag--##C4|visible|selected_tips|branch_3_category##"
+                  >##C4|visible|selected_tips|branch_3_category##</span
+                >
+                <div>
+                  <h3 class="type-body-medium-strong">
+                    ##C4|visible|selected_tips|branch_3_title##
+                  </h3>
+                  <p class="type-body-medium">##C4|visible|selected_tips|branch_3_body##</p>
                 </div>
               </article>
             </div>
@@ -149,14 +165,16 @@
         <div class="report-footer__content">
           <div class="report-footer__text-wrapper">
             <span class="report-footer__page-title type-label-xxsmall-strong"
-              >03 우리아이 미생물 성장 이야기</span
+              >##C4|visible|footer|section_label##</span
             >
             <span class="report-footer__page-divider" aria-hidden="true"></span>
             <span class="report-footer__page-description type-label-xxsmall"
-              >분만 분석 : 태어날 때 만난 우리 아이 미생물</span
+              >##C4|visible|footer|page_label##</span
             >
           </div>
-          <strong class="report-footer__page-number type-label-small-strong">12p</strong>
+          <strong class="report-footer__page-number type-label-small-strong"
+            >##C4|visible|footer|page_number##</strong
+          >
         </div>
       </footer>
     </main>

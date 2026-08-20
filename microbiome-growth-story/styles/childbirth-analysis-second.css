@@ -56,9 +56,23 @@
   border-radius: 999px;
 }
 
+.childbirth-summary__method--제왕절개 {
+  background: var(--color-category-child-birth-special);
+}
+
+.childbirth-summary__method--자연분만 {
+  background: var(--color-category-child-birth-dark);
+}
+
 .childbirth-summary__method img {
+  display: none;
   width: 12px;
   height: 12px;
+}
+
+.childbirth-summary__method--제왕절개 .childbirth-summary__icon--제왕절개,
+.childbirth-summary__method--자연분만 .childbirth-summary__icon--자연분만 {
+  display: block;
 }
 
 .childbirth-summary__content {
@@ -102,6 +116,13 @@
 .childbirth-comparison__chart-placeholder {
   margin-top: 12px;
   height: 207px;
+}
+
+.childbirth-comparison__chart-placeholder img {
+  display: block;
+  width: 100%;
+  height: 207px;
+  object-fit: contain;
 }
 
 .childbirth-chart-legend {
@@ -184,7 +205,7 @@
 }
 
 .childbirth-tip__tag::after {
-  content: "";
+  content: '';
   flex: 0 0 auto;
   width: 12px;
   height: 12px;
@@ -193,49 +214,59 @@
   background-size: contain;
 }
 
-.childbirth-tip__tag--diet {
+.childbirth-tip__tag--diet,
+.childbirth-tip__tag--식이 {
   color: var(--color-category-diet-dark);
   background-color: var(--color-category-diet-light);
 }
 
-.childbirth-tip__tag--diet::after {
-  background-image: url("../../common/svgs/feeding-bottle-filled-green.svg");
+.childbirth-tip__tag--diet::after,
+.childbirth-tip__tag--식이::after {
+  background-image: url('../../common/svgs/feeding-bottle-filled-green.svg');
 }
 
-.childbirth-tip__tag--exercise {
+.childbirth-tip__tag--exercise,
+.childbirth-tip__tag--운동 {
   color: var(--color-category-exercise-dark);
   background-color: var(--color-category-exercise-light);
 }
 
-.childbirth-tip__tag--exercise::after {
-  background-image: url("../../common/svgs/foot.svg");
+.childbirth-tip__tag--exercise::after,
+.childbirth-tip__tag--운동::after {
+  background-image: url('../../common/svgs/foot.svg');
 }
 
-.childbirth-tip__tag--surrounding {
+.childbirth-tip__tag--surrounding,
+.childbirth-tip__tag--환경 {
   color: var(--color-category-surrounding-dark);
   background-color: var(--color-category-surrounding-light);
 }
 
-.childbirth-tip__tag--surrounding::after {
-  background-image: url("../../common/svgs/home-filled-blue.svg");
+.childbirth-tip__tag--surrounding::after,
+.childbirth-tip__tag--환경::after {
+  background-image: url('../../common/svgs/home-filled-blue.svg');
 }
 
-.childbirth-tip__tag--habit {
+.childbirth-tip__tag--habit,
+.childbirth-tip__tag--습관 {
   color: var(--color-category-habit-dark);
   background-color: var(--color-category-habit-light);
 }
 
-.childbirth-tip__tag--habit::after {
-  background-image: url("../../common/svgs/alarm-filled-purple.svg");
+.childbirth-tip__tag--habit::after,
+.childbirth-tip__tag--습관::after {
+  background-image: url('../../common/svgs/alarm-filled-purple.svg');
 }
 
-.childbirth-tip__tag--observation {
+.childbirth-tip__tag--observation,
+.childbirth-tip__tag--관찰 {
   color: var(--color-category-observation-dark);
   background-color: var(--color-category-observation-light);
 }
 
-.childbirth-tip__tag--observation::after {
-  background-image: url("../../common/svgs/observation.svg");
+.childbirth-tip__tag--observation::after,
+.childbirth-tip__tag--관찰::after {
+  background-image: url('../../common/svgs/observation.svg');
 }
 
 .childbirth-tips h3 {

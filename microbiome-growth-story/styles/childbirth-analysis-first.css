@@ -68,22 +68,48 @@
   border-radius: 999px;
 }
 
+.childbirth-method__badge--제왕절개 {
+  background: var(--color-category-child-birth-special);
+}
+
+.childbirth-method__badge--자연분만 {
+  background: var(--color-category-child-birth-dark);
+}
+
 .childbirth-method img {
+  display: none;
   width: 12px;
   height: 12px;
 }
 
+.childbirth-method__badge--제왕절개 .childbirth-method__icon--제왕절개,
+.childbirth-method__badge--자연분만 .childbirth-method__icon--자연분만 {
+  display: block;
+}
+
 .childbirth-result__message {
+  --message-bg: var(--color-surface-status-positive);
+  --message-accent: var(--color-text-status-positive);
+
   padding: 16px;
   margin-top: 8px;
   text-align: center;
-  background: var(--color-surface-status-positive);
+  background: var(--message-bg);
   border-radius: 12px;
 }
 
-.childbirth-result__message strong,
-.childbirth-result__message b {
-  color: var(--color-text-status-positive);
+.childbirth-result__message--green {
+  --message-bg: var(--color-surface-status-positive);
+  --message-accent: var(--color-text-status-positive);
+}
+
+.childbirth-result__message--orange {
+  --message-bg: var(--color-data-normal-light);
+  --message-accent: var(--color-data-normal-dark);
+}
+
+.childbirth-result__message strong {
+  color: var(--message-accent);
 }
 
 .childbirth-result__message p {
@@ -91,9 +117,24 @@
   color: var(--color-text-secondary);
 }
 
+.childbirth-result__message p em {
+  color: var(--message-accent);
+  font-style: normal;
+}
+
 .childbirth-chart-placeholder {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
   margin-top: 20px;
   height: 228px;
+}
+
+.childbirth-chart-placeholder img {
+  display: block;
+  width: 238px;
+  height: 228px;
+  object-fit: contain;
 }
 
 .childbirth-chart-legend {

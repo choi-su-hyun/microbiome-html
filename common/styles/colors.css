@@ -41,11 +41,13 @@
   --color-blue-100: #f4f9ff;
   --color-blue-200: #dfeeff;
   --color-blue-600: #5392da;
+  --color-blue-700: #3991bd;
 
   /* Green palette */
   --color-green-100: #edf6e9;
   --color-green-200: #d8edd0;
   --color-green-400: #9fcf8d;
+  --color-green-500: #0ac30a;
   --color-green-600: #589c40;
 
   /* Pink palette */

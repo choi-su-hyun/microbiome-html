@@ -68,21 +68,53 @@
   border-radius: 999px;
 }
 
+.breast-feeding-method__badge--모유수유 {
+  background: var(--color-category-feeding-dark);
+}
+
+.breast-feeding-method__badge--분유수유 {
+  background: var(--color-category-feeding-special);
+}
+
+.breast-feeding-method__badge--혼합수유 {
+  background: var(--color-data-baseline-dark);
+}
+
 .breast-feeding-method img {
+  display: none;
   width: 12px;
   height: 12px;
 }
 
+.breast-feeding-method__badge--모유수유 .breast-feeding-method__icon--모유수유,
+.breast-feeding-method__badge--분유수유 .breast-feeding-method__icon--분유수유,
+.breast-feeding-method__badge--혼합수유 .breast-feeding-method__icon--혼합수유 {
+  display: block;
+}
+
 .breast-feeding-result__message {
+  --message-bg: var(--color-surface-status-positive);
+  --message-accent: var(--color-text-status-positive);
+
   padding: 16px;
   margin-top: 8px;
   text-align: center;
-  background: var(--color-surface-base);
+  background: var(--message-bg);
   border-radius: 12px;
 }
 
+.breast-feeding-result__message--green {
+  --message-bg: var(--color-surface-status-positive);
+  --message-accent: var(--color-text-status-positive);
+}
+
+.breast-feeding-result__message--orange {
+  --message-bg: var(--color-data-normal-light);
+  --message-accent: var(--color-data-normal-dark);
+}
+
 .breast-feeding-result__message strong {
-  color: var(--color-surface-emphasis);
+  color: var(--message-accent);
 }
 
 .breast-feeding-result__message p {
@@ -90,9 +122,28 @@
   color: var(--color-text-secondary);
 }
 
+.breast-feeding-result__message p strong {
+  color: var(--color-text-status-positive);
+}
+
+.breast-feeding-result__message p em {
+  color: var(--color-data-normal-dark);
+  font-style: normal;
+}
+
 .breast-feeding-chart-placeholder {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
   margin-top: 20px;
   height: 228px;
+}
+
+.breast-feeding-chart-placeholder img {
+  display: block;
+  width: 238px;
+  height: 228px;
+  object-fit: contain;
 }
 
 .breast-feeding-chart-legend {

@@ -56,9 +56,28 @@
   border-radius: 999px;
 }
 
+.breast-feeding-summary__method--모유수유 {
+  background: var(--color-category-feeding-dark);
+}
+
+.breast-feeding-summary__method--분유수유 {
+  background: var(--color-category-feeding-special);
+}
+
+.breast-feeding-summary__method--혼합수유 {
+  background: var(--color-data-baseline-dark);
+}
+
 .breast-feeding-summary__method img {
+  display: none;
   width: 12px;
   height: 12px;
+}
+
+.breast-feeding-summary__method--모유수유 .breast-feeding-summary__icon--모유수유,
+.breast-feeding-summary__method--분유수유 .breast-feeding-summary__icon--분유수유,
+.breast-feeding-summary__method--혼합수유 .breast-feeding-summary__icon--혼합수유 {
+  display: block;
 }
 
 .breast-feeding-summary__content {
@@ -102,6 +121,13 @@
 .breast-feeding-comparison__chart-placeholder {
   height: 207px;
   margin-top: 12px;
+}
+
+.breast-feeding-comparison__chart-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .breast-feeding-chart-legend {
@@ -189,48 +215,58 @@
   background-size: contain;
 }
 
-.breast-feeding-tip__tag--diet {
+.breast-feeding-tip__tag--diet,
+.breast-feeding-tip__tag--식이 {
   color: var(--color-category-diet-dark);
   background-color: var(--color-category-diet-light);
 }
 
-.breast-feeding-tip__tag--diet::after {
+.breast-feeding-tip__tag--diet::after,
+.breast-feeding-tip__tag--식이::after {
   background-image: url("../../common/svgs/feeding-bottle-filled-green.svg");
 }
 
-.breast-feeding-tip__tag--exercise {
+.breast-feeding-tip__tag--exercise,
+.breast-feeding-tip__tag--운동 {
   color: var(--color-category-exercise-dark);
   background-color: var(--color-category-exercise-light);
 }
 
-.breast-feeding-tip__tag--exercise::after {
+.breast-feeding-tip__tag--exercise::after,
+.breast-feeding-tip__tag--운동::after {
   background-image: url("../../common/svgs/foot.svg");
 }
 
-.breast-feeding-tip__tag--surrounding {
+.breast-feeding-tip__tag--surrounding,
+.breast-feeding-tip__tag--환경 {
   color: var(--color-category-surrounding-dark);
   background-color: var(--color-category-surrounding-light);
 }
 
-.breast-feeding-tip__tag--surrounding::after {
+.breast-feeding-tip__tag--surrounding::after,
+.breast-feeding-tip__tag--환경::after {
   background-image: url("../../common/svgs/home-filled-blue.svg");
 }
 
-.breast-feeding-tip__tag--habit {
+.breast-feeding-tip__tag--habit,
+.breast-feeding-tip__tag--습관 {
   color: var(--color-category-habit-dark);
   background-color: var(--color-category-habit-light);
 }
 
-.breast-feeding-tip__tag--habit::after {
+.breast-feeding-tip__tag--habit::after,
+.breast-feeding-tip__tag--습관::after {
   background-image: url("../../common/svgs/alarm-filled-purple.svg");
 }
 
-.breast-feeding-tip__tag--observation {
+.breast-feeding-tip__tag--observation,
+.breast-feeding-tip__tag--관찰 {
   color: var(--color-category-observation-dark);
   background-color: var(--color-category-observation-light);
 }
 
-.breast-feeding-tip__tag--observation::after {
+.breast-feeding-tip__tag--observation::after,
+.breast-feeding-tip__tag--관찰::after {
   background-image: url("../../common/svgs/observation.svg");
 }
 

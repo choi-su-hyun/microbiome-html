@@ -26,6 +26,10 @@
   width: 100%;
 }
 
+.microbial-growth-story-sheet__title h1 {
+  max-width: 274px;
+}
+
 .microbial-growth-story-sheet__list {
   display: flex;
   flex-direction: column;
