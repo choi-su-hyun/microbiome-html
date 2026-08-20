@@ -3,7 +3,8 @@
   width: var(--page-a4-preview-width);
   height: var(--page-a4-preview-height);
   overflow: hidden;
-  background: var(--color-surface-on) url("../../common/images/sheet_bg.jpg") center / 100% 100% no-repeat;
+  background: var(--color-surface-on) url('../../common/images/sheet_bg.jpg') center / 100% 100%
+    no-repeat;
 }
 
 .status-analysis-guide-sheet__content {
@@ -23,6 +24,7 @@
 .status-analysis-guide-sheet__title p,
 .status-analysis-guide-sheet__title h1 {
   width: 100%;
+  max-width: 274px;
 }
 
 .status-analysis-guide-sheet__list {

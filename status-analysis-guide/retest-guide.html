@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>재검사 가이드 | 신생아 마이크로바이옴 유전체 분석 리포트</title>
+    <title>##D9|visible|title## | 신생아 마이크로바이옴 유전체 분석 리포트</title>
     <link rel="stylesheet" href="../common/styles/reset.css" />
     <link rel="stylesheet" href="../common/styles/common.css" />
     <link rel="stylesheet" href="../common/styles/print.css" />
@@ -15,59 +15,73 @@
   <body>
     <main class="retest-guide" aria-labelledby="retest-title">
       <header class="report-header">
-        <img class="report-header__logo" src="../common/svgs/logo.svg" alt="miriwell bebe" />
+        <img
+          class="report-header__logo"
+          src="../common/svgs/logo.svg"
+          alt="##D9|visible|report_context|brand##"
+        />
         <dl class="report-header__metadata type-label-xsmall-strong" aria-label="아이 정보">
           <div>
             <dt>등록번호</dt>
-            <dd class="type-label-xsmall">0008127</dd>
+            <dd class="type-label-xsmall">##D9|visible|report_context|registration_code##</dd>
           </div>
           <div>
             <dt>이름</dt>
-            <dd class="type-label-xsmall">홍길동</dd>
+            <dd class="type-label-xsmall">##D9|visible|report_context|name##</dd>
           </div>
           <div>
             <dt>나이</dt>
-            <dd class="type-label-xsmall">만 0세 (N개월)</dd>
+            <dd class="type-label-xsmall">##D9|visible|report_context|age##</dd>
           </div>
           <div>
             <dt>성별</dt>
-            <dd class="type-label-xsmall">여아</dd>
+            <dd class="type-label-xsmall">##D9|visible|report_context|sex##</dd>
           </div>
         </dl>
       </header>
       <section class="report-page__content retest-guide__content">
         <header class="report-page__title-area">
-          <h1 id="retest-title" class="type-heading-primary-large-strong">재검사 가이드</h1>
+          <h1 id="retest-title" class="type-heading-primary-large-strong">##D9|visible|title##</h1>
         </header>
         <section class="retest-timeline" aria-labelledby="timeline-title">
           <header>
             <h2 id="timeline-title" class="type-heading-secondary-small-strong">
-              주요 체크 포인트
+              ##D9|visible|section_title##
             </h2>
-            <p class="type-body-medium">
-              마이크로바이옴은, 우리 생애 초기 골든 타임에 적응하여 평생 건강의 기초를 다집니다.
-            </p>
+            <p class="type-body-medium">##D9|visible|intro##</p>
           </header>
-          <ol class="is-repeat-round">
+          <!-- comment:: color_highlight|is|survey_date_before → is-first-round-1(1회차), 아니면 is-first-round-0(2회차 이상). -->
+          <ol
+            class="retest-timeline__list is-first-round-##D9|visible|timeline|color_highlight|is|survey_date_before##"
+          >
             <li>
               <span class="retest-timeline__node" aria-hidden="true"></span>
               <div class="retest-timeline__speech-bubble">
-                <strong class="type-heading-secondary-medium-strong">이번 검사</strong
-                ><span class="type-body-large">2026.06.29</span>
+                <strong class="type-heading-secondary-medium-strong"
+                  >##D9|visible|timeline|survey_date_before|label##</strong
+                ><span class="type-body-large"
+                  >##D9|visible|timeline|survey_date_before|date##</span
+                >
               </div>
             </li>
             <li>
               <span class="retest-timeline__node" aria-hidden="true"></span>
               <div class="retest-timeline__speech-bubble">
-                <strong class="type-heading-secondary-medium-strong">(권장) 3개월 후</strong
-                ><span class="type-body-large">2026. 09</span>
+                <strong class="type-heading-secondary-medium-strong"
+                  >##D9|visible|timeline|survey_date_after_3_month|label##</strong
+                ><span class="type-body-large"
+                  >##D9|visible|timeline|survey_date_after_3_month|date##</span
+                >
               </div>
             </li>
             <li>
               <span class="retest-timeline__node" aria-hidden="true"></span>
               <div class="retest-timeline__speech-bubble">
-                <strong class="type-heading-secondary-medium-strong">(권장) 6개월 후</strong
-                ><span class="type-body-large">2026. 12</span>
+                <strong class="type-heading-secondary-medium-strong"
+                  >##D9|visible|timeline|survey_date_after_6_month|label##</strong
+                ><span class="type-body-large"
+                  >##D9|visible|timeline|survey_date_after_6_month|date##</span
+                >
               </div>
             </li>
           </ol>
@@ -82,12 +96,11 @@
                     class="retest-reasons__node"
                     src="../common/svgs/check-round-secondary-color.svg"
                     alt=""
-                  />이유식이<br />바뀐 뒤
+                  />##D9|visible|recommended_retest_points|branch_1_label##
                 </h3>
                 <div>
                   <p class="type-body-large">
-                    <strong>이유식 시작</strong> 혹은 초기 / 중기 / 후기 이유식 전환 후,
-                    <strong>4~6주 후</strong>
+                    ##D9|visible|recommended_retest_points|branch_1_sentence##
                   </p>
                   <div class="check-list">
                     <img
@@ -95,7 +108,9 @@
                       src="../common/svgs/check-line-orange.svg"
                       alt=""
                     />
-                    <b class="type-body-medium-strong">이유식 변화에 따른 유익/유해균 확인</b>
+                    <b class="type-body-medium-strong"
+                      >##D9|visible|recommended_retest_points|branch_1_check##</b
+                    >
                   </div>
                 </div>
               </li>
@@ -105,11 +120,11 @@
                     class="retest-reasons__node"
                     src="../common/svgs/check-round-secondary-color.svg"
                     alt=""
-                  />항생제 복용이<br />끝난 뒤
+                  />##D9|visible|recommended_retest_points|branch_2_label##
                 </h3>
                 <div>
                   <p class="type-body-large">
-                    항생제 복용이 완전히 끝나고 <strong>최소 4주 후</strong>
+                    ##D9|visible|recommended_retest_points|branch_2_sentence##
                   </p>
                   <div class="check-list">
                     <img
@@ -117,7 +132,9 @@
                       src="../common/svgs/check-line-orange.svg"
                       alt=""
                     />
-                    <b class="type-body-medium-strong">장 속 균형이 다시 자리잡는지 확인</b>
+                    <b class="type-body-medium-strong"
+                      >##D9|visible|recommended_retest_points|branch_2_check##</b
+                    >
                   </div>
                 </div>
               </li>
@@ -127,11 +144,11 @@
                     class="retest-reasons__node"
                     src="../common/svgs/check-round-secondary-color.svg"
                     alt=""
-                  />불편한 증상이<br />지속될 때
+                  />##D9|visible|recommended_retest_points|branch_3_label##
                 </h3>
                 <div>
                   <p class="type-body-large">
-                    배변/피부/수면 등 아이가 불편한 증상이 3~4주 이상 지속되거나 나아지지 않을 때
+                    ##D9|visible|recommended_retest_points|branch_3_sentence##
                   </p>
                   <div class="check-list">
                     <img
@@ -139,7 +156,9 @@
                       src="../common/svgs/check-line-orange.svg"
                       alt=""
                     />
-                    <b class="type-body-medium-strong">우리 아이에게 맞는 케어 방향 재확인</b>
+                    <b class="type-body-medium-strong"
+                      >##D9|visible|recommended_retest_points|branch_3_check##</b
+                    >
                   </div>
                 </div>
               </li>
@@ -149,11 +168,11 @@
                     class="retest-reasons__node"
                     src="../common/svgs/check-round-secondary-color.svg"
                     alt=""
-                  />6개월 주기<br />정기점검
+                  />##D9|visible|recommended_retest_points|branch_4_label##
                 </h3>
                 <div>
                   <p class="type-body-large">
-                    특별한 변화가 없더라도 6개월 간격으로 추세 관찰 필요
+                    ##D9|visible|recommended_retest_points|branch_4_timing##
                   </p>
                   <div class="check-list">
                     <img
@@ -161,36 +180,35 @@
                       src="../common/svgs/check-line-orange.svg"
                       alt=""
                     />
-                    <b class="type-body-medium-strong">아이 성장에 따른 장기적인 흐름 확인</b>
+                    <b class="type-body-medium-strong"
+                      >##D9|visible|recommended_retest_points|branch_4_check##</b
+                    >
                   </div>
                 </div>
               </li>
             </ul>
           </section>
           <aside class="retest-guide__callout">
-            <h2 class="type-heading-secondary-medium-strong">
-              재검사를 하면<br />좋은 이유가 있나요?
-            </h2>
-            <p class="type-body-large">
-              재검사는 질병을 진단하기 위함이 아니라 마이크로바이옴 생태계의 변화 추세를
-              확인하고,<br />우리 아이에게 맞는 환경을 찾아가기 위한 과정입니다. 수치 자체보다는
-              변화의 방향성에<br />주목해 주세요!
-            </p>
+            <h2 class="type-heading-secondary-medium-strong">##D9|visible|why_title##</h2>
+            <p class="type-body-large">##D9|visible|why_body##</p>
           </aside>
-          <p class="retest-guide__note type-caption-medium">
-            * 이 결과는 통계적 연관/경향을 기반으로 하며, 특정 질병의 원인을 단정하지 않습니다.
-          </p>
+          <p class="retest-guide__note type-caption-medium">##D9|visible|disclaimer##</p>
         </section>
       </section>
       <footer class="report-footer" aria-label="현재 페이지">
         <div class="report-footer__content">
           <div class="report-footer__text-wrapper">
             <span class="report-footer__page-title type-label-xxsmall-strong"
-              >04 우리아이 상태 분석 및 맞춤 가이드</span
-            ><span class="report-footer__page-divider" aria-hidden="true"></span
-            ><span class="report-footer__page-description type-label-xxsmall">재검사 가이드</span>
+              >##D9|visible|footer|section_label##</span
+            >
+            <span class="report-footer__page-divider" aria-hidden="true"></span>
+            <span class="report-footer__page-description type-label-xxsmall"
+              >##D9|visible|footer|page_label##</span
+            >
           </div>
-          <strong class="report-footer__page-number type-label-small-strong">24p</strong>
+          <strong class="report-footer__page-number type-label-small-strong"
+            >##D9|visible|footer|page_number##</strong
+          >
         </div>
       </footer>
     </main>

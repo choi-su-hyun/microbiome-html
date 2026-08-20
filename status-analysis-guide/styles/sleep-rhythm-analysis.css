@@ -47,6 +47,13 @@
   margin-top: 12px;
 }
 
+.sleep-rhythm-analysis__chart-placeholder img {
+  display: block;
+  width: 499px;
+  height: 174px;
+  object-fit: contain;
+}
+
 .sleep-rhythm-analysis__legend {
   display: flex;
   align-items: center;

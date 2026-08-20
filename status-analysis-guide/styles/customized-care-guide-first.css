@@ -6,5 +6,3 @@
   --care-guide-outcomes-surface: var(--color-surface-base);
   --care-guide-success-color: var(--color-data-normal-dark);
 }
-
-.customized-care-guide-first .care-guide-focus__benefit img { background: var(--color-category-fret-medium); }

@@ -58,6 +58,13 @@
   margin-top: 12px;
 }
 
+.skin-sensitivity-analysis__chart-placeholder img {
+  display: block;
+  width: 499px;
+  height: 174px;
+  object-fit: contain;
+}
+
 .skin-sensitivity-analysis__legend {
   display: flex;
   align-items: center;
