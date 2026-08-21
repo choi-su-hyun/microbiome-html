@@ -54,9 +54,9 @@
 
 .intro-page__item-line {
   flex: 1 1 auto;
-  width: auto;
-  min-width: 0;
+  min-width: 8px;
   height: 1px;
+  border-top: 1px dotted var(--color-border-light);
 }
 
 .intro-page__item-page {
