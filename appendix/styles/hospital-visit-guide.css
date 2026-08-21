@@ -25,6 +25,11 @@
 .hospital-visit-guide__title p {
   margin-top: 4px;
 }
+.hospital-visit-guide__title p b,
+.hospital-visit-guide__title p strong {
+  font-style: normal;
+  font-weight: 700;
+}
 .hospital-symptoms em,
 .hospital-visit-guide__warning {
   color: var(--color-text-status-negative);

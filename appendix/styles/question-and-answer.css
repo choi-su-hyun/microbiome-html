@@ -57,7 +57,10 @@
   background: var(--color-surface-status-positive);
   border-radius: 8px;
 }
+.faq-list b,
 .faq-list strong {
+  font-style: normal;
+  font-weight: 700;
   color: var(--color-text-primary);
 }
 @media print {

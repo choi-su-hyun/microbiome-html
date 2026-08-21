@@ -81,13 +81,14 @@
   color: var(--color-text-secondary);
   font-weight: var(--font-weight-regular);
 }
-.microorganisms-list .is-beneficial::before {
+/* comment:: branch_N_color(green/pink/gray)에 따라 원 색상 분기 */
+.microorganisms-list .microorganisms-item--green::before {
   color: var(--color-status-positive);
 }
-.microorganisms-list .is-neutral::before {
+.microorganisms-list .microorganisms-item--gray::before {
   color: var(--color-mono-400);
 }
-.microorganisms-list .is-harmful::before {
+.microorganisms-list .microorganisms-item--pink::before {
   color: var(--color-data-bad-dark);
 }
 @media print {

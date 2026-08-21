@@ -104,7 +104,7 @@
 ### 데이터 소스
 
 - 바인딩용 JSON은 `test` 워크스페이스(예: `/Users/choisuhyun/Downloads/test/`)에 `{등록번호}.json` 형태로 둔다. 예: `32PD7PN_2.json`.
-- JSON 파일명의 `{등록번호}`는 해당 파일 `visible.report_context.registration_code`와 일치한다.
+- JSON 파일명의 `{등록번호}`는 해당 파일 `response.visible.report_context.registration_code`와 일치한다.
 - 어떤 JSON 파일의 어떤 페이지 키(`A1`, `B6` 등)를 어떤 HTML에 바인딩할지는 **사용자가 매 요청마다 지정**한다. 에이전트가 임의로 매핑하지 않는다.
 
 ### JSON 구조
@@ -124,6 +124,17 @@
     },
     "A2": { … },
     "B6": { … },
+    "E5": {
+      "total_sub_page_count": 2,
+      "sub_index_1": {
+        "part_index": 1,
+        "part_count": 2,
+        "response": {
+          "visible": { … }
+        }
+      },
+      "sub_index_2": { … }
+    },
     …
   }
 }
@@ -131,21 +142,24 @@
 
 - 페이지 키는 `page_N`이 아니라 파트 문자와 순번이다. 예: `A1`, `B6`, `C3`.
 - 실제 바인딩 필드는 `value.{페이지키}.response.visible` 아래에 있다.
+- `sub_index_N`이 있는 페이지는 `value.{페이지키}.sub_index_N.response.visible` 아래에 있다.
 - `pdf_id`, `page_id`, `design_pdf_number`는 페이지 식별·매핑 확인용 메타데이터다.
-- `part_index` / `part_count`가 2 이상이면 한 HTML 파일이 여러 페이지 키로 나뉜다(예: 맞춤 케어 가이드, 참고 문헌).
+- `part_index` / `part_count`가 2 이상이면 한 HTML 파일이 여러 페이지 키로 나뉜다(예: 맞춤 케어 가이드). `sub_index_N`으로 나뉜 경우는 고정 페이지면 HTML을 나누고(예: `references.html` / `references2.html`), 가변 리스트면 주석으로 파이프라인 처리를 남긴다.
 
 ### 토큰 문법
 
-- 형식: `##페이지키|visible|…|필드##`
+- 형식: `##페이지키|response|visible|…|필드##`
+- `sub_index_N`이 있으면: `##페이지키|sub_index_N|response|visible|…|필드##`
 - `##`로 토큰을 감싸고, 계층은 `|`로 구분한다.
-- 첫 세그먼트는 JSON의 페이지 키와 동일하다. 예: `A1`, `B6`.
-- 두 번째 세그먼트부터는 `response.visible` 아래의 키 경로다. `response`는 토큰에 쓰지 않는다.
-- 예: `##A1|visible|title_above##` → `value.A1.response.visible.title_above`
-- 예: `##B6|visible|report_context|name##` → `value.B6.response.visible.report_context.name`
-- 객체 키는 JSON에 정의된 이름 그대로 쓴다. 예: `##A2|visible|sections|A|section##`, `##B6|visible|metric_cards|branch_1_metric_label##`
+- 첫 세그먼트는 JSON의 페이지 키와 동일하다. 예: `A1`, `B6`, `E5`.
+- `response`와 `visible` 세그먼트를 토큰에 포함한다. JSON 경로와 토큰 경로를 맞춘다.
+- 예: `##A1|response|visible|title_above##` → `value.A1.response.visible.title_above`
+- 예: `##B6|response|visible|report_context|name##` → `value.B6.response.visible.report_context.name`
+- 예: `##E5|sub_index_1|response|visible|title##` → `value.E5.sub_index_1.response.visible.title`
+- 객체 키는 JSON에 정의된 이름 그대로 쓴다. 예: `##A2|response|visible|sections|A|section##`, `##B6|response|visible|metric_cards|branch_1_metric_label##`
 - 값이 배열인 경우는 없다.(배열이 있다면 사용자에게 알린다)
-- class 속성 등에도 토큰을 삽입할 수 있다. 예: `class="change-result change-result--##B6|visible|metric_cards|branch_1_current_status##"`
-- 박스 배경·테두리처럼 영역 전체 색은 `status` 값을 클래스 접미사로 쓴다. JSON 값은 공백 없이 온다. 예: `class="change-summary--##B6|visible|summary_opinion|branch_sentence|status##"`
+- class 속성 등에도 토큰을 삽입할 수 있다. 예: `class="change-result change-result--##B6|response|visible|metric_cards|branch_1_current_status##"`
+- 박스 배경·테두리처럼 영역 전체 색은 `status` 값을 클래스 접미사로 쓴다. JSON 값은 공백 없이 온다. 예: `class="change-summary--##B6|response|visible|summary_opinion|branch_sentence|status##"`
 
 ### 문장 일부 강조 (`strong`, `em`)
 
@@ -160,9 +174,9 @@
 
 ```html
 <section
-  class="change-summary change-summary--overview change-summary--##B6|visible|summary_opinion|branch_sentence|status##"
+  class="change-summary change-summary--overview change-summary--##B6|response|visible|summary_opinion|branch_sentence|status##"
 >
-  <p class="type-body-medium">##B6|visible|summary_opinion|branch_sentence|body##</p>
+  <p class="type-body-medium">##B6|response|visible|summary_opinion|branch_sentence|body##</p>
 </section>
 ```
 
@@ -186,7 +200,7 @@
 
 #### 2. JSON 확인
 
-1. 사용자가 지정한 JSON 파일 → `value.{페이지키}`를 연다.
+1. 사용자가 지정한 JSON 파일 → `value.{페이지키}`를 연다. `sub_index_N`이 있으면 해당 하위 경로를 연다.
 2. `response.visible`의 키 구조를 파악한다.
 3. HTML에 대응하는 모든 동적 필드를 목록으로 정리한다.
 4. JSON에 없는 키는 토큰으로 만들지 않는다.
@@ -194,10 +208,10 @@
 #### 3. HTML 수정
 
 1. 사용자가 지정한 HTML 파일을 연다.
-2. 화면에 보이는 동적 텍스트·수치·이름·등급·날짜 등을 `##페이지키|visible|…##` 토큰으로 교체한다. 토큰의 페이지 키는 사용자가 지정한 JSON 키와 일치해야 한다.
+2. 화면에 보이는 동적 텍스트·수치·이름·등급·날짜 등을 `##페이지키|response|visible|…##` 토큰으로 교체한다. `sub_index_N`이 있으면 `##페이지키|sub_index_N|response|visible|…##`로 쓴다. 토큰의 페이지 키는 사용자가 지정한 JSON 키와 일치해야 한다.
 3. 레이블·장식 문구·고정 카피는 그대로 둔다.
 4. `report_context`, `footer`, 등급 class 등 반복 필드도 JSON 키가 있으면 토큰으로 바꾼다.
-5. 기존 레거시 토큰(`##page_N|visible|…##`, `##1|visible|…##`)이 남아 있으면 해당 페이지 키 형식으로 교체한다.
+5. 기존 레거시 토큰(`##page_N|visible|…##`, `##페이지키|visible|…##`, `##1|visible|…##`)이 남아 있으면 `##페이지키|response|visible|…##` 형식으로 교체한다.
 6. HTML 구조·CSS·레이아웃은 바인딩 목적 외에는 변경하지 않는다.
 
 #### 4. 결과 보고
@@ -221,7 +235,7 @@
 - 한 번에 사용자가 지정한 HTML 하나·JSON 페이지 키 하나만 바인딩한다. 사용자 확인이 끝나기 전에 다음 페이지로 진행하지 않는다.
 - HTML 예시 파일에 실제 개인정보를 직접 넣지 않는다. JSON의 값은 파이프라인 치환용이며, HTML에는 토큰만 남긴다.
 - JSON 객체는 배열이 아닌 명명 키(`A`, `term_A`, `branch_1` 등)를 쓰는 경우가 많다. 토큰 경로는 JSON 실제 구조를 따른다.
-- 분할 페이지(`part_index` > 1)는 사용자가 지정한 페이지 키의 `visible`만 참조한다. 다른 파트 데이터를 섞지 않는다.
+- 분할 페이지(`part_index` > 1 또는 `sub_index_N`)는 사용자가 지정한 페이지 키·서브 인덱스의 `response.visible`만 참조한다. 다른 파트 데이터를 섞지 않는다.
 
 ## 새 페이지 추가 절차
 
