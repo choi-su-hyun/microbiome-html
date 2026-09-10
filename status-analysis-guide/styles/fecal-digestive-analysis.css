@@ -152,6 +152,7 @@
 
 .fecal-digestive-analysis__together h2 {
   color: inherit;
+  flex-shrink: 0;
 }
 .fecal-digestive-analysis__together dl {
   display: flex;
@@ -175,6 +176,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  flex-shrink: 0;
 }
 
 .fecal-digestive-analysis__together dt img {
